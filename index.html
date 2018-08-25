@@ -90,7 +90,6 @@
     font-family: kayak-bold, sans-serif;
     display: block;
     color: #fff;
-    font-size: 15px;
     text-decoration: none;
   }
 
@@ -169,7 +168,6 @@
     font-style: semi-condensed;
     text-transform: capitalize;
     padding: 8px 0;
-    letter-spacing: 1px;
   }
 
   .r-sd-bar{
@@ -403,6 +401,7 @@
 
   .left-text a, .right-text a{
     position: relative;
+    font-size: 15px;
   }
 
   .left-text a{
@@ -471,7 +470,7 @@
 
     .r-sd-bar p, .l-sd-bar, .left-img::after, .right-img::after,
     .left-text a::after, .right-text a::after, .bnr-hero::after,
-    .bnr-para h2, .to_be_hidden, .left-text a, .right-text a{
+    .bnr-para h2, .to_be_hidden{
       display: none;
     }
 
@@ -525,7 +524,9 @@
 
     .prj{
       flex-direction: column;
-      margin-bottom: -17vh;
+      align-items: center;
+      margin-bottom: -16vh;
+      overflow: hidden;
     }
 
     .prj-img{
@@ -543,19 +544,14 @@
 
     .left-text a, .right-text a{
       transform: translate(0, 0);
+      text-align: right;
       text-decoration: underline;
       margin-top: -6px;
     }
 
     .info p{
-      margin: 12vh 0 -10vh;
+      margin: 26vh 0 -12vh;
     }
-
-    .cont a{
-      margin-bottom: -10px;
-      margin-top: 20px;
-    }
-
 
 
     .txt1{
@@ -594,20 +590,21 @@
 
     .prj h3{
       font-size: 5vh;
-      padding-bottom: 0px;
+      padding-bottom: 5px;
     }
 
     .info h2{
       font-size: 5.5vh;
-      padding-left: 0;
+      padding: 6vh 0 0 0;
     }
 
-    .cont h2{
+    .cont h2, .cont a{
       font-size: 7vh;
     }
 
     .cont a{
-      font-size: 8vh;
+      margin-bottom: -10px;
+      margin-top: 28px;
     }
 
   }
@@ -661,66 +658,66 @@
 
       <div class="prj" data-aos="fade-up" data-aos-easing="ease-out-cubic">
         <div class="prj-img left-img">
-          <img src="media/prj1.jpg">
+          <img src="media/cur.jpg">
         </div>
         <div class="prj-text left-text txt1" data-scroll-speed="13">
-          <h3>Currently<br/>Located</h3>
-          <p>A Site crafed for Designing lorem ipsum<br/>
-             your Itinary.
+          <h3>Currently<span class="brake"> Located</span></h3>
+          <p>Currently located travel
+             service that aims<br/> to maximize your experience.
           </p><br/>
-          <a href="#">view more</a>
+          <a target="_blank" href="https://www.currentlylocated.com/">visit site</a>
         </div>
       </div>
 
       <div class="prj to_be_hidden" data-aos="fade-up" data-aos-easing="ease-out-cubic">
         <div class="prj-text right-text txt2" data-scroll-speed="13">
-          <h3>Rise of<br/>Artificial Intelligence</h3>
-          <p>A Site crafed for Designing lorem ipsum<br/>
-             your Itinary.
+          <h3>Rise of<span class="brake"> Artificial Intelligence</span></h3>
+          <p>A Site Illustrating the uses of Artificial<br/>
+             Intelligence in future.
           </p><br/>
-          <a href="#">view more</a>
+          <a href="projects/">visit site</a>
         </div>
         <div class="prj-img right-img">
-          <img src="media/prj1.jpg">
+          <img src="media/ris.jpg">
         </div>
       </div>
 
       <div class="prj" data-aos="fade-up" data-aos-easing="ease-out-cubic">
         <div class="prj-img left-img">
-          <img src="media/prj1.jpg">
+          <img src="media/maf.jpg">
         </div>
         <div class="prj-text left-text txt3" data-scroll-speed="13">
-          <h3>Martial<br/>Arts</h3>
-          <p>A Site crafed for Designing lorem ipsum<br/>
-             your Itinary.
+          <h3>Martial<span class="brake"> Arts</span></h3>
+          <p>A Template designed for a Martial
+             Arts &<br/> Fitness Academy.
           </p><br/>
-          <a href="#">view more</a>
+          <a href="#">visit site</a>
         </div>
       </div>
 
       <div class="prj to_be_hidden" data-aos="fade-up" data-aos-easing="ease-out-cubic">
         <div class="prj-text right-text txt4" data-scroll-speed="13">
-          <h3>Artificial<br/>Intelligence</h3>
-          <p>A Site crafed for Designing lorem ipsum<br/>
-             your Itinary.
+          <h3>Artificial<span class="brake"> Intelligence</span></h3>
+          <p>A New Perspective on the upcoming AI & some<br/>
+             of their uses in Industries.
           </p><br/>
-          <a href="#">view more</a>
+          <a href="#">visit site</a>
         </div>
         <div class="prj-img right-img">
-          <img src="media/prj1.jpg">
+          <img src="media/ari.jpg">
         </div>
       </div>
 
       <div class="prj" data-aos="fade-up" data-aos-easing="ease-out-cubic">
         <div class="prj-img left-img">
-          <img src="media/prj1.jpg">
+          <img src="media/hrb.jpg">
         </div>
         <div class="prj-text left-text txt5" data-scroll-speed="13">
-          <h3>Hero's<br/>Brother</h3>
-          <p>A Site crafed for Designing lorem ipsum<br/>
-             your Itinary.
+          <h3>Hero's<span class="brake"> Brother</span></h3>
+          <p>A Template for Hero's Brother
+             a book by <br/>M. Scott Anderson.
           </p><br/>
-          <a href="#">view more</a>
+          <a href="#">visit site</a>
         </div>
       </div>
 
@@ -731,7 +728,8 @@
         the ability to bring those concepts to life
         through creative<span class="stroke"> front-end development</span>.
       </h2>
-      <p data-aos="fade-up" data-scroll-speed="20" data-aos-anchor-placement="bottom-bottom">I also like to do from time to time a bit of
+      <p data-aos="fade-up" data-scroll-speed="20">
+         I also like to do from time to time a bit of
          illustration & motion.
          I look forward to any kind of creative work
          including branding and art direction.
@@ -740,7 +738,7 @@
   </main>
   <footer class="cont">
       <h2 data-aos="fade-up"><span class="stroke">Have a Project in mind?</span><br><a href="mailto:rnegic341@gmail.com">Let me know.</a></h2>
-      <p data-aos="fade-up">Crafted with love by abhishek jha.<span class="to_be_hidden"> all rights reserved. made possible by github.</span></p>
+      <p data-aos="fade-up" data-aos-anchor-placement="top-bottom">Crafted with love by abhishek jha.<span class="to_be_hidden"> all rights reserved. made possible by github.</span></p>
   </footer>
   <script>
 
