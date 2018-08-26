@@ -25,7 +25,7 @@ body, html{
 }
 
 ::-webkit-scrollbar-thumb{
-  background: #7e7e7e;
+  background: #28282a;
 }
 
 @font-face {
@@ -93,6 +93,7 @@ a{
   top: 10%;
   left: 10%;
   z-index: 10;
+  box-shadow: inset 480px 0 #fffcef;
 }
 
 .header__logo{
@@ -101,9 +102,10 @@ a{
 }
 
 .header a{
-  padding: 0 16px;
+  margin: 0 16px;
   letter-spacing: 1px;
   transition: 0.4s;
+  box-shadow: inset 0px 0 #ccc;
 }
 
 .header__pgname{
@@ -115,7 +117,7 @@ a{
 }
 
 .header a:hover{
-  text-decoration: underline;
+  box-shadow: inset 30px 0 #bbb;
 }
 
 /*CONTENT*/
@@ -138,8 +140,9 @@ a{
   top: 48%;
   right: 12%;
   font-family: bebas, sans-serif;
-  font-size: 30vh;
+  font-size: 32vh;
   opacity: 0.2;
+  letter-spacing: 15px;
 }
 
 .banner p{
@@ -187,7 +190,7 @@ a{
   background-position: center;
 }
 
-.art__knowedge{
+.art__knowledge{
   background: url("photos/know.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
@@ -214,7 +217,7 @@ a{
 }
 
 .art__text--info h3{
-  margin: 6px 0 -15px 0;
+  margin: 6px 0 -12px 0;
   font-family: kayak-b, sans-serif;
 }
 
@@ -334,7 +337,6 @@ a{
 .nxt h1, .nxt h2{
   font-family: bebas, sans-serif;
   font-size: 8vh;
-  color: #28282a;
   letter-spacing: 5px;
 }
 
