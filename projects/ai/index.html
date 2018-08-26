@@ -1,0 +1,469 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <title>Ai Senses</title>
+  <link rel="shortcut icon" href="photos/logo.jpg">
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  body, html{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: #fffcef;
+  }
+
+  *{
+    box-sizing: border-box;
+  }
+
+  ::selection{
+    background: transparent;
+    color: inherit;
+  }
+
+  ::-moz-selection{
+    background: transparent;
+    color: inherit;
+  }
+
+  ::-webkit-scrollbar{
+    background: #eee;
+    width: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb{
+    background: #7e7e7e;
+  }
+
+  @font-face {
+    font-family: product;
+    src: url('fonts/Product.ttf');
+  }
+
+  @font-face {
+    font-family: bebas;
+    src: url('fonts/BebasNeue.otf');
+  }
+
+  @font-face {
+    font-family: crete;
+    src: url('fonts/CreteRound.ttf');
+  }
+
+  @font-face {
+    font-family: kayak-b;
+    src: url('fonts/Kayak Sans Bold.otf');
+  }
+
+  @font-face {
+    font-family: kayak-r;
+    src: url('fonts/Kayak Sans Regular.otf');
+  }
+
+  h1, h2, h3, h4{
+    margin: 0;
+    padding: 0;
+  }
+
+  p{
+    font-family: kayak-r, sans-serif;
+  }
+
+  ul{
+    list-style-type: none;
+    padding: 0px;
+  }
+
+  a{
+    text-decoration: none;
+    font-family: kayak-b, sans-serif;
+    color: #283149;
+  }
+
+  /*STYLESHEETS*/
+
+  .header{
+    width: 80%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    top: 10%;
+    left: 10%;
+    z-index: 10;
+  }
+
+  .header__logo{
+    width: 38px;
+    margin-right: 25px;
+  }
+
+  .header a{
+    padding: 0 16px;
+    letter-spacing: 1px;
+  }
+
+  .header__pgname{
+    position: absolute;
+    right: 0;
+    bottom: -12%;
+    color: #283149;
+    font-family: kayak-b, sans-serif;
+  }
+
+
+  .scroll{
+    position: absolute;
+    bottom: 15%;
+    right: 6%;
+    transform: rotate(-90deg);
+  }
+
+  /*banner*/
+
+  .banner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+  }
+
+  .banner__text{
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(0, -50%);
+  }
+
+  .banner__text h1{
+    font-size: 20vh;
+    font-family: product, sans-serif;
+    color: #28282a;
+  }
+
+  .banner__text h2{
+    position: absolute;
+    top: 10%;
+    right: 32%;
+    font-family: crete, sans-serif;
+    color: #283149;
+  }
+
+  .banner__text p{
+    line-height: 25px;
+    margin-top: -5px;
+    padding-left: 10px;
+    color: #404b69;
+  }
+
+  .banner__img{
+   height: 85%;
+   position: absolute;
+   top: 50%;
+   right: 15%;
+   transform: translate(0, -50%);
+   z-index: 3;
+  }
+
+
+  .marq{
+    position: absolute;
+    width: 100%;
+    font-size: 35vh;
+    font-family: product, sans-serif;
+    right: 0;
+    opacity: 0.1;
+    letter-spacing: 5px;
+    margin-top: -180px;
+  }
+
+
+  .content{
+    padding: 10%;
+    width: 100%;
+  }
+
+
+  .senses-ltr, .senses-rtl{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 150px;
+  }
+
+  .senses__img{
+    width: 56%;
+    position: relative;
+  }
+
+  .senses__img img{
+    width: 100%;
+  }
+
+  .senses__img--gradient, .senses-rtl__img--gradient{
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 252, 239, 0.0), rgba(255, 252, 239, 1) 80%);
+  }
+
+  .senses-rtl__img--gradient{
+    left: 0;
+    background: linear-gradient(to right, rgba(255, 252, 239, 1) 20%, rgba(255, 252, 239, 0));
+  }
+
+  .senses__text, .senses-rtl__text{
+    width: 44%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    margin-left: -12px;
+  }
+
+  .senses-rtl__text{
+    margin-left: 12px;
+    margin-right: -12px;
+  }
+
+  .senses__text h1, .senses-rtl__text h1{
+    font-size: 50px;
+    transform: scale(5, 5);
+    position: absolute;
+    top: 10px;
+    right: 20%;
+    font-family: bebas, sans-serif;
+    opacity: 0.1;
+  }
+
+  .senses-rtl__text h1{
+    right: 65%;
+  }
+
+  .senses__text h2, .senses-rtl__text h2{
+    font-size: 58px;
+    letter-spacing: 8px;
+    font-family: bebas, sans-serif;
+    color: #283149;
+  }
+
+  .senses-rtl__text h2, .senses-rtl__text p{
+    text-align: right;
+  }
+
+  .senses__text p, .senses-rtl__text p{
+    line-height: 25px;
+    margin-top: 5px;
+    color: #404b69;
+  }
+
+  .senses__text a, .senses-rtl__text a{
+    padding-left: 70%;
+    text-decoration: underline;
+    font-family: kayak-b, sans-serif;
+  }
+
+  .senses-rtl__text a{
+    padding-left: 20%;
+    text-align: right;
+  }
+
+
+
+  .quote{
+    margin: 200px 0 -80px 0;
+    text-align: center;
+  }
+
+  .quote h2{
+    font-family: crete, sans-serif;
+    color: #283149;
+    text-align: center;
+    font-size: 34px;
+  }
+
+  .quote img{
+    width: 50px;
+    margin-bottom: 30px;
+  }
+
+  .quote p{
+    padding-left: 50%;
+    color: #404b69;
+    font-family: kayak-b, sans-serif;
+  }
+
+  /*FOOTER*/
+
+  .footer{
+    width: 100%;
+    position: relative;
+  }
+
+  .footer__text{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: auto;
+    transform: translate(0, 160%);
+  }
+
+  .footer__text img{
+    width: 40px;
+    margin-right: 20px;
+  }
+
+  .footer__text p{
+    color: #404b69;
+    font-family: kayak-b, sans-serif;
+  }
+
+  .footer__text p:nth-child(3){
+    position: absolute;
+    right: 0;
+    color: #404b69;
+  }
+
+  .footer__artwork{
+    width: 10%;
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: 0.3;
+  }
+
+  </style>
+</head>
+<body>
+
+  <!--FIXED-->
+
+  <div class="header">
+    <img class="header__logo" src="photos/logo.jpg">
+    <a href="interaction.html">interaction</a>
+    <a href="monitor.html">monitor</a>
+    <a href="analyze.html">analyze</a>
+    <a href="knowledge.html">knowledge</a>
+
+    <p class="header__pgname"><s>homepage</s></p>
+  </div>
+
+  <p class="scroll">
+    scroll to navigate
+  </p>
+
+  <!--CONTENT-->
+
+  <div class="banner">
+    <div class="banner__text">
+      <h2>ai can read, see and hear</h2><br>
+      <h1>ai senses</h1>
+      <p>Nulla consequat massa quis enim. Donec pede justo,<br>
+         fringilla vel, aliquet nec, vulputate eget, arcu.
+       </p>
+     </div>
+     <img class="banner__img" src="photos/banner.png">
+   </div>
+
+
+   <marquee class="marq" dir="left" scrollamount="1" behavior="alternate" vspace="200px">the four senses of ai</marquee>
+
+   <!--SENSES LIST-->
+
+   <div class="content">
+
+   <div class="senses-ltr" style="margin-top: 20px;">
+     <div class="senses__img">
+      <img src="photos/inter.png"></img>
+      <div class="senses__img--gradient"></div>
+     </div>
+     <div class="senses__text">
+       <h1>01</h1>
+       <h2>Interaction</h2>
+       <p>This is the ability to listen, read, talk, write, and respond to
+          users of the<br>AI solution. The aim here is for technology to
+          ensure that the<br> interaction feels intuitive and the
+          customer is happy.
+        </p><br>
+        <a href="#">view page</a>
+      </div>
+    </div>
+
+
+    <div class="senses-rtl">
+      <div class="senses-rtl__text">
+        <h1>02</h1>
+        <h2>Monitor</h2>
+        <p>Here technology is used to watch and record key business data.<br>
+          It is used to create knowledge. This would include <br>
+          CCTV and IoT sensors.
+         </p><br>
+         <a href="#">view page</a>
+       </div>
+       <div class="senses__img">
+        <img src="photos/monitor.jpg"></img>
+        <div class="senses-rtl__img--gradient"></div>
+       </div>
+     </div>
+
+
+     <div class="senses-ltr">
+       <div class="senses__img">
+        <img src="photos/analyze.jpg"></img>
+        <div class="senses__img--gradient"></div>
+       </div>
+       <div class="senses__text">
+         <h1>03</h1>
+         <h2>Analyze</h2>
+         <p>This is the ability to detect patterns and recognize trends. It<br> applies
+            algorithms to knowledge to determine appropriate<br> action
+            or predict future consequences.
+         </p><br>
+         <a href="#">view page</a>
+        </div>
+      </div>
+
+
+      <div class="senses-rtl">
+        <div class="senses-rtl__text">
+          <h1>04</h1>
+          <h2>Knowledge</h2>
+          <p>This is about being able to store and find information effectively <br>
+             using components like databases and search engines.
+           </p><br>
+           <a href="#">view page</a>
+         </div>
+         <div class="senses__img">
+          <img src="photos/know.jpg"></img>
+          <div class="senses-rtl__img--gradient"></div>
+         </div>
+       </div>
+
+
+       <div class="quote">
+         <img src="photos/quote.png"><br>
+         <h2>I visualize a time when we will be to robots what dogs<br>
+             are to humans, and I’m rooting for the machines.
+          </h2>
+         <p>- Claude Shannon</p>
+       </div>
+
+     </div>
+
+      <!--FOOTER-->
+
+      <div class="footer">
+        <div class="footer__text">
+         <img src="photos/logo.jpg">
+         <p>ai senses</p>
+         <p>created by abhishek jha. <a href="https://www.instagram.com/auriga_z/">@auriga_z</a></p>
+        </div>
+        <img class="footer__artwork" src="photos/footer.png">
+      </div>
+
+  </body>
+  </html>
