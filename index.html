@@ -133,7 +133,7 @@
     width: 100%;
   }
 
-  .l-sd-bar a, .bar-links a:after{
+  .l-sd-bar a, .l-sd-bar p, .bar-links a:after{
     color: #2a2a2a;
   }
 
@@ -163,11 +163,12 @@
     font-size: 13px;
   }
 
-  .l-sd-bar ul:first-child a{
+  .l-sd-bar ul:first-child p{
     font-family: bahnschrift, sans-serif;
-    font-style: semi-condensed;
     text-transform: capitalize;
     padding: 8px 0;
+    letter-spacing: 1px;
+    font-size: 16px;
   }
 
   .r-sd-bar{
@@ -470,8 +471,12 @@
 
     .r-sd-bar p, .l-sd-bar, .left-img::after, .right-img::after,
     .left-text a::after, .right-text a::after, .bnr-hero::after,
-    .bnr-para h2, .to_be_hidden, .bar-links a:after{
+    .bnr-para h2, .to_be_hidden{
       display: none;
+    }
+
+    .texture{
+      filter: brightness(1.5);
     }
 
     .bnr-para p, .info p{
@@ -479,7 +484,7 @@
     }
 
     .r-sd-bar{
-      top: 9%;
+      top: 8%;
       width: 84%;
       height: 25px;
       z-index: 3;
@@ -491,8 +496,8 @@
 
     .bar-links{
       position: absolute;
-      right: 8px;
-      top: 8px;
+      right: 5px;
+      top: 9px;
       display: flex;
     }
 
@@ -503,7 +508,7 @@
     main, footer, .bnr{
       width: 100%;
       margin-left: 0;
-      padding: 7% 6%;
+      padding: 6.5% 6%;
     }
 
     footer{
@@ -525,7 +530,7 @@
     .prj{
       flex-direction: column;
       align-items: center;
-      margin-bottom: -16vh;
+      margin-bottom: -13vh;
       overflow: hidden;
     }
 
@@ -546,7 +551,7 @@
       transform: translate(0, 0);
       text-align: right;
       text-decoration: underline;
-      margin-top: -6px;
+      margin-top: -3vh;
     }
 
     .info p{
@@ -570,13 +575,14 @@
     /*Font Sizing*/
 
     p{
-      font-size: 14px;
+      font-size: 13px;
       line-height: 27px;
     }
 
     .bnr-hero h1{
-      font-size: 8vh;
+      font-size: 8.3vh;
       padding-bottom: 15px;
+      letter-spacing: 1px;
     }
 
     .prjs h2{
@@ -595,7 +601,7 @@
 
     .info h2{
       font-size: 5.5vh;
-      padding: 6vh 0 0 0;
+      padding: 8.5vh 0 0 0;
     }
 
     .cont h2, .cont a{
@@ -615,15 +621,15 @@
   <!--left side bar-->
   <div class="l-sd-bar">
     <ul>
-      <li><a href="#">about</a></li>
-      <li><a href="#">projects</a></li>
-      <li><a href="#">home</a></li>
-      <li><a href="#">contact</a></li>
+      <li><p id="abt" href="javascript:void(0);">about</p></li>
+      <li><p id="prj" href="javascript:void(0);">projects</p></li>
+      <li><p id="hom" href="javascript:void(0);" href="#">home</p></li>
+      <li><p id="con" href="javascript:void(0);" href="#">contact</p></li>
     </ul>
     <ul>
-      <li><a href="#">dribbble</a></li>
-      <li><a href="#">instagram</a></li>
-      <li><a href="#">behance</a></li>
+      <li><a href="https://dribbble.com/auriga">dribbble</a></li>
+      <li><a href="https://www.instagram.com/auriga_z/">instagram</a></li>
+      <li><a href="https://www.behance.net/auriga_z">behance</a></li>
     </ul>
   </div>
   <!--right bar-->
@@ -663,7 +669,7 @@
         <div class="prj-text left-text txt1" data-scroll-speed="13">
           <h3>Currently<span class="brake"> Located</span></h3>
           <p>Currently located travel
-             service that aims<br/> to maximize your experience.
+             service that aims to <br/>maximize your experience.
           </p><br/>
           <a target="_blank" href="https://www.currentlylocated.com/">visit site</a>
         </div>
@@ -688,8 +694,8 @@
         </div>
         <div class="prj-text left-text txt3" data-scroll-speed="13">
           <h3>Martial<span class="brake"> Arts</span></h3>
-          <p>A Template designed for a Martial
-             Arts &<br/> Fitness Academy.
+          <p>A Template designed for Martial
+             Arts & Fitness<br/>Academy.
           </p><br/>
           <a href="#">visit site</a>
         </div>
@@ -701,7 +707,7 @@
           <p>A New Perspective on the upcoming AI & some<br/>
              of their uses in Industries.
           </p><br/>
-          <a href="#">visit site</a>
+          <a href="projects/ai/index.html">visit site</a>
         </div>
         <div class="prj-img right-img">
           <img src="media/ari.jpg">
@@ -715,9 +721,9 @@
         <div class="prj-text left-text txt5" data-scroll-speed="13">
           <h3>Hero's<span class="brake"> Brother</span></h3>
           <p>A Template for Hero's Brother
-             a book by <br/>M. Scott Anderson.
+             a book by M. Scott <br/>Anderson.
           </p><br/>
-          <a href="#">visit site</a>
+          <a href="projects/hb/index.html">visit site</a>
         </div>
       </div>
 
@@ -771,6 +777,30 @@
 
    // Initialization
    $(function(){$('[data-scroll-speed]').moveIt();});
+
+
+   $(document).ready(function(){
+
+     $("#abt").click(function(){
+       $("html, body").animate({
+           scrollTop: $(".info").offset().top}, 1000);
+     });
+
+     $("#prj").click(function(){
+       $("html, body").animate({
+           scrollTop: $(".prjs").offset().top}, 1000);
+     });
+
+     $("#hom").click(function(){
+       $("html, body").animate({
+           scrollTop: $(".bnr").offset().top}, 1000);
+     });
+
+     $("#con").click(function(){
+       $("html, body").animate({
+           scrollTop: $(".cont").offset().top}, 1000);
+     });
+   });
   </script>
 </body>
 </html>
