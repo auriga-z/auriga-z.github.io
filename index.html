@@ -18,10 +18,23 @@
     height: 100%;
     margin: 0px;
     font-family: verdana, sans-serif;
-    background: #0000ef;
+    background: #014baa;
+    animation: color 60s infinite;
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     text-rendering: geometricPrecision;
+  }
+
+  @keyframes color{
+    0%{background: #f30e5c;}
+    10%{background: #ff5959;}
+    20%{background: #f34949;}
+    40%{background: #7045af;}
+    50%{background: #014baa;}
+    60%{background: #7045af;}
+    70%{background: #f34949;}
+    90%{background: #ff5959;}
+    100%{background: #f30e5c;}
   }
 
   .texture{
