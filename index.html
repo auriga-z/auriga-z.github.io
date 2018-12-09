@@ -18,23 +18,10 @@
     height: 100%;
     margin: 0px;
     font-family: verdana, sans-serif;
-    background: #014baa;
-    animation: color 60s infinite;
+    background: #2b2b28;
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     text-rendering: geometricPrecision;
-  }
-
-  @keyframes color{
-    0%{background: #f30e5c;}
-    10%{background: #ff5959;}
-    20%{background: #f34949;}
-    40%{background: #7045af;}
-    50%{background: #014baa;}
-    60%{background: #7045af;}
-    70%{background: #f34949;}
-    90%{background: #ff5959;}
-    100%{background: #f30e5c;}
   }
 
   .texture{
@@ -46,6 +33,7 @@
     height: 100%;
     background: url('media/bg.png');
     background-size: cover;
+    opacity: .5;
   }
 
   /*UNIVERSAL*/
@@ -498,6 +486,10 @@
 
     .bnr-para p, .info p{
       width: 94%;
+    }
+
+    .bnr-hero h1{
+      text-align: left;
     }
 
     .r-sd-bar{
