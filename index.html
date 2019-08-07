@@ -202,6 +202,7 @@
   .wrk > div > div{
     padding: 10px 0;
     position: relative;
+    overflow-x: hidden;
   }
 
   .wrk > div > div a::after{
@@ -212,12 +213,12 @@
     width: 3vh;
     height: 3vh;
     top: 50%;
-    transition: .6s;
+    transition: .8s;
     transform: translate(0, -50%) rotate(-90deg);
   }
 
   .wrk > div > div a[data-emergence=hidden]::after{
-    right: -100%;
+    right: -10%;
   }
   .wrk > div > div a[data-emergence=visible]::after{
     right: 0;
