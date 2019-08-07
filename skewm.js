@@ -17,7 +17,7 @@ constructor() {
   this.bindMethods()
 
   this.data = {
-    ease: 0.1,                //ease: 0.1,
+    ease: 0,                //ease: 0.1,
     current: 0,               //current: 0,
     last: 0                   //last: 0
   }
