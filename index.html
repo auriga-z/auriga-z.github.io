@@ -207,7 +207,6 @@
   .wrk > div > div a::after{
     content: "";
     position: absolute;
-    right: 0;
     background: url('arrow.png');
     background-size: cover;
     width: 3vh;
@@ -215,6 +214,14 @@
     top: 50%;
     transform: translate(0, -50%) rotate(-90deg);
   }
+
+  .wrk > div > div a[data-emergence=hidden]::after{
+    right: -100%;
+  }
+  .wrk > div > div a[data-emergence=visible]::after{
+    right: 0;
+  }
+
 
   .wrk > div > div h4{
     font-size: 3vh;
@@ -314,7 +321,7 @@
         <div>
           <hr data-emergence="hidden">
           <div>
-            <a href="">
+            <a href="" data-emergence="hidden">
               <h4>
                 <span class="row">
                   <span data-emergence="hidden">Currently Located</span>
@@ -324,7 +331,7 @@
           </div>
           <hr data-emergence="hidden">
           <div>
-            <a href="">
+            <a href="" data-emergence="hidden">
               <h4>
                 <span class="row">
                   <span data-emergence="hidden">Chuu redesign</span>
@@ -334,7 +341,7 @@
           </div>
           <hr data-emergence="hidden">
           <div>
-            <a href="">
+            <a href="" data-emergence="hidden">
               <h4>
                 <span class="row">
                   <span data-emergence="hidden">Star wars</span>
@@ -344,7 +351,7 @@
           </div>
           <hr data-emergence="hidden">
           <div>
-            <a href="">
+            <a href="" data-emergence="hidden">
               <h4>
                 <span class="row">
                   <span data-emergence="hidden">Vvorld agency</span>
