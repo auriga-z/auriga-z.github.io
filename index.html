@@ -248,6 +248,34 @@
     text-decoration: underline;
   }
 
+  .imgrev{
+    position: relative;
+    overflow: hidden;
+  }
+
+  .imgrev img{
+    width: 100%;
+  }
+
+  .imgrev::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #1d1d1d;
+    z-index: 4;
+    transition: .8s;
+    transition-delay: .2s;
+  }
+
+  .imgrev[data-emergence=hidden]::before {
+    width: 100%;
+  }
+  .imgrev[data-emergence=visible]::before{
+    width: 0;
+  }
+
 
   </style>
 </head>
@@ -300,7 +328,9 @@
           </span>
         </h1>
         <div>
-          <img style='width: 100%' src="pos.jpg">
+          <div class="imgrev" data-emergence="hidden">
+            <img style='width: 100%' src="pos.jpg">
+          </div>
           <p>
             <span class="row">
               <span data-emergence="hidden">Hi, I'm Abhishek Jha, a visual designer</span>
