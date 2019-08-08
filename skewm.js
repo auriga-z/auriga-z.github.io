@@ -17,7 +17,7 @@ constructor() {
   this.bindMethods()
 
   this.data = {
-    ease: 0.08,                //ease: 0.1,
+    ease: 0.1,                //ease: 0.1,
     current: 0,               //current: 0,
     last: 0                   //last: 0
   }
@@ -75,7 +75,7 @@ run() {
   const diff = this.data.current - this.data.last
   const acc = diff / config.width
   const velo =+ acc
-  const skew = velo * 5.5        //was 7.5
+  const skew = velo * 7.5        //was 7.5
 
   this.dom.content.style.transform = `translate3d(0, -${this.data.last}px, 0) skewY(${skew}deg)`
 
