@@ -77,7 +77,7 @@ run() {
   const velo =+ acc
   const skew = velo * 7.5        //was 7.5
 
-  this.dom.content.style.transform = `translate3d(0, -${this.data.last}px, 0) skewY(${skew}deg)`
+  this.dom.content.style.transform = `translate3d(0, -${this.data.last}px, 0)`
 
   this.requestAnimationFrame()
 }
