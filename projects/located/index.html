@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Currently Located</title>
+  <meta charset="utf-8"/>
+  <meta name="description" content="Travel Service with an Element of Surprise">
+  <meta name="keywords" content="travel, holiday, plans, enjoy, planner">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+  <link rel="shortcut icon" href="photos/icon.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <style>
+  body, html{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+  }
+
+  *{
+    box-sizing: border-box;
+  }
+
+  @font-face {
+    font-family: product-r;
+    src: url("../../fonts/product.ttf");
+  }
+
+  @font-face {
+    font-family: product-b;
+    src: url("../../fonts/productb.ttf");
+  }
+
+  @font-face {
+    font-family: kayak-r;
+    src: url("font/Kayak Sans Regular.otf");
+  }
+
+  @font-face {
+    font-family: kayak-b;
+    src: url("font/Kayak Sans Bold.otf");
+  }
+
+  @font-face {
+    font-family: bebas;
+    src: url("font/Bebas.otf");
+  }
+
+  ::-webkit-scrollbar{
+    width: 5px;
+    background: #f8f5f0;
+  }
+
+  ::-webkit-scrollbar-thumb{
+    background: #27253d;
+  }
+
+
+  p, h1, h2, h3, h4{
+    margin: 0px;
+    font-family: sans-serif;
+    font-weight: normal;
+  }
+
+  p{
+    font-size: 14px;
+  }
+
+  ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  hr{
+    display: block;
+  }
+
+  a{
+    text-decoration: none;
+    font-family: kayak-r, sans-serif;
+    display: block;
+  }
+
+  button{
+    background: none;
+    border: none;
+  }
+
+  /*STYLESHEETS*/
+
+  .nav, .nav__logo, .nav__social, .nav__menu, #scroll, .testi{
+    display: flex;
+    align-items: center;
+  }
+
+  .flex{
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .padding_6-18{
+    padding: 6% 18%;
+  }
+
+  .width_to_100{
+
+  }
+
+  .padding_10-22{
+    padding: 10% 22%;
+  }
+
+  .nav__logo, .nav__menu, .nav__social, #bg, .play{
+    position: absolute;
+  }
+
+  .nav, #sidebar, #scroll, #bnr__photo, .background, #que{
+    position: fixed;
+  }
+
+  .title{
+    font-family: bebas, sans-serif;
+    font-size: 10vh;
+    letter-spacing: 5px;
+    color: #27253d;
+  }
+
+  .ideal__para{
+    font-family: kayak-r, sans-serif;
+    font-size: 15px;
+    color: #326765;
+    line-height: 25px;
+  }
+
+  .video, .gallery{
+    position: relative;
+    width: 100%;
+    height: inherit;
+    padding: 10%;
+  }
+
+  h5{
+    font-size: 14px;
+    font-family: sans-serif;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    white-space: nowrap;
+    color: #27253d;
+    position: relative;
+  }
+
+  h5::after{
+    content: "";
+    width: 10px;
+    height: 2px;
+    position: absolute;
+    background: #27253d;
+    top: -10px;
+    left: 0;
+  }
+
+  button img{
+    width: 20px;
+    padding: 5px;
+  }
+
+  .active__btn{
+    position: relative;
+    color: #27253d;
+    display: block;
+  }
+
+  .active__btn:hover{
+    transform: scale(1.1, 1.1);
+  }
+
+  .left__button{
+    transform: rotate(180deg);
+  }
+
+  [class~="wrapper"]{
+    display: flex;
+    transition: 0.6s;
+  }
+
+  /*FIXED*/
+
+  .nav{
+    top: 12%;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+  }
+
+  .nav__logo{
+    left: 8%;
+  }
+
+  .nav__logo img{
+    width: 90px;
+  }
+
+  .nav__menu{
+    right: 8%;
+  }
+
+  .nav__menu a{
+    padding: 0 15px;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  .nav__menu a img{
+    width: 16px;
+  }
+
+  .nav__social{
+    left: 18%;
+  }
+
+  .nav__social img {
+    width: 15px;
+    margin: 8px;
+  }
+
+  .nav__social:last-child{
+    width: 205px;
+  }
+
+  .black{
+    filter: invert(1) sepia(1) saturate(5) hue-rotate(175deg);
+  }
+
+  #sidebar{
+    transform: translate(0, 50%) rotate(90deg);
+    z-index: 2;
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  .sidebar__right{
+    right: .7%;
+    bottom: 50%;
+  }
+
+  .sidebar__right a{
+    color: #fff;
+  }
+
+  @keyframes side {
+    from{opacity: 0; margin-left: -5%;}
+    to{opacity: .4; margin-left: 0;}
+  }
+
+
+  .sidebar__left{
+    left: 1.5%;
+    bottom: 30%;
+    animation: side .6s;
+    opacity: .4;
+  }
+
+  .sidebar__left a{
+    color: #000;
+  }
+
+  #scroll{
+    transform: rotate(90deg);
+    opacity: 0.7;
+  }
+
+  #sidebar a, #scroll a{
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  #scroll{
+    bottom: 8%;
+    right: 5.35%;
+  }
+
+  #scroll hr{
+    width: 45px;
+    height: 1px;
+    margin: 3px 0 0 8px;
+    background: #fff;
+    border: none;
+  }
+
+  #scroll a{
+    color: #fff;
+  }
+
+  /*BANNER*/
+
+  #bnr__photo{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url('photos/banner.jpg');
+    background-size: cover;
+    z-index: -2;
+    transition: .8s;
+  }
+
+  .banner{
+    width: 100%;
+    height: 100%;
+    padding-left: 10%;
+    color: #fff;
+    position: relative;
+  }
+
+  .banner__text{
+    position: absolute;
+    top: 50%;
+    z-index: -2;
+    transform: translate(0, -50%);
+  }
+
+  .banner h1{
+    font-family: product-b;
+    font-size: 15vh;
+  }
+
+  .banner p{
+    padding: 20px 0 0 0;
+    width: 55%;
+    word-wrap: normal;
+    font-family: kayak-r;
+    line-height: 25px;
+  }
+
+  .background{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+  }
+
+  #bg{
+    transition: 0.4s;
+    z-index: -1;
+    background: #f8f5f0;
+  }
+
+  .bg__white--hidden{
+    bottom: 0;
+    left: 8%;
+    width: 60%;
+    height: 35px;
+  }
+
+  .bg__white--visible{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 140%;
+  }
+
+  /*QUESTIONAIRE*/
+
+  #que{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 4;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.8s;
+  }
+
+  #que__close{
+    position: absolute;
+    top: 50%;
+    right: 42%;
+  }
+
+  #que__close img{
+    width: 35px;
+  }
+
+  #que__form{
+    width: 60%;
+    height: 100%;
+    overflow-y: scroll;
+    padding: 10% 0 0 3%;
+  }
+
+  #que iframe{
+    margin: auto;
+  }
+
+  #que__img{
+    width: 40%;
+    background: url('photos/vid.JPG');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+  }
+
+
+  /*ABOUT*/
+
+  .about__photo{
+    width: 55%;
+    overflow: hidden;
+  }
+
+  .about__text{
+    width: 45%;
+  }
+
+  .about__text p{
+    width: 78%;
+  }
+
+  .about__photo img{
+    width: 100%;
+  }
+
+  /*ELEMENTS*/
+
+  .elements{
+    width: 100%;
+    flex-direction: column;
+    padding: 5% 11%;
+  }
+
+  .elements__body{
+    text-align: center;
+  }
+
+  .elements p{
+    font-size: 18px;
+    font-family: kayak-r, sans-serif;
+    padding-bottom: 40px;
+  }
+
+  .elem{
+    width: 33.33%;
+    background: #eee;
+    border-radius: 10px;
+    margin: 0 18px;
+    padding: 25px 16px 8px 16px;
+  }
+
+  .elem img{
+    width: 100px;
+    padding-bottom: 20px;
+  }
+
+  .elem p{
+    font-size: 12px;
+    line-height: calc(12px * 1.618px);
+  }
+
+  #elem__title, #elem__para{
+    transition: 0.4s;
+  }
+
+  .elements h5{
+    margin: auto;
+    padding-bottom: 30px;
+  }
+
+
+  /*TIPS*/
+
+  .hidden-tips{
+    position: fixed;
+    top: 10%;
+    left: 20%;
+    width: 60%;
+    height: 80%;
+    background: #f8f5f0;
+    box-shadow: 10px 10px 50px #000;
+    z-index: 20;
+    transition: 0.6s;
+    visibility: hidden;
+    overflow: scroll;
+  }
+
+  .hidden-tips ul{
+    list-style: circle;
+  }
+
+  .hidden-tips h2{
+    text-align: center;
+    font-family: bebas, sans-serif;
+    font-size: 4vh;
+    padding: 20px;
+    color: #27253d;
+  }
+
+  #tips__close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  #tips__close img{
+    width: 30px;
+  }
+
+
+  .hidden-tips li{
+    font-family: kayak-r, sans-serif;
+    padding: 20px;
+  }
+
+  .tips{
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  .tips__layer{
+    justify-content: space-between;
+  }
+
+  .nudge-up{
+    margin-top: -14%;
+  }
+
+  .--aid{
+    padding-left: 5%;
+  }
+
+  .tips__layer img{
+    width: 50%;
+  }
+
+  .tips__text{
+    width: 50%;
+  }
+
+  .tips__text p{
+    width: 70%;
+  }
+
+  .tips__text a{
+    color: #326765;
+    text-decoration: underline;
+  }
+
+  .tips__layer img:last-child{
+    width: 63%;
+  }
+
+
+  /*TESTIMONIALS*/
+
+  .testimonials{
+    padding: 3% 10% 0% 10%;
+  }
+
+  .testimonials h5{
+    padding: 0 0 35px 0;
+    margin-left: 60px;
+  }
+
+  .testimonials a{
+    margin: auto;
+    width: 162.5px;
+    margin-top: 20px;
+  }
+
+  .testi button{
+    padding: 4%;
+  }
+
+  .testi__holder{
+    overflow: hidden;
+  }
+
+  #testi__text{
+    transition: 0.4s;
+  }
+
+  .testi h1{
+    text-align: center;
+    font-size: 3.5vh;
+    font-family: product-r;
+    line-height: 36px;
+    min-width: 100%;
+    height: auto;
+    color: #27253d;
+  }
+
+  .testi h1 p{
+    font-family: kayak-r, sans-serif;
+  }
+
+  /*VIDEO*/
+
+  .video{
+    height: auto;
+  }
+
+  .video video{
+    width: 95%;
+    margin-left: 2.5%;
+  }
+
+  .play{
+    left: 50%;
+    top: 50%;
+    width: 60px;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+
+  .vid{
+    width: 100%;
+    transform: translate(0, -20%);
+  }
+
+  /*STORE*/
+
+  .store{
+    padding-top: 0%;
+  }
+
+  .store__content{
+    justify-content: space-between;
+  }
+
+  .store__photo{
+    width: 52%;
+    overflow: hidden;
+
+  }
+
+  #s-img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .store__photo div{
+    min-width: 100%;
+  }
+
+  .store__photo img{
+    width: 100%;
+  }
+
+  .store__text{
+    width: 48%;
+    margin-left: 6%;
+  }
+
+  .store__heading{
+    width: 100%;
+    height: 14vh;
+    overflow: hidden;
+    margin-bottom: 3%;
+  }
+
+  .title{
+    min-width: 100%;
+  }
+
+  .store__para{
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 10%;
+  }
+
+  .active__btn{
+    font-size: 16px;
+    font-family: kayak-r,sans-serif;
+    text-decoration: none;
+    padding: 8px 25px;
+    background: #27253d;
+    color: #fff;
+    border-radius: 200px;
+  }
+
+  #s-para{
+    transition: 0.8s;
+  }
+
+  .store__para p{
+    min-width: 100%;
+  }
+
+  .store__buttons{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /*GALLERY*/
+
+  .gallery{
+    padding: 0 12% 4% 12%;
+    height: auto;
+  }
+
+  .gallery img{
+    width: 100%;
+    margin: 10% 0;
+  }
+
+  .gallery__column{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 0 5%;
+  }
+
+  /*FOOTER*/
+
+  footer{
+    background: #ece8d9;
+    position: relative;
+    z-index: 3;
+  }
+
+  footer p, footer a{
+    font-size: 14px;
+  }
+
+  .footer{
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 7% 10%;
+  }
+
+  footer a{
+    color: #374818;
+  }
+
+  .f__logo{
+    width: 150px;
+  }
+
+  .f__add p{
+    color: #374818;
+    font-family: kayak-b;
+    padding-bottom: 10px;
+  }
+
+  .f__links a{
+    padding: 0 0 8px 0;
+  }
+
+  .f__sub input{
+    background: none;
+    border: none;
+    border-bottom: 1px solid #374818;
+    font-size: 14px;;
+    color: #374818;
+    font-family: kayak-r;
+    width: 70%;
+  }
+
+  .f__sub button img{
+    width: 18px;
+  }
+
+  .f__social a{
+    margin: 8px 0 0 0;
+  }
+
+  .footer h6{
+    margin: 0 0 10px 0;
+    font-size: 17px;
+    color: #3c502a;
+    font-family: product-r;
+    letter-spacing: 1px;
+  }
+
+  .f__copy{
+    width: 75%;
+    padding-bottom: 30px;
+    margin: auto;
+    justify-content: space-between;
+  }
+
+  .f__copy p{
+    font-family: kayak-r;
+    color: #144d53;
+  }
+
+  .f__copy a{
+    display: inline;
+    color: #144d53;
+  }
+
+
+
+
+  @media only screen and (max-width: 720px){
+    .nav__social, #sidebar, #scroll, .nav__menu a:first-child, .gallery__column:last-child,
+    #que__img{
+      display: none;
+    }
+
+    .--aid{
+      padding-left: 0;
+    }
+
+    .title{
+      font-size: 8vh;
+    }
+
+    .ideal__para{
+      font-size: 14px;
+    }
+
+    #bnr__photo{
+      background-position: center;
+    }
+
+    .banner{
+      padding: 45% 5% 0 8%;
+    }
+
+    .banner h1{
+      font-size: 11vh;
+    }
+
+    .banner p {
+      width: 80%;
+    }
+
+    .bg__white--hidden{
+      width: 84%
+    }
+
+    #que__form{
+      overflow-y: scroll;
+      padding: 8% 0 0 0;
+    }
+
+    #que iframe{
+      transform: scale(.8, .8);
+      margin-left: -20%;
+    }
+
+    #que{
+      z-index: 30;
+    }
+
+    #que__close{
+      top: 5%;
+      right: 50%;
+      transform: translate(50%, 0);
+    }
+
+    .flex{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .padding_6-18, .padding_10-22, .testimonials, .gallery{
+      padding: 3% 8%;
+    }
+
+    .width_to_100, #que__form{
+      width: 100%;
+    }
+
+    .about__photo{
+      margin: 28px 0;
+    }
+
+    .about__text p{
+      width: 100%;
+    }
+
+    .elements{
+      align-items: flex-start;
+    }
+
+    .elem{
+      width: 100%;
+      margin: 20px 0;
+    }
+
+    .hidden-tips{
+      top: 0%;
+      left: 0%;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0px 0px 0px #000;
+      z-index: 30;
+      transition: 0.6s;
+      visibility: hidden;
+      overflow: scroll;
+    }
+
+    .tips div:first-child{
+      flex-direction: column-reverse;
+    }
+
+    .tips__layer img{
+      width: 100%;
+      margin: 25px 0;
+    }
+
+    .tips__layer img:last-child{
+      width: 100%;
+    }
+
+    .tips__text{
+      width: 100%;
+    }
+
+    .nudge-up{
+      margin: 0;
+    }
+
+    .testimonials{
+      margin: 38px 0 70px 0;
+    }
+
+    .testimonials h1{
+      font-size: 4vh;
+      line-height: 30px;
+      text-align: left;
+    }
+
+    .testimonials h5{
+      margin-left: 0;
+      padding-bottom: 10px
+    }
+
+
+    .testi button{
+      padding: 10px;
+    }
+
+    .video{
+      margin-bottom: 8vh;
+      padding: 0;
+    }
+
+    .video video{
+      width: 100%;
+      margin: 0;
+    }
+
+    .store__heading{
+      height: 12vh;
+    }
+
+    .store{
+      margin-bottom: 6vh;
+    }
+
+    .gallery__column:first-child{
+      padding: 0;
+    }
+
+    footer{
+      position: relative;
+      z-index: 5;
+    }
+
+    .footer__ctn{
+      width: 100%;
+      margin: 25px 0;
+    }
+
+    .f__logo{
+      margin-top: 30px;
+    }
+
+    .f__copy{
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+
+  </style>
+</head>
+<body>
+  <!--FIXED MENU STUFF-->
+  <div class="nav">
+    <div class="nav__logo">
+      <img class="to__black" alt="Logo" src="photos/logo.png">
+    </div>
+    <div class="nav__social">
+      <a href="https://www.instagram.com/kis0sweet/"><img class="to__black" alt="Instagram" src="photos/instagram.svg"></a>
+      <a href="https://www.facebook.com/lovekmarie"><img class="to__black" alt="Facebook" src="photos/face.png"></a>
+    </div>
+    <div class="nav__menu">
+      <a href="#store" class="nav__links">store</a>
+      <a href="javascript:void(0);" class="nav__links" onclick="que__open();">inquire</a>
+      <a href="#"><img class="to__black" alt="Your Route" src="photos/per.svg"></a>
+    </div>
+  </div>
+
+  <div id="sidebar" class="sidebar__right">
+    <a style="transform: translate(-25px, 1px); white-space: nowrap" href="tel:+13233364677" style="font-size: 12px;">+ 1 (323) 336-4677</a>
+    <a href="mailto:kay_banks89@yahoo.com">support@cl.com</a>
+  </div>
+
+  <div id="scroll">
+    <a href="#">scroll down</a>
+    <hr>
+  </div>
+  <!--QUESTION-->
+  <div id="que" class="flex">
+
+    <button id="que__close" onclick="que__close();"><img src="photos/close.png"></button>
+    <div id="que__form" class="width_to_100">
+    <!--  <h1>Your Personal Travel Planner</h1>
+      <form action="/#wpcf7-f173-o1" method="post" novalidate="novalidate">
+        <input type="text" placeholder="Your Name" name="your-name"/>
+        <input type="email" placeholder="Email" name="your-email"/>
+        <input type="text" placeholder="Destination"/>
+        <span>No. of People</span>
+        <select>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+        <button type="submit">SEND</button>
+      </form> -->
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdofGAnVP7VFfZFVTNDpcgDwrSksvmZpLmR2EgmP5KfSFwK0w/viewform?embedded=true" width="700" height="1089" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+    </div>
+    <div id="que__img">
+    </div>
+  </div>
+  <!--BANNER-->
+  <div id="bnr__photo"></div>
+
+  <div class="banner">
+    <div class="banner__text">
+      <h1 class="cushycms">true spirit<br>wanders.</h1>
+      <p class="cushycms">If you need help planning a leisure vacation or
+        occupational travel, we can design every detail allowing you
+        to simply show up, and show out.
+      </p>
+      <a href="#"></a>
+    </div>
+  </div>
+
+  <div class="background">
+    <div class="bg__white--hidden" id="bg"></div>
+  </div>
+  <!--CONTENT-->
+  <div class="about flex padding_6-18">
+    <div class="about__text width_to_100">
+      <h5 class="cushycms" data-aos="fade-up">WHAT WE DO</h5>
+      <h2 class="title cushycms" data-aos="fade-up">we construct<br>Journey</h2><br>
+      <p class="ideal__para cushycms" data-aos="fade-up">Currently located is a pristine travel service
+        that aims to maximize your experience while minimizing your worries.
+       <br/><br/>
+         It was conceived by a Los Angeles native who is passionate
+         about creating memories for her clients.
+      </p>
+      </div>
+      <div class="about__photo width_to_100">
+        <img data-aos="fade-up" class="cushycms" src="photos/gall1.jpg">
+      </div>
+    </div>
+    <!--ELEMENTS-->
+    <div data-value="1" id="elements" class="elements flex">
+      <h5 data-aos="fade-up">THE ELEMENTS</h5>
+      <p data-aos="fade-up" style="text-align: center">We provide different packages as per your needs.</p>
+      <div class="elements__body flex">
+          <div data-aos="fade-up" class="elem" style="transition-delay: .1s">
+            <img src="photos/dis.svg">
+            <h3>Discovery</h3><br>
+            <p class="ideal__para cushycms">Whether you’re traveling with a loved
+              one or flying solo, The element can plan every detail of your
+              getaway. After a consultation, We work with
+              all reasonable budgets and expectations to ensure a worthwhile
+              travel experience.
+            </p>
+          </div>
+          <div data-aos="fade-up" class="elem" style="transition-delay: .2s">
+            <img src="photos/sur.svg">
+            <h3>Surprise</h3><br>
+            <p class="ideal__para cushycms">Vacationing out of the country should
+              always be a trip of a lifetime. Our Surprise package offers the
+              same preparedness of the Discovery, with a little twist. Through our
+              consultation, you will choose to either face a fear or fulfill a
+              fantasy.
+            </p>
+            </div>
+            <div data-aos="fade-up" class="elem" style="transition-delay: .3s">
+              <img src="photos/pro.svg">
+              <h3>Professional</h3><br>
+            <p class="ideal__para cushycms">Your career may be stressful enough,
+              so allow us to take a load off by handling all of your travel needs.
+              You will not regret this fullfilling adventure in your lifetime.
+              This package is a perfect way to get a break from the stressful loop.
+            </p>
+          </div>
+          </div>
+        </div>
+    <!--TIPS-->
+
+    <div class="hidden-tips" id="tips">
+      <button id="tips__close" onclick="tips__close();"><img src="photos/close.png"></button>
+      <h2 class="cushycms">Tips for south east asia travel</h2>
+      <ul>
+        <li class="cushycms">Purchase data SIM cards unless you have an international travel plan
+            (ex. Telkomsel for Indonesia & Happy SIM for Thailand)</li>
+        <li class="cushycms">Pack light and include travel tissue, hand sanitizer, universal
+            adapter, bug spray and necessary medicine (in case of food
+            poisoning or headaches, etc)</li>
+        <li class="cushycms">Squat toilets are normal.</li>
+        <li class="cushycms">Bring cover ups, lightweight pants, and flip flops to visit temples
+           (Ladies are forbidden to enter temple during menstruation)</li>
+        <li class="cushycms">Purchase thin raincoats there or bring your own & bring a hoodie for hikes</li>
+        <li class="cushycms">Always have cash in the foreign country’s currency</li>
+        <li class="cushycms">Rent a motorbike at your own risk - Always wear a helmet and remember
+            to drive on the left side of the road</li>
+        <li class="cushycms">Traffic lights (if any) are often ignored in small towns</li>
+        <li class="cushycms">Exchange money at local ATMs for best exchange rate & have US cash to exchange for emergencies</li>
+        <li class="cushycms">Always bargain with local vendors, never pull out all of your cash at once, and give exact change</li>
+        <li class="cushycms">Check weather daily for random rain storms</li>
+        <li class="cushycms">Don’t expect refunds...for anything.</li>
+        <li class="cushycms">Agree on a price for transportation BEFORE going for the ride to avoid being
+           overcharged. Remember to bargain!.</li>
+        <li class="cushycms">Don’t be alarmed if locals snap photos of you</li>
+        <li class="cushycms">Once you arrive at your home, drop a pin and save it to your phone</li>
+      </ul>
+    </div>
+
+    <div class="tips flex padding_6-18">
+      <div class="tips__layer flex">
+        <img data-aos="fade-right" class="cushycms" src="photos/tip1.JPG">
+        <div class="tips__text nudge-up --aid" data-aos="fade-up">
+          <h5>TIPS</h5>
+          <h2 class="title">TIPS FOR YOUR <br/>JOURNEY</h2><br/>
+          <p class="ideal__para cushycms">After a consultation, We work with all reasonable
+            budgets and expectations to ensure a worthwhile travel experience.
+           </p>
+         </div>
+       </div>
+       <div class="tips__layer flex">
+         <div class="tips__text" data-aos="fade-up">
+           <p class="ideal__para cushycms">Pack light and include travel tissue, hand sanitizer, universal
+               adapter, bug spray and necessary medicine.
+            </p><br>
+            <a href="javascript:void(0);" onclick="tips__open();">click for more tips</a>
+          </div>
+         <img data-aos="fade-up" class="nudge-up cushycms" src="photos/tip2.jpg">
+        </div>
+      </div>
+      <!--TESTIMONIALS-->
+      <div class="testimonials">
+        <h5 data-aos="fade-up">TESTIMONIALS</h5>
+        <div class="testi" data-aos="fade-up">
+         <button id="testi__back"><img class="left__button" src="photos/arrow.svg"></button>
+          <div class="testi__holder">
+            <div id="testi__text" class="testi__text wrapper">
+              <h1 class="cushycms">"Our wonderful customers are the reason we’re in
+                business. Take a look at our reviews or if you’ve
+                had the pleasure of having your own Experience."
+              <a href="mailto:kay_banks89@yahoo.com" class="active__btn" style="white-space: nowrap; padding: 1px 25px;">Share your own</a>
+              </h1>
+              <h1 class="cushycms">It was my first time in Cancun and there’s no better way
+                to travel. The Element Life made it very easy for us to have
+                 a good time. It was affordable and we didn’t have to worry
+                 about anything.
+                 <p class="cushycms">Irasema  -  July 26,2017  -  Cancun</p>
+              </h1>
+              <h1 class="cushycms">My trip to Europe went off without a hitch thanks to The
+                 Element Life. Everything was taken care of for me from booking
+                 multiple flights, to setting up ground transportation and
+                 setting up activities.
+                 <p class="cushycms">Jarrell G  -  May 1, 2017  -  Barcelona/Paris</p>
+              </h1>
+              <h1 class="cushycms">I went to Japan for eight days and each day was something
+                 new and exciting. My planner Kiara would check up on me to
+                 make sure I was at my destination or just to see how I was doing.
+                 <p class="cushycms">Steven Martinez  -  February 25, 2018  -  Japan</p>
+              </h1>
+              <h1 class="cushycms">I booked my trip to Machu Picchu through Currently Located
+                in March. Our group of 5 was met with several unforeseen challenges and
+                Kiara was there to resolve every single one of them. I’m not sure what we would
+                have done without her. Thanks Kiara for everything!
+                 <p class="cushycms">Monique Webber  -  May 25, 2018  -  Cusco, Peru</p>
+              </h1>
+              <h1 class="cushycms">I found this company to be very personable and professional.
+                The representative listen to what I wanted , stayed within my budget and
+                was available for questions or concerns. I would definitely booked with
+                them again. I have already recommended them to a few of my friends.
+                 <p class="cushycms">Kimberly T.  -  May 1, 2017  -  Barcelona/Paris</p>
+              </h1>
+              <h1 class="cushycms">I recently set up a trip to Thailand through the Element and
+                had an amazing vacation! Booking with the Element is easy and my favorite
+                part is the payment options! Thanks to Kiara for all her hard work, everything
+                was laid out for me to choose the vacation of my dreams for a great price!
+                 <p class="cushycms">Erica A.  -  January 7, 2017  -  Thailand</p>
+              </h1>
+            </div>
+         </div>
+         <button id="testi__next" onclick="test1();"><img src="photos/arrow.svg"></button>
+        </div>
+      </div>
+      <!--VIDEO-->
+      <div class="video" data-aos="fade">
+        <video class="cushycms" src="photos/vid.mp4" controls="play" poster="photos/vid.JPG">Your Browser
+          Does not Support Video Tag.
+        </video>
+      </div>
+      <!--STORE-->
+      <div class="store padding_6-18" id="store" data-aos="fade-up">
+        <h5>STORE</h5>
+        <div class="store__content flex">
+          <div class="store__photo width_to_100">
+            <div id="s-img" class="wrapper">
+              <div><img class="cushycms" src="photos/rid.jpg"></div>
+              <div><img class="cushycms" src="photos/gall4.jpg"></div>
+              <div><img class="cushycms" src="photos/tip1.JPG"></div>
+              <div><img class="cushycms" src="photos/dar.jpg"></div>
+              <div><img class="cushycms" src="photos/vo.jpg"></div>
+              <div><img class="cushycms" src="photos/tou.jpg"></div>
+              <div><img class="cushycms" src="photos/wan.jpg"></div>
+              <div><img class="cushycms" src="photos/pio.jpg"></div>
+            </div>
+          </div>
+          <div class="store__text width_to_100">
+            <div class="store__heading">
+              <div id="s-head" class="wrapper">
+                <h2 class="title cushycms">Rider</h2>
+                <h2 class="title cushycms">Heroine</h2>
+                <h2 class="title cushycms">JetSetter</h2>
+                <h2 class="title cushycms">Daredevil</h2>
+                <h2 class="title cushycms">Voyager</h2>
+                <h2 class="title cushycms">Tourist</h2>
+                <h2 class="title cushycms">Wanderer</h2>
+                <h2 class="title cushycms">Pioneer</h2>
+              </div>
+            </div>
+            <div class="store__para">
+              <div id="s-para" class="wrapper">
+                <p class="ideal__para cushycms">Sizes: 4 (Quantity: 1)<br/>
+                    Details: Polyester. Machine Wash.
+                </p>
+                <p class="ideal__para cushycms">Sizes: S, M, L, XL (Quantity: 1 of each size)<br/>
+                    Details: Polyester. Machine Wash.
+                </p>
+                <p class="ideal__para cushycms">Sizes: S, M, L, XL (Quantity: 1 of each size)<br/>
+                    Details: Polyester. Machine Wash.
+                </p>
+                <p class="ideal__para cushycms">Sizes: XS, S, M, L, (Quantity: 1 of each size)<br/>
+                    Details: 92% Rayon, 8 Spandex. Machine Wash.
+                </p>
+                <p class="ideal__para cushycms">Sizes: 10, 12, 14 (Quantity: 1 of each size)<br/>
+                   Details: 95% Polyamide, 5% Elastane. Machine Wash.
+                </p>
+                <p class="ideal__para cushycms">Sizes: S, M, L (Quantity: 1 of each size)<br/>
+                    Details: Polyester. Machine Wash.
+                </p>
+                <p class="ideal__para cushycms">Sizes: 2, 4, 6, 8, 10, 12, 14 (Quantity: 1 of each size)<br/>
+                    Details: 83% Polyamide, 17% Elastane. Machine Wash.
+                </p>
+                <p class="ideal__para cushycms">Sizes: 2 (Quantity: 1)<br/>
+                    Details: 95% Polyamide, 5% Elastane. Machine Wash.
+                </p>
+              </div>
+            </div>
+            <div class="store__buttons">
+              <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="MBBUV5A2ELL8J">
+               <button class="active__btn">Buy Now</button>
+              </form>
+              <div class="store__mover">
+                <button id="s-back" onclick=""><img class="left__button" src="photos/arrow.svg"></button>
+                <button id="s-next" onclick="store1();"><img src="photos/arrow.svg"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--GALLERY-->
+      <div class="gallery">
+        <div class="flex">
+          <div class="gallery__column width_to_100">
+            <h5 data-aos="fade-up">GALLERY</h5>
+            <img data-aos="fade-up" src="photos/gall4.jpg">
+            <img data-aos="fade-up" src="photos/gall1.jpg">
+            <img data-aos="fade-up" src="photos/gall3.jpg">
+          </div>
+          <div class="gallery__column">
+            <img data-aos="fade-up" src="photos/gall2.jpg">
+            <img data-aos="fade-up" src="photos/to.jpg">
+            <img data-aos="fade-up" src="photos/tip1.JPG">
+          </div>
+        </div>
+      </div>
+      <!--FOOTER-->
+      <footer>
+        <div class="footer flex">
+          <img class="f__logo" src="photos/logog.png">
+          <div class="footer__ctn f__add">
+            <h6>Contact</h6>
+            <p>Click Below to talk about <br/> your next journey.</p>
+            <a href="mailto:support@currentlylocated.com">support@currentlylocated.com</a>
+          </div>
+          <div class="footer__ctn f__links">
+            <h6>Links</h6>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#store">Store</a></li>
+              <li><a href="javascript:void(0);" onclick="que__open();">Inquire</a></li>
+            </ul>
+          </div>
+          <div class="footer__ctn f__sub">
+            <h6>Newsletter</h6>
+            <form style="display: flex" action="URL" method="post">
+              <input type="email" placeholder="Email">
+              <button><img src="photos/arrow.svg"></button>
+            </form>
+          </div>
+          <div class="footer__ctn f__social">
+            <h6>Follow</h6>
+            <div>
+              <a href="https://www.instagram.com/kis0sweet/">Instagram</a>
+              <a href="https://www.youtube.com/user/ilovebeingamermaid">Youtube</a>
+              <a href="https://www.facebook.com/lovekmarie">Facebook</a>
+            </div>
+          </div>
+        </div>
+        <div class="f__copy flex">
+          <p>© 2018 Currently Located.</p>
+          <p>Designed & Developed By - <a href='https://auriga-z.github.io'>Abhishek Jha</a></p>
+        </div>
+      </footer>
+
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
+
+    <script>
+    var scrol = window.pageYOffset;
+    var bg = document.getElementById('bg');
+    var sidebar = document.getElementById('sidebar');
+    var links = document.getElementsByClassName('nav__links');
+    var scroll = document.getElementById('scroll');
+    var black = document.getElementsByClassName('to__black');
+    var baner = document.getElementById('bnr__photo');
+
+    onscroll = scr;
+    function scr(){
+      if(window.pageYOffset > 30){
+        sidebar.setAttribute("class", "sidebar__left");
+        bg.setAttribute("class", "bg__white--visible");
+        links[0].style.color = "black";
+        links[1].style.color = "black";
+        scroll.style.display = "none";
+        baner.style.transform = "scale(1.1, 1.1)";
+
+        for(i=0; i<=3; ++i){
+          black[i].setAttribute('class', 'to__black black');
+        }
+      }
+      else{
+        sidebar.setAttribute("class", "sidebar__right");
+        bg.setAttribute("class", "bg__white--hidden");
+        links[0].style.color = "";
+        links[1].style.color = "";
+        scroll.style.display = "";
+        baner.style.transform = "";
+      for(i=0; i<=3; ++i){
+        black[i].setAttribute('class', 'to__black');
+       }
+      }
+    }
+    onscroll = scr;
+
+    var que = document.getElementById('que');
+    var que__btn = document.getElementById('que__close');
+
+    var tip = document.getElementById('tips');
+
+    function que__close(){
+      que.style = "opacity: 0; visibility: hidden;";
+    }
+
+    function que__open(){
+      que.style = "opacity: 1; visibility: visible;";
+    }
+
+    function tips__close(){
+      tips.style = "opacity: 0; visibility: hidden;";
+    }
+
+    function tips__open(){
+      tips.style = "opacity: 1; visibility: visible;";
+    }
+
+
+    var testi = document.getElementById('testi__text');
+    var testi__next = document.getElementById('testi__next');
+    var testi__back = document.getElementById('testi__back');
+
+
+    function test0(){
+      testi.style.transform = "translate(0, 0)";
+      testi__next.setAttribute('onclick', "test1();");
+      testi__back.setAttribute('onclick', "");
+    }
+
+    function test1(){
+      testi.style.transform = "translate(-100%, 0)";
+      testi__next.setAttribute('onclick', "test2();");
+      testi__back.setAttribute('onclick', "test0();");
+    }
+
+    function test2(){
+      testi.style.transform = "translate(-200%, 0)";
+      testi__next.setAttribute('onclick', "test3();");
+      testi__back.setAttribute('onclick', "test1();");
+    }
+
+    function test3(){
+      testi.style.transform = "translate(-300%, 0)";
+      testi__next.setAttribute('onclick', "test4();");
+      testi__back.setAttribute('onclick', "test2();");
+    }
+
+    function test4(){
+      testi.style.transform = "translate(-400%, 0)";
+      testi__next.setAttribute('onclick', "test5();");
+      testi__back.setAttribute('onclick', "test3();");
+    }
+
+    function test5(){
+      testi.style.transform = "translate(-500%, 0)";
+      testi__next.setAttribute('onclick', "test6();");
+      testi__back.setAttribute('onclick', "test4();");
+    }
+
+    function test6(){
+      testi.style.transform = "translate(-600%, 0)";
+      testi__next.setAttribute('onclick', "test7();");
+      testi__back.setAttribute('onclick', "test5();");
+    }
+
+
+    var s__img = document.getElementById('s-img'),
+        s__head = document.getElementById('s-head'),
+        s__para = document.getElementById('s-para'),
+        s__next = document.getElementById('s-next'),
+        s__back = document.getElementById('s-back');
+
+
+    function store0(){
+      s__img.style.transform = 'translate(0, 0)';
+      s__head.style.transform = 'translate(0, 0)';
+      s__para.style.transform = 'translate(0, 0)';
+      s__next.setAttribute('onclick', 'store1();');
+      s__back.setAttribute('onclick', '');
+    }
+
+    function store1(){
+      s__img.style.transform = 'translate(-100%, 0)';
+      s__head.style.transform = 'translate(-100%, 0)';
+      s__para.style.transform = 'translate(-100%, 0)';
+      s__next.setAttribute('onclick', 'store2();');
+      s__back.setAttribute('onclick', 'store0();');
+    }
+
+    function store2(){
+      s__img.style.transform = 'translate(-200%, 0)';
+      s__head.style.transform = 'translate(-200%, 0)';
+      s__para.style.transform = 'translate(-200%, 0)';
+      s__next.setAttribute('onclick', 'store3();');
+      s__back.setAttribute('onclick', 'store1();');
+    }
+
+    function store3(){
+      s__img.style.transform = 'translate(-300%, 0)';
+      s__head.style.transform = 'translate(-300%, 0)';
+      s__para.style.transform = 'translate(-300%, 0)';
+      s__next.setAttribute('onclick', 'store4();');
+      s__back.setAttribute('onclick', 'store2();');
+    }
+
+    function store4(){
+      s__img.style.transform = 'translate(-400%, 0)';
+      s__head.style.transform = 'translate(-400%, 0)';
+      s__para.style.transform = 'translate(-400%, 0)';
+      s__next.setAttribute('onclick', 'store5();');
+      s__back.setAttribute('onclick', 'store3();');
+    }
+
+    function store5(){
+      s__img.style.transform = 'translate(-500%, 0)';
+      s__head.style.transform = 'translate(-500%, 0)';
+      s__para.style.transform = 'translate(-500%, 0)';
+      s__next.setAttribute('onclick', 'store6();');
+      s__back.setAttribute('onclick', 'store4();');
+    }
+
+    function store6(){
+      s__img.style.transform = 'translate(-600%, 0)';
+      s__head.style.transform = 'translate(-600%, 0)';
+      s__para.style.transform = 'translate(-600%, 0)';
+      s__next.setAttribute('onclick', 'store7();');
+      s__back.setAttribute('onclick', 'store5();');
+    }
+
+    function store7(){
+      s__img.style.transform = 'translate(-700%, 0)';
+      s__head.style.transform = 'translate(-700%, 0)';
+      s__para.style.transform = 'translate(-700%, 0)';
+      s__next.setAttribute('onclick', '');
+      s__back.setAttribute('onclick', 'store6();');
+    }
+
+
+
+    </script>
+  </body>
+  </html>

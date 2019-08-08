@@ -1,0 +1,173 @@
+
+@font-face {
+  font-family: product;
+  src: url(../fonts/Questrial-Regular.woff2);
+}
+
+@font-face {
+  font-family: pbold;
+  src: url(../fonts/productb.ttf);
+}
+
+.abt > div hr{
+  width: 100%;
+  margin: 0;
+  height: 2px;
+}
+
+.abt-img{
+  width: 48vw;
+  margin-bottom: 10vw;
+}
+
+.abt-img img{
+  width: 100%;
+}
+
+.intro{
+  padding: 5vw 0;
+}
+
+.intro > div > span{
+  font-family: product;
+  color: #e5d8c7;
+}
+
+.intro div:last-of-type {
+  transform: translate(-8vw, 0);
+}
+
+.abt-bar{
+  display: flex;
+  align-items: flex-start;
+  padding: 2vw 0 6vw 0;
+}
+
+.col-7{
+  margin-left: 39.67%;
+}
+
+.abt-bar > div{
+  font-family: product;
+  font-size: 14px;
+  color: #e5d8c7;
+  text-transform: uppercase;
+}
+
+.con{
+  margin-top: 12vw;
+}
+
+.con .col-12{
+  justify-content: flex-end;
+  margin-top: 10vh;
+  padding-right: 4vw;
+}
+
+.con .social{
+  margin-right: 20vw;
+}
+
+.cimg{
+  width: 30vw;
+  position: absolute;
+  z-index: -2;
+  top: 30vh;
+  left: 1.5vw;
+}
+
+
+
+.sw{
+  margin: 0 auto 18vw auto;
+}
+
+.swdes span > span{
+  text-align: right;
+  transition-delay: 1s;
+  text-transform: none;
+  font-weight: normal;
+}
+
+.scol{
+  padding: 20vh 8vw 5vh 8vw;
+}
+
+.sbot{
+  margin-top: 24vh;
+}
+
+.w-margin{
+  margin: 0 0 28vh 0;
+}
+
+.w p{
+  padding: 10px 0 3px 0;
+}
+
+.w > span{
+  font-size: 12px;
+  font-family: product;
+  opacity: .5;
+  color: #e5d8c7;
+}
+
+.w > a > div img{
+  filter: grayscale(1);
+  transition: .4s;
+}
+
+.w > a > div img:hover{
+  filter: grayscale(0);
+}
+
+.oth{
+  height: auto;
+  padding:0 0 25vh 0;
+}
+
+.oth h1{
+  margin-bottom: 8vw;
+}
+
+.prj-bar > div{
+  align-items: center;
+  justify-content: space-between;
+  margin: 25px 0;
+}
+
+.prj-bar > div > div{
+  color: #e5d8c7;
+  font-size: 12px;
+  opacity: .7;
+  font-family: product;
+}
+
+.prj-bar p{
+  margin-bottom: 2px;
+}
+
+.prj-bar a{
+  font-size: 12px;
+  text-align: right;
+}
+
+.prj-bar hr{
+  margin: 0;
+  height: 2px;
+  width: 100%;
+}
+
+.cont-alt > div{
+  transform: translate(48.5vw, 10vh);
+}
+
+.ce{
+  font-family: product;
+  text-decoration: underline;
+  font-size: 25px;
+}
+
+.cont-alt > div > span{
+  transform: translate(0, 10vh);
+}

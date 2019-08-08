@@ -1,0 +1,556 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <title>The Hero's Brother</title>
+  <link rel="shortcut icon" href="#">
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  body, html{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    background: #fff;
+  }
+
+  *{
+    box-sizing: border-box;
+  }
+
+  @font-face {
+    font-family: noe;
+    src: url('font/noe-display-bold.ttf');
+  }
+
+  @font-face {
+    font-family: kayak_r;
+    src: url('font/Kayak Sans Regular.otf');
+  }
+
+  @font-face {
+    font-family: kayak_b;
+    src: url('font/Kayak Sans Bold.otf');
+  }
+
+  p, h1, h2, h3, h4{
+    margin: 0px;
+    font-family: sans-serif;
+  }
+
+  ul{
+    list-style-type: none;
+  }
+
+  ::-webkit-scrollbar{
+    width: 4px;
+    background: #ddd;
+  }
+
+  ::-webkit-scrollbar-thumb{
+    background: #222222;
+  }
+
+  /*HEADING*/
+
+  h1{
+    font-family: noe, sans-serif;
+    font-size: 3.8em;
+    letter-spacing: 2px;
+    line-height: 1.4em;
+    color: #222222;
+  }
+
+  h2{
+    font-family: noe, sans-serif;
+    font-size: 2.8em;
+    letter-spacing: 2px;
+    line-height: 1.2em;
+    color: #222222;
+  }
+
+  h3{
+    font-family: noe;
+    color: #272324;
+    font-size: 4vh;
+    width: 85%;
+  }
+
+  h4{
+    font-family: kayak_b;
+    font-size: .9em;
+    letter-spacing: 5px;
+    color: #606470;
+  }
+
+  p{
+    color: #272324;
+    font-family: kayak_r;
+    font-size: 1em;
+    line-height: 1.7em;
+  }
+
+  a{
+    color: #222222;
+    font-family: kayak_b;
+  }
+
+  /*MAIN CSS*/
+
+  /*SIDE BAR*/
+
+  .sidebar{
+    position: fixed;
+    left: 0;
+    width: 16%;
+    height: 100%;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  .logo{
+    position: absolute;
+    top: 5%;
+    left: 23%;
+    font-family: noe;
+    font-size: 1em;
+    letter-spacing: 1px;
+  }
+
+  .sidebar__links{
+    position: absolute;
+    top: 29%;
+    transform: translate(13%, 0);
+  }
+
+  .sidebar__links p{
+    font-family: noe;
+    font-size: 1.2em;
+    padding: 0 0 10px 0;
+    color: #222222;
+  }
+
+  .sidebar__links a{
+    font-family: kayak_r;
+    letter-spacing: 1px;
+    text-decoration: none;
+  }
+
+  .sidebar__links li{
+    padding: 5px 0;
+  }
+
+  .sidebar__social{
+    position: absolute;
+    white-space: nowrap;
+    bottom: 8%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .sidebar__social img{
+    width: 25px;
+    padding: 5px;
+  }
+
+  /*CONTENT*/
+
+  .master__parent{
+    position: absolute;
+    width: 84%;
+    right: 0;
+    padding: 12vh 0 0 0;
+  }
+
+  .scroll{
+    position: absolute;
+    right: 4%;
+    top: 17%;
+    transform: rotate(-90deg);
+  }
+
+  .banner, .buy, .author, .review, .updates{
+    padding: 0 10vh 0 25vh;
+  }
+
+  /*BANNER*/
+
+  .banner__img{
+    width: 82%;
+    padding: 0 10vh 0 25vh;
+  }
+
+  .banner{
+    position: relative;
+    margin: 1% 0 0 0;
+  }
+
+  .banner__heading{
+    padding-top: 20px;
+  }
+
+  .banner__para{
+    width: 38%;
+    position: absolute;
+    right: 18%;
+    top: 84%;
+  }
+
+  .banner__para a{
+    width: 100%;
+    padding-left: 70%;
+    color: #333;
+    font-family: kayak_b;
+  }
+
+  /*BUY*/
+
+  .buy{
+    margin: 15% 0;
+  }
+
+  .buy__options{
+    display: flex;
+    align-items: center;
+  }
+
+  .buy__options a{
+    padding: 10px 26px;
+    margin: 1% 11% 0 0;
+    border: 2px solid rgba(15,15,15, 0.8);
+    letter-spacing: 3px;
+    text-decoration: none;
+    transition: 0.4s;
+  }
+
+  .buy__options a:hover{
+    background: #222222;
+    color: #fff;
+    border: 2px solid #222222;
+  }
+
+  /*AUTHOR*/
+
+  .author{
+    display: flex;
+    align-items: center;
+  }
+
+  .author__info{
+    width: 50%;
+    text-align: right;
+    padding-right: 8%;
+  }
+
+  .author img{
+    width: 50%;
+  }
+
+  .author__info p{
+    width: 90%;
+    text-align: right;
+    float: right;
+  }
+
+  /*REVIEW*/
+
+  .review{
+    margin: 10% 0;
+  }
+
+  .review h3{
+    text-align: center;
+  }
+
+  .review p{
+    padding-left: 70%;
+  }
+
+  /*UPDATES*/
+
+  .updates{
+    margin: 2% 0;
+  }
+
+  .updates form{
+    width: 90%;
+    display: flex;
+    align-items: center;
+  }
+
+  .updates input{
+    width: 60%;
+    padding: 15px 19px;
+    background: none;
+    border: 2px solid #272324;
+    letter-spacing: 1px;
+    font-family: kayak_b;
+  }
+
+  .updates button{
+    width: 30%;
+    padding: 15px 19px;
+    background: #272324;
+    border: 2px solid #272324;
+    color: #fff;
+    letter-spacing: 1px;
+    font-family: kayak_b;
+  }
+
+  /*FOOTER*/
+
+  .footer{
+    width: 100%;
+    position: relative;
+    padding: 40% 0 0 0;
+    z-index: -1;
+  }
+
+  .footer img{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+  }
+
+  /*MEDIA QUERIES*/
+
+  @media only screen and (max-width: 900px){
+
+    h1{
+      font-family: noe, sans-serif;
+      font-size: 2.5em;
+      letter-spacing: 2px;
+      line-height: 1.4em;
+      color: #222222;
+    }
+
+    h2{
+      font-family: noe, sans-serif;
+      font-size: 2.8em;
+      letter-spacing: 2px;
+      line-height: 1.2em;
+      color: #222222;
+    }
+
+    h3{
+      font-family: noe;
+      color: #272324;
+      font-size: 4vh;
+      width: 85%;
+    }
+
+    h4{
+      font-family: kayak_r;
+      font-size: .7em;
+      letter-spacing: 5px;
+      color: #606470;
+    }
+
+    p{
+      color: #272324;
+      font-family: kayak_r;
+      font-size: .9em;
+      line-height: 1.5em;
+    }
+
+    a{
+      color: #222222;
+      font-family: kayak_b;
+      font-size: 0.8em;
+    }
+
+    .sidebar, .scroll{
+      display: none;
+    }
+
+    .master__parent{
+      width: 100%;
+      padding: 3vh 0 0 0;
+    }
+
+    .banner, .buy, .author, .review, .updates{
+      padding: 2vh 2.5vh;
+    }
+
+    .banner__img, .author img{
+      width: 100%;
+      padding: 0 2.5vh;
+    }
+
+    .banner__para{
+      width: 90%;
+      right: 5%;
+      top: 100%;
+    }
+
+    .banner__para a{
+      padding-left: 70%;
+    }
+
+    .buy{
+      margin: 25vh 0 10% 0;
+    }
+
+    .buy__options{
+      display: block;
+    }
+
+    .buy__options a{
+      padding: 8px 16px;
+      margin: 2% 0;
+      border: 2px solid rgba(0,0,0, 0.8);
+      text-align: center;
+      letter-spacing: 5px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .author{
+      display: block;
+    }
+
+    .author__info{
+      width: 100%;
+    }
+
+    .author__info p{
+      margin-bottom: 12%;
+      width: 95%;
+    }
+
+    .review p{
+      padding: 0;
+      text-align: center;
+    }
+
+    .review h3{
+      width: 100%
+    }
+
+    .updates form{
+      width: 100%;
+    }
+
+    .updates input, .updates button{
+      padding: 10px 5px;
+    }
+
+    .updates input{
+      width: 65%;
+    }
+
+    .updates button{
+      width: 35%;
+    }
+
+
+  }
+
+
+
+  </style>
+</head>
+<body>
+
+   <!--SIDEBAR-->
+
+   <div class="sidebar">
+
+     <h5 class="logo">Scott<br>Anderson</h5>
+
+     <ul class="sidebar__links">
+       <p>Staircase</p>
+       <li><a href="#">home</a></li>
+       <li><a href="#buy">buy</a></li>
+       <li><a href="#author">bio</a></li>
+       <li><a href="#updates">updates</a></li>
+     </ul>
+
+     <div class="sidebar__social">
+       <img src="photo/facebook.svg">
+       <img src="photo/twitter.svg">
+       <img src="photo/instagram.svg">
+       <img src="photo/amazon.svg">
+     </div>
+
+   </div>
+
+   <!--content-->
+
+   <div class="master__parent">
+
+     <p class="scroll">scroll down to naviate</p>
+
+     <img class="banner__img" src="photo/banner.jpg">
+
+     <div class="banner">
+       <div class="banner__heading">
+         <h1>The Hero's<br>Brother</h1>
+       </div>
+       <div class="banner__para">
+         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+           Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+           natoque penatibus et magnis dis
+         </p><br>
+         <a href="#">read more</a>
+        </div>
+      </div><br>
+
+      <!--BUY-->
+
+      <div id="buy" class="buy">
+        <h4>PRE ORDER</h2><br>
+        <div class="buy__options">
+          <a href="#">HARD COVER</a>
+          <a href="#">PAPER BACK</a>
+          <a href="#">AUDIO BOOK</a>
+        </div>
+      </div>
+
+      <!--AUTHOR BIO-->
+
+      <div id="author" class="author">
+        <div class="author__info">
+          <h4>ABOUT THE AUTHOR</h4><br>
+          <h2>M. Scott<br>Anderson</h2><br>
+          <p>Nullam dictum felis eu pede mollis pretium.
+             Integer tincidunt. Cras dapibus. Lorem ipsum
+             dolor sit amet, consectetuer adipiscing elit.
+             Aenean commodo ligula eget dolor.
+          </p><br><br>
+        </div>
+        <img src="photo/aut.jpg">
+      </div>
+
+      <!--REVIEW-->
+
+      <div class="review">
+        <h4>REVIEW</h4><br><br>
+        <h3> Nullam quis ante. Etiam sit amet orci eget eros
+           faucibus tincidunt. Duis leo. Sed fringilla mauris
+           sit amet nibh. Donec sodales sagittis magna. Sed
+           consequat, leo eget bibendum sodales.
+         </h3><br>
+         <p>- John Doe</p>
+       </div>
+
+       <!--UPDATES-->
+
+       <div id="updates" class="updates">
+         <h4>GET UPDATES</h4><br>
+         <h3>Enter your Email & never<br>miss updates</h3><br><br>
+         <form action="url" method="post">
+           <input type="email" placeholder="ENTER YOUR EMAIL">
+           <button>SUBSCRIBE</button>
+         </form>
+       </div>
+
+       <!--FOOTER-IMAGES-->
+
+       <div class="footer">
+         <img src="photo/footer_4.png">
+         <img src="photo/footer_3.png">
+         <img src="photo/footer_2.png">
+         <img src="photo/footer_1.png">
+         <img src="photo/footer_0.png">
+       </div>
+
+     </div>

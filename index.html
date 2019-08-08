@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145352703-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-145352703-1');
+  </script>
   <title>Abhishek Jha — Visual Designer</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="icon" href="photos/logo.png">
+  <link rel="stylesheet" href="unistyles.css">
   <meta name="keywords" content="ui/ux, designer, freelance, website, portfolio">
   <meta name="author" content="Abhishek Jha">
-  <meta name="description" content="Portfolio of Abhishek Jha. A visual designer and front-end developer specialized in UI/UX.">
+  <meta name="description" content="Portfolio of Abhishek Jha. A visual designer specialised in User Interfaces but not limited to it.">
   <meta name="theme-color" content="#f94444">
   <meta name="twitter:card" content="Abhishek Jha - Visual designer and developer.">
   <meta name="twitter:site" content="@auriga_z">
@@ -17,444 +27,573 @@
   <meta name="twitter:description" content="Abhishek Jha is a visual designer based in New Delhi. He makes high-end user interfaces.">
   <meta name="twitter:image" content="https://abhishekjha.me/photos/card.jpg">
   <meta name="twitter:image:alt" content="Image">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    <!--
+    if (screen.width <= 699) {
+    document.location = "mobile.html";
+    }
+    //-->
+  </script>
+  <script language=javascript>
+    <!--
+    if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
+    location.replace("mobile.html");
+    }
+    -->
+  </script>
   <style>
-  body{
-   width: 100%;
-   height: 100%;
-   margin: 0;
-   text-rendering: optimizeLegibility;
-   font-size: 100%;
-   font-family: sans-serif;
-   background: #f0f0f0;
-  }
-
-  *{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    -webkit-user-select: none;
-  }
-
-  @font-face {
-    font-family: product;
-    src: url(product.ttf);
-  }
-
-  @font-face {
-    font-family: pbold;
-    src: url(productb.ttf);
-  }
-
-  [data-scroll-content]{
-    padding: 0 0 4vh 0;
-  }
-
-  span{
-    display: block;
-    font-size: inherit;
-  }
-
-  a{
-    text-decoration: none;
-    color: inherit;
-    font-family: product;
-  }
-
-  h1, h2, h3, h4{
-    font-weight: normal;
-  }
-
-  h1{
-    font-size: 15vw;
-    color: #19191b;
-    font-family: pbold, sans-serif;
-    line-height: 8.5vh;
-    text-transform: uppercase;
-  }
-
-  p{
-    font-family: product, sans-serif;
-    font-size: 4.5vw;
-    color: #aeaeaf;
-  }
-
-  hr{
-    height: 1px;
-    border: none;
-    transition: box-shadow 1.9s cubic-bezier(0.215, 0.61, 0.355, 1);
-    transition-delay: .5s;
-    position: relative;
-    display: block;
-  }
-
-  hr::after{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 100%;
-    width: 0;
-    background: #dddddd;
-    transition: 1.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-    transition-delay: .8s;
-  }
-
-  hr[data-emergence=hidden]::after {
-    width: 0;
-  }
-  hr[data-emergence=visible]::after {
-    width: 100%;
-  }
-
-  .row{
-    overflow: hidden;
-    font-size: inherit;
-  }
-
-  .row > span, .imgrev::before{
-    transition: transform 1s cubic-bezier(0.215, 0.61, 0.355, 1);
-    transition-delay: .3s;
-  }
-
-  .row > span{
-    font-family: inherit;
-  }
-
-  .row > span[data-emergence=hidden] {
-    transform: translate(0, 100%);
-  }
-  .row > span[data-emergence=visible] {
-    transform: translate(0, 0);
-  }
-
-  .flex{
-    display: flex;
-    align-items: center;
-  }
-
-  .social{
-    text-align: center;
-    margin: 40px 0 30px 0;
-  }
-
-  .social a{
-    text-transform: uppercase;
-    font-size: 14px;
-    margin: 0 10px;
-    color: #3a3a3c;
-  }
-
-  /*styles*/
-
-  nav{
-    padding-top: 25px;
-    padding-bottom: 1.5vh;
-    position: relative;
-  }
-
-  nav > div{
-    text-align: center;
-    margin: auto;
-  }
-
-  nav .flex{
-    white-space: nowrap;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-  }
-
-  nav hr{
-    height: 2px;
-  }
-
-  nav hr::after{
-    background: #3a3a3c;
-  }
-
-  nav h3, nav .flex span{
-    font-family: product;
-    font-size: 4.5vw;
-    color: #3a3a3c;
-  }
 
   .bnr{
-    padding-top: 27vh;
-    padding-bottom: 8vh;
-  }
-
-  .bnr h1{
-    text-align: center;
-    font-size: 7vh;
-    padding-bottom: 40px;
-    line-height: 7vh;
-  }
-
-  .bnr img{
-    padding-bottom: 20px;
-  }
-
-  .bnr p{
-    margin: 0 20px;
-  }
-
-  .wrk{
-    margin: 10vh 20px;
-  }
-
-  .wrk > div > div{
-    padding: 10px 0;
-    position: relative;
     overflow-x: hidden;
+    position: relative;
+    background: #1d1d1d;
   }
 
-  .wrk > div > div a::after{
-    content: "";
-    position: absolute;
-    background: url('arrow.png');
-    background-size: cover;
-    width: 3vh;
-    height: 3vh;
-    top: 50%;
-    transition: .8s;
-    transform: translate(0, -50%) rotate(-90deg);
-  }
-
-  .wrk > div > div a[data-emergence=hidden]::after{
-    right: -10%;
-  }
-  .wrk > div > div a[data-emergence=visible]::after{
-    right: 0;
-  }
-
-
-  .wrk > div > div h4{
-    font-size: 3vh;
-    font-family: product;
-    color: #3a3a3c;
+  .tb{
+    width: 180vw;
+    font-size: 7.613vw;
     text-transform: uppercase;
+  }
+
+  .sright{
+    margin-left: -10vw;
+    position: relative;
+    z-index: 5;
+  }
+
+  .bl{
+    transform: translate(0, -5.8vh);
+  }
+
+  .bi{
+    width: 49vw;
+    height: auto;
+  }
+
+  .ba{
+    position: absolute;
+    bottom: 25vh;
+    right: 10vh;
+    width: 70px;
+  }
+
+  .bt{
+    padding-left: 10vw;
+    transform: translate(0, 70%);
+  }
+
+  .sw{
+    margin-top: 20vw;
+  }
+
+  .sw, .con{
+    margin: 18vw auto 20vh auto;
+  }
+
+  .swdes span > span{
+    text-align: right;
+    transition-delay: 1.6s;
+    font-size: 15px;
+  }
+
+  .scol{
+    padding: 20vh 8vw 5vh 8vw;
+  }
+
+  .sbot{
+    margin-top: -20vh;
+  }
+
+  .w-margin{
+    margin: 0 0 28vh 0;
+  }
+
+  .w p{
+    font-size: 1.02em;
+    font-family: product;
+    padding: 15px 0 1px 0;
+  }
+
+  .w > span{
+    font-size: 12px;
+    font-family: quest;
+    opacity: .5;
+    color: #e5d8c7;
+  }
+
+  .w > a > div img{
+    filter: grayscale(1);
+    transition: .4s;
+  }
+
+  .w > a > div img:hover{
+    filter: grayscale(0);
   }
 
   .con{
-    margin: 0 20px;
+    position: relative;
   }
 
-  .ce{
-    margin-top: 6vh;
+  .con *{
+    transition-delay: .6s;
+    transition-property: transform;
+  }
+
+  .cs{
+    position: absolute;
+    left: 20vw;
+    top: 44vh;
+  }
+
+  .social a{
+    font-family: product, sans-serif;
+    font-size: 1.066em;
+    line-height: 1.154em;
+    display: block;
+    padding: 1px 0;
+    transition: .2s;
+  }
+
+  .ctext{
+    transform: translate(0, 1.8vh);
+  }
+
+  .ctext p{
+    white-space: nowrap;
+  }
+
+  .ctext > a{
+    font-family: product;
+    text-decoration: underline;
+    transform: translate(0, 10vh);
     display: block;
     font-size: 25px;
-    color: #3a3a3c;
-    text-decoration: underline;
   }
 
-  .imgrev{
-    position: relative;
-    overflow: hidden;
+  .social p{
+    font-size: 16px;
+    opacity: .5;
   }
 
-  .imgrev img{
-    width: 100%;
+  .c-small{
+    font-size: 12px;
+    font-family: product;
+    transform: translate(0, 25vh);
+    color: #e5d8c7;
+    opacity: .5;
   }
 
-  .imgrev::before{
-    content: "";
+  .cimg{
+    width: 30vw;
     position: absolute;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: #f0f0f0;
-    z-index: 4;
-    transition: .6s;
+    z-index: -2;
+    top: 35vh;
+    left: 31.5vw;
   }
 
-  .imgrev[data-emergence=hidden]::before {
-    width: 100%;
-  }
-  .imgrev[data-emergence=visible]::before{
-    width: 0;
+  .cimg p{
+    font-size: 12px;
+    padding-top: 5px;
+    opacity: .3;
   }
 
+  .cimg a{
+    font-size: inherit;
+  }
 
   </style>
 </head>
 <body>
-  <nav class="col-12">
-   <div class="flex">
-      <span class="row">
-        <span data-emergence="hidden">2019 PORTFOLIO</span>
-      </span>
-      <hr data-emergence="hidden" style="width: 5vw;margin: 0 5px;">
-      <span class="row">
-        <span data-emergence="hidden">ABHISHEK JHA</span>
-      </span>
-   </div><br><br>
+  <nav class="flex col-12">
    <div>
-     <h3>
-       <span class="row">
-         <span data-emergence="hidden">VISUAL DESIGNER</span>
-       </span>
-       <span class="row">
-         <span data-emergence="hidden">BASED IN DELHI</span>
-       </span>
-     </h3>
+     <span class="flex">
+       2019 PORTFOLIO
+       <hr data-emergence="hidden" style="width: 2vw;">
+       ABHISHEK JHA
+     </span>
+   </div>
+   <div>
+     <span class="flex">
+       <a href="about/">ABOUT</a>
+       <hr data-emergence="hidden" style="width: 5vw;">
+       <a href="projects/">PROJECTS</a>
+     </span>
+   </div>
+   <div id="mbtn" class="mbtn-visible" onclick="shonav();">
+     <hr>
+     <hr style="transition-delay: .3s;">
    </div>
   </nav>
-  <!--scroll-->
+  <div id="nl" class="nav_left">
+    <h5 class="flex">
+      2019 PORTFOLIO
+      <hr data-emergence="visible" style="width: 4vw;">
+      ABHISHEK JHA
+    </h5>
+  </div>
+  <div id="mbtn_side" onclick="shonav();">
+    <h5>MENU</h5>
+  </div>
+  <!--MAIN-->
+  <div id="mnu" class="mnu-hid">
+    <div id="cbtn" class="cbtn-hidden" onclick="hidnav();">
+      <hr style="transform: rotate(-45deg) translate(-1px, 1px);">
+      <hr style="transform: rotate(45deg)">
+    </div>
+    <div class="col-10">
+      <h1 class="jus">
+          <span class="row">
+            <span class="js-hide" data-emergence="hidden">
+              <a href="about/">ABOUT</a>
+            </span>
+          </span>
+          <hr class="js-hide" data-emergence="hidden" style="width: 37.1vw;">
+          <span class="row">
+            <span class="js-hide" data-emergence="hidden">
+              <del>HOME</del>
+            </span>
+          </span>
+      </h1><br>
+      <h1>
+        <hr class="js-hide" data-emergence="hidden" style="width: 25vw;margin-left:0">
+          <span class="row">
+            <span class="js-hide" data-emergence="hidden">
+              <a href="projects/">PROJECTS</a>
+            </span>
+          </span>
+      </h1>
+    </div><br><br>
+    <div class="mnub jus flex col-10">
+      <div class="me flex">
+        <div class="flex">
+          <span class="row">
+            <span class="js-hide" data-emergence="hidden">
+              <a class="flex" href="mailto:rnegic341@gmail.com?subject=Lets%20Work%20Together">Write Email</a>
+            </span>
+          </span>
+          <hr class="js-hide" data-emergence="hidden" style="width: 5vw;">
+        </div>
+        <p class="p mb">
+          <span class="row">
+            <span class="js-hide" data-emergence="hidden">This button will open your default</span>
+          </span>
+          <span class="row">
+            <span class="js-hide" data-emergence="hidden">mail client with my email filled in</span>
+          </span>
+          <span class="row">
+            <span class="js-hide" data-emergence="hidden">if you don't want to open it, then my</span>
+          </span>
+          <span class="row">
+            <span class="js-hide" data-emergence="hidden">my email is rnegic341@gmail.com</span>
+          </span>
+          <span class="row">
+            <span class="js-hide" data-emergence="hidden">wierd right?</span>
+          </span>
+        </p>
+      </div>
+      <div class="ms social">
+        <span class="row">
+          <span class="js-hide" data-emergence="hidden">
+            <a href="https://www.instagram.com/auriga_z/">Instagram</a>
+          </span>
+        </span>
+        <span class="row">
+          <span class="js-hide" data-emergence="hidden">
+            <a href="https://dribbble.com/auriga">Dribbble</a>
+          </span>
+        </span>
+        <span class="row">
+          <span class="js-hide" data-emergence="hidden">
+            <a href="https://twitter.com/auriga_z">Twitter</a>
+          </span>
+        </span>
+        <span class="row">
+          <span class="js-hide" data-emergence="hidden">
+            <a href="https://www.behance.net/auriga_z">Behance</a>
+            </span>
+        </span>
+        <span class="row">
+          <span class="js-hide" data-emergence="hidden">
+            <a href="https://github.com/auriga-z">Github</a>
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+  <!--SCROLL-CTN-->
   <div data-scroll>
     <div data-scroll-content>
-      <!--bnr-->
-      <div class="bnr" id="js-bnr">
-        <div class="row social">
-          <span data-emergence="hidden">
-              <a href="#">Dribbble</a>
-              <a href="#">Instagram</a>
-              <a href="#">Behance</a>
-          </span>
-        </div>
+      <!--BANNER-->
+      <div class="bnr col-12">
         <h1 class="tb sleft">
           <span class="row">
-            <span data-emergence="hidden">Custodian</span>
+            <span data-emergence="hidden">Custodian of</span>
           </span>
+          <hr data-emergence="hidden" style="width: 20vw;">
           <span class="row">
-            <span data-emergence="hidden">of User</span>
+            <span data-emergence="hidden">User Inter</span>
           </span>
+        </h1>
+        <h1 class="tb sright">
           <span class="row">
             <span data-emergence="hidden">Interface</span>
           </span>
+          <hr data-emergence="hidden" style="width: 24vw;">
           <span class="row">
             <span data-emergence="hidden">Paradigms</span>
           </span>
         </h1>
-        <div>
-          <div class="imgrev" data-emergence="hidden">
-            <img style='width: 100%' src="pos.jpg">
+        <div class="bl ali flex">
+          <div class="bi imgrev" data-emergence="hidden">
+            <img src="photos/bnr2.jpg">
           </div>
-          <p>
+          <div class="bt">
+            <p>
+              <span class="row">
+                <span data-emergence="hidden">Hi, I'm Abhishek Jha, a visual</span>
+              </span>
+              <span class="row">
+                <span data-emergence="hidden">designer based in New Delhi</span>
+              </span>
+              <span class="row">
+                <span data-emergence="hidden">I make high-end digital</span>
+              </span>
+              <span class="row">
+                <span data-emergence="hidden">stuff but not least*</span>
+              </span>
+              </br>
+              <span class="row">
+                <span data-emergence="hidden">Aestheticist for Customary</span>
+              </span>
+              <span class="row">
+                <span data-emergence="hidden">Conceptualization.</span>
+              </span>
+            </p>
+          </div>
+          <img class="ba" src="photos/arrow.svg">
+        </div>
+      </div>
+      <!--WORK-->
+      <div class="sw col-10">
+        <div>
+          <h1 class="jus">
             <span class="row">
-              <span data-emergence="hidden">Hi, I'm Abhishek Jha, a visual designer</span>
+              <span style="transition-delay: .2s" data-emergence="hidden">SELECTED</span>
+            </span>
+            <hr style="width: 31%;" style="transition-delay: .5s" data-emergence="hidden">
+            <span class="row">
+              <span style="transition-delay: .5s" data-emergence="hidden">WORK</span>
+            </span>
+          </h1>
+          <p class="swdes">
+            <span class="row">
+              <span data-emergence="hidden">
+                These are some of my personal
+              </span>
             </span>
             <span class="row">
-              <span data-emergence="hidden">based in New Delhi, I make high-end</span>
-            </span>
-            <span class="row">
-              <span data-emergence="hidden">digital stuff but not least*</span>
+              <span data-emergence="hidden">
+                favourite projects.
+              </span>
             </span>
           </p>
         </div>
-      </div>
-      <!--work-->
-      <div class="wrk">
-        <h1 class="tb sleft">
-          <span class="row">
-            <span data-emergence="hidden">Selected</span>
-          </span>
-          <span class="row">
-            <span data-emergence="hidden">work</span>
-          </span>
-        </h1><br><br>
-        <div>
-          <hr data-emergence="hidden">
-          <div>
-            <a href="" data-emergence="hidden">
-              <h4>
+        <div class="flex">
+          <div class="scol col-6">
+            <div class="w w-margin">
+              <a href="https://www.behance.net/gallery/81156627/CHUU-Website-Redesign">
+                <div class="imgrev" data-emergence="hidden">
+                  <img src="photos/chuu.jpg">
+                </div>
+              </a>
+              <p>
                 <span class="row">
-                  <span data-emergence="hidden">Currently Located</span>
+                  <span data-emergence="hidden">
+                    Chuu Apparel Redesign
+                  </span>
                 </span>
-              </h4>
-            </a>
-          </div>
-          <hr data-emergence="hidden">
-          <div>
-            <a href="" data-emergence="hidden">
-              <h4>
+              </p>
+              <span class="row">
+                <span data-emergence="hidden">
+                  Concept - Redesign
+                </span>
+              </span>
+            </div>
+            <div class="w">
+              <a href="projects/poster/">
+                <div class="imgrev" data-emergence="hidden">
+                  <img src="photos/pos.jpg">
+                </div>
+              </a>
+              <p>
                 <span class="row">
-                  <span data-emergence="hidden">Chuu redesign</span>
+                  <span data-emergence="hidden">
+                    Poster Series
+                  </span>
                 </span>
-              </h4>
-            </a>
+              </p>
+              <span class="row">
+                <span data-emergence="hidden">
+                  Compilation
+                </span>
+              </span>
+            </div>
           </div>
-          <hr data-emergence="hidden">
-          <div>
-            <a href="" data-emergence="hidden">
-              <h4>
+          <div class="sbot scol col-6">
+            <div class="w w-margin">
+              <a href="projects/located/">
+                <div class="imgrev" data-emergence="hidden">
+                  <img src="photos/cur.jpg">
+                </div>
+              </a>
+              <p>
                 <span class="row">
-                  <span data-emergence="hidden">Star wars</span>
+                  <span data-emergence="hidden">
+                    Currently Located
+                  </span>
                 </span>
-              </h4>
-            </a>
-          </div>
-          <hr data-emergence="hidden">
-          <div>
-            <a href="" data-emergence="hidden">
-              <h4>
+              </p>
+              <span class="row">
+                <span data-emergence="hidden">
+                  Website - Redesign
+                </span>
+              </span>
+            </div>
+            <div class="w">
+              <a href="https://www.behance.net/gallery/78469709/Star-Wars-Online-Store">
+                <div class="imgrev" data-emergence="hidden">
+                  <img src="photos/star.jpg">
+                </div>
+              </a>
+              <p>
                 <span class="row">
-                  <span data-emergence="hidden">Vvorld agency</span>
+                  <span data-emergence="hidden">
+                    Star Wars
+                  </span>
                 </span>
-              </h4>
-            </a>
-          </div>
-          <hr data-emergence="hidden">
-        </div>
-      </div>
-      <!--contact-->
-      <div class="con">
-        <h1 class="tb sleft">
-          <span class="row">
-            <span data-emergence="hidden">Contact</span>
-          </span>
-        </h1><br>
-        <div>
-          <p>
-            <span class="row">
-              <span data-emergence="hidden">Have a project in mind? Would you like to</span>
-            </span>
-            <span class="row">
-              <span data-emergence="hidden">share it with me? If yes then feel free to</span>
-            </span>
-            <span class="row">
-              <span data-emergence="hidden">reach out, write an e-mail and I will</span>
-            </span>
-            <span class="row">
-              <span data-emergence="hidden">get back to you as soon as possible.</span>
-            </span><br>
-            <span class="row">
-              <span data-emergence="hidden">Let's make something</span>
-            </span>
-            <span class="row">
-              <span data-emergence="hidden">that matters.</span>
-            </span>
-          </p>
-          <a href="mailto:rnegic341@gmail.com?subject=Lets%20Work%20Together" class="ce" title="I usually respond in a day.">
-            <span class="row">
-              <span data-emergence="hidden">Write Email</span>
-            </span>
-          </a><br>
-          <div class="row social" style="text-align: left">
-            <span data-emergence="hidden">
-                <a href="#" style="margin-left:0;">Dribbble</a>
-                <a href="#">Instagram</a>
-                <a href="#">Behance</a>
-            </span>
+              </p>
+              <span class="row">
+                <span data-emergence="hidden">
+                  Concept - Website
+                </span>
+              </span>
+            </div>
           </div>
         </div>
       </div>
-      <!--scroll-end-->
+      <!--CONTACT-->
+      <div class="con col-10">
+        <div class="flex ali jus">
+          <div class="col-10">
+            <h1 class="flex">
+              <span class="row">
+                <span data-emergence="hidden">CONT</span>
+              </span>
+              <hr data-emergence="hidden" style="width: 67%;">
+            </h1>
+            <h1>
+              <span class="row">
+                <span data-emergence="hidden">ACT</span>
+              </span>
+            </h1>
+         </div>
+         <div class="ctext col-2">
+           <p>
+             <span class="row">
+               <span data-emergence="hidden">Have a project in mind?</span>
+             </span>
+             <span class="row">
+               <span data-emergence="hidden">Would you like to share</span>
+             </span>
+             <span class="row">
+               <span data-emergence="hidden">it? I don't mind making</span>
+             </span>
+             <span class="row">
+               <span data-emergence="hidden">new friends anyway 😄</span>
+             </span><br>
+             <span class="row">
+               <span data-emergence="hidden">Feel free to reach out</span>
+             </span>
+             <span class="row">
+               <span data-emergence="hidden">by writing an e-mail.</span>
+             </span>
+           </p>
+           <a href="mailto:rnegic341@gmail.com?subject=Lets%20Work%20Together" class="ce" title="I usually respond in a day.">
+             <span class="row">
+               <span data-emergence="hidden">Write Email</span>
+             </span>
+           </a>
+           <span class="c-small row">
+             <span data-emergence="hidden">Made with 💙 by<br> Abhishek Jha.</span>
+           </span>
+         </div>
+       </div>
+       <div class="cs social">
+         <p>
+           <span class="row">
+             <span data-emergence="hidden">SOCIAL</span>
+           </span>
+         </p>
+         <a href="https://www.instagram.com/auriga_z/">
+           <span class="row">
+             <span data-emergence="hidden">Instagram</span>
+           </span>
+         </a>
+         <a href="https://dribbble.com/auriga">
+           <span class="row">
+             <span data-emergence="hidden">Dribbble</span>
+           </span>
+         </a>
+         <a href="https://twitter.com/auriga_z">
+           <span class="row">
+             <span data-emergence="hidden">Twitter</span>
+           </span>
+         </a>
+         <a href="https://www.behance.net/auriga_z">
+           <span class="row">
+             <span data-emergence="hidden">Behance</span>
+           </span>
+         </a>
+         <a href="https://github.com/auriga-z">
+           <span class="row">
+             <span data-emergence="hidden">Github</span>
+           </span>
+         </a>
+       </div>
+       <div class="cimg imgrev" data-emergence="hidden">
+         <img src="photos/cont.jpg">
+         <p>
+           <span class="row">
+             <span data-emergence="hidden">
+               Images by
+               <a href="https://crucamara.tumblr.com/">Cru camara</a>
+               and
+               <a href="https://www.behance.net/thisset">Slava Semeniuta</a>
+             </span>
+           </span>
+         </p>
+       </div>
+      </div>
+      <!--SCROLL-END-->
     </div>
   </div>
+  <!--SCRIPTS-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-  <script src="skewm.js"></script>
-  <script src="emergence.js"></script>
+  <script src="js/skew.js"></script>
+  <script src="js/paroller.js"></script>
+  <script src="js/emergence.js"></script>
+  <script src="js/menu.js"></script>
   <script>
   emergence.init({
     container: window,
     reset: false,
     handheld: true,
     throttle: 250,
-    elemCushion: 0.15,
+    elemCushion: 0.2,
     offsetTop: 0,
     offsetRight: 0,
-    offsetBottom: 30,
+    offsetBottom: 60,
     offsetLeft: 0,
     callback: function(element, state) {
       if (state === 'visible') {
@@ -467,3 +606,44 @@
     }
     });
   </script>
+  <script>
+    $(document).ready(function () {
+      $('[data-paroller-factor]').paroller();
+      //FIRST HEADING
+      $(".sleft").paroller({
+       factor: 0.5,
+       factorXs: 0.1,
+       type: 'foreground',
+       direction: 'horizontal',
+       transition: 'transform .3s ease-out'
+      });
+      //SECOND HEADING
+      $(".sright").paroller({
+       factor: -0.3,
+       factorXs: 0.1,
+       type: 'foreground',
+       direction: 'horizontal',
+       transition: 'transform .3s ease-out'
+      });
+      //TO BOTTOM
+      $(".sbot").paroller({
+       factor: .19,
+       type: 'foreground',
+       direction: 'vertical',
+       transition: 'transform .3s ease-out'
+      });
+      //CONTACT
+      $(".cimg").paroller({
+       factor: -.21,
+       type: 'foreground',
+       direction: 'vertical',
+       transition: 'transform .3s ease-out'
+      });
+    });
+  </script>
+  <noscript>
+    Congrats, You are probably living in the 90s. Now in order to access this site you either need to
+    update your browser or enable Javascript from settings. And please don't use Internet explorer.
+  </noscript>
+</body>
+</html>

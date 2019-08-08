@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Abhishek Jha</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" content="Portfolio of Abhishek Jha, a
+  designer based in India. As a freelancer, he works for web agencies,
+  companies and startups all over the world."/>
+  <meta name="theme-color" content="#2b2b28">
+  <script src="jquery.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="jquery.smoothwheel.js"></script>
+  <meta charset="utf-8"/>
+  <link rel="shortcut icon" href="media/logo.svg"/>
+  <style>
+  html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    font-family: verdana, sans-serif;
+    background: #2b2b28;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: geometricPrecision;
+  }
+
+  .texture{
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('media/bg.png');
+    background-size: cover;
+    opacity: .5;
+  }
+
+  /*UNIVERSAL*/
+
+  ::-moz-selection{
+    color: inherit;
+    background: transparent;
+  }
+
+  ::selection{
+    color: inherit;
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar{
+    background: #fff;
+    width: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb{
+    background: #2a2a2a;
+  }
+
+  *{
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  @font-face {
+    font-family: bahnschrift;
+    src: url('font/TradeGothicLTPro-Bold.woff2');
+  }
+
+  @font-face {
+    font-family: noe;
+    src: url('font/noe-display-bold.ttf');
+  }
+
+  @font-face {
+    font-family: productb;
+    src: url('font/Product.ttf');
+  }
+
+  @font-face {
+    font-family: kayak;
+    src: url('font/Kayak Sans Regular.otf');
+  }
+
+  @font-face {
+    font-family: kayak-bold;
+    src: url('font/Kayak Sans Bold.otf');
+  }
+
+  a{
+    font-family: kayak-bold, sans-serif;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  p{
+    font-family: kayak-bold;
+    color: #fff;
+    line-height: 27px;
+    font-size: 15px;
+    position: relative;
+    z-index: 3;
+  }
+
+  ul{
+    list-style-type: none;
+    padding: 0;
+  }
+
+  h1, h2, h3, h4{
+    font-weight: normal;
+    font-family: productb;
+    color: #fff;
+  }
+
+  h1{
+    font-size: 5.5vw;
+    font-family: noe, sans-serif;
+    letter-spacing: 4px;
+  }
+
+  /*GROUPED CLASSES*/
+
+  .l-sd-bar, .r-sd-bar{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 4;
+  }
+
+  section{
+    width: 100%;
+  }
+
+  .l-sd-bar a, .l-sd-bar p, .bar-links a:after{
+    color: #2a2a2a;
+  }
+
+  .r-sd-bar p, .r-sd-bar p::after, .bar-links a:after{
+    position: absolute;
+  }
+
+  .stroke{
+    color: transparent;
+    -webkit-text-stroke: .03em white;
+    text-stroke: 2px white;
+  }
+
+  /*STYLESHEETS*/
+
+  .l-sd-bar{
+    left: 0;
+    width: 16%;
+    height: 100%;
+    padding: 5% 4%;
+    background: #fff;
+  }
+
+  .l-sd-bar ul:last-child a{
+    padding: 3px 0;
+    opacity: 0.83;
+    font-size: 13px;
+  }
+
+  .l-sd-bar ul:first-child p{
+    font-family: bahnschrift, sans-serif;
+    text-transform: capitalize;
+    padding: 8px 0;
+    letter-spacing: 1px;
+    font-size: 16px;
+  }
+
+  .l-sd-bar ul:first-child p:hover{
+    cursor: pointer;
+  }
+
+  .r-sd-bar{
+    height: 78%;
+    top: 11%;
+    right: 7%;
+  }
+
+  .r-sd-bar p{
+    font-family: kayak-bold, sans-serif;
+    transform: translate(36%, 0) rotate(-90deg);
+    bottom: 32%;
+    right: 8px;
+    opacity: 0.9;
+    white-space: nowrap;
+  }
+
+  .r-sd-bar p::after{
+    content: "";
+    left: -35px;
+    width: 15px;
+    height: 2px;
+    top: calc(50% - 1px);
+    background: #fff;
+  }
+
+  .logo{
+    width: 38px;
+    padding: 6px;
+    font-family: kayak;
+  }
+
+  .bar-links a{
+    margin: 15px 0;
+    transform: translate(8px, 0);
+    position: relative;
+  }
+
+  .bar-links a:after{
+    content: attr(title);
+    right: 150%;
+    top: -30%;
+    transition: .4s;
+    background: #fff;
+    padding: 5px 10px;
+    border-radius: 1px;
+    opacity: 0;
+  }
+
+  .bar-links a:hover:after{
+    opacity: 1;
+    right: 130%;
+  }
+
+  .bar-links a img{
+    width: 15px;
+  }
+
+
+  main, footer, .bnr{
+    width: 84%;
+    margin-left: 16%;
+    padding: 7% 16% 8% 9%;
+  }
+
+  main{
+    padding-top: 0;
+    padding-bottom: 0;
+    scroll-behavior: smooth;
+  }
+
+  footer{
+    padding-top: 0;
+  }
+
+  .bnr{
+    padding-bottom: 5%;
+  }
+
+  .bnr-hero{
+    text-align: right;
+    position: relative;
+  }
+
+  .bnr-hero h1{
+    margin-bottom: -4px;
+  }
+
+  .bnr-hero::after{
+    content: url('media/available.png');
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    transform: scale(.6, .6);
+  }
+
+  .bnr-para h2{
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-family: bahnschrift, sans-serif;
+    margin: 3% 0 1% 0;
+  }
+
+  .bnr-para p, .info p{
+    width: 43%;
+  }
+
+  .prjs{
+    padding-left: 3%;
+    width: 100%;
+    height: 100%;
+  }
+
+  .prjs h2{
+    font-size: 3.5vw;
+    text-align: right;
+    line-height: 8.8vh;
+    padding: 0 0 3%;
+  }
+
+  .brake{
+    display: block;
+  }
+
+  .prj{
+    display: flex;
+    align-items: center;
+    padding: 10% 0;
+  }
+
+  .prj-img{
+    width: 60%;
+  }
+
+  .left-img, .right-img{
+    position: relative;
+  }
+
+  .left-img::after, .right-img::after{
+    content: "";
+    width: 100%;;
+    height: 100%;
+    position: absolute;
+    border: 1px solid #fff;
+    top: 8px;
+    z-index: 0;
+  }
+
+  .left-img::after{
+    left: -16px;
+  }
+
+  .right-img::after{
+    left: 16px;
+  }
+
+  .prj-img img{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+  }
+
+  .prj-text{
+    position: relative;
+    z-index: 2;
+  }
+
+  .prj-text:nth-of-type(even){
+    margin-left: -7%;
+  }
+
+  .prj-text:nth-of-type(odd){
+    margin-right: -7%;
+    margin-left: 12%;
+  }
+
+  /*.txt1{
+    margin-bottom: -25%;
+  }
+
+  .txt2{
+    margin-bottom: -44%;
+  }
+
+  .txt3{
+    margin-bottom: -63%;
+  }
+
+  .txt4{
+    margin-bottom: -80%;
+  }
+
+  .txt5{
+    margin-bottom: -96%;
+  }*/
+
+  .txt1{
+    margin-bottom: -30vh;
+  }
+
+  .txt2{
+    margin-bottom: -50vh;
+  }
+
+  .txt3{
+    margin-bottom: -72vh;
+  }
+
+  .txt4{
+    margin-bottom: -94vh;
+  }
+
+  .txt5{
+    margin-bottom: -114vh;
+  }
+
+  .prj-text p{
+    white-space: nowrap;
+  }
+
+  .right-text{
+    text-align: right;
+  }
+
+  .prj-text h3{
+    font-size: 2.6vw;
+    font-family: bahnschrift, sans-serif;
+    padding-bottom: 15px;
+    white-space: nowrap;
+  }
+
+  .left-text a, .right-text a{
+    position: relative;
+    font-size: 15px;
+  }
+
+  .left-text a{
+    transform: translate(95px ,0);
+  }
+
+  .right-text a{
+    transform: translate(-95px ,0);
+  }
+
+  .left-text a::after, .right-text a::after{
+    content: "";
+    width: 80px;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    z-index: 4;
+    background: #fff;
+  }
+
+  .left-text a::after{
+    right: 105%;
+  }
+
+  .right-text a::after{
+    left: 105%;
+  }
+
+  .info h2{
+    font-size: 2.8vw;
+    text-align: right;
+    padding: 7% 0 25% 13%;
+    line-height: 8.8vh;
+  }
+
+  .info p{
+    margin-bottom: -4%;
+  }
+
+  .cont h2, .cont a{
+    font-size: 3.5vw;
+    padding-bottom: 40px;
+    line-height: 10vh;
+  }
+
+  .cont a{
+    position: relative;
+    padding-bottom: 0;
+    font-family: productb, sans-serif;
+    width: 100%;
+    display: inline;
+  }
+
+  .cont a:last-child::after{
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 2px;
+    background: #fff;
+    width: 100%;
+    height: 4px;
+  }
+
+
+  @media only screen and (max-width: 720px){
+
+    .r-sd-bar p, .l-sd-bar, .left-img::after, .right-img::after,
+    .left-text a::after, .right-text a::after, .bnr-hero::after,
+    .bnr-para h2, .to_be_hidden, .bar-links a:after{
+      display: none;
+    }
+
+    .texture{
+      filter: brightness(1.5);
+    }
+
+    .bnr-para p, .info p{
+      width: 94%;
+    }
+
+    .bnr-hero h1{
+      text-align: left;
+      margin-bottom: -6px;
+    }
+
+    .r-sd-bar{
+      top: 8%;
+      width: 84%;
+      height: 25px;
+      z-index: 3;
+    }
+
+    .logo{
+      width: 35px;
+    }
+
+    .bar-links{
+      position: absolute;
+      right: 5px;
+      top: 9px;
+      display: flex;
+    }
+
+    .bar-links a{
+      margin: 0 8px;
+    }
+
+    main, footer, .bnr{
+      width: 100%;
+      margin-left: 0;
+      padding: 7% 6%;
+    }
+
+    footer{
+      padding-bottom: 16%;
+    }
+
+    .bnr{
+      padding: 27% 5% 9%;
+    }
+
+    .bnr-para{
+      padding: 5vh 2vh 0 1%;
+    }
+
+    .prjs{
+      padding-left: 0;
+    }
+
+    .prj{
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: -13vh;
+      overflow: hidden;
+    }
+
+    .prj-img{
+      width: 100%;
+    }
+
+    .prj-text:nth-of-type(even){
+      margin-left: 0;
+    }
+
+    .prj-text:nth-of-type(odd){
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    .left-text a, .right-text a{
+      transform: translate(0, 0);
+      text-align: right;
+      text-decoration: underline;
+      margin-top: -3vh;
+    }
+
+    .info p{
+      margin: 26vh 0 -12vh;
+    }
+
+
+    .txt1{
+      margin: 0;
+    }
+
+    .txt3{
+      margin: 5vh 0 -5vh;
+    }
+
+    .txt5{
+      margin: 10vh 0 -10vh;
+    }
+
+
+    /*Font Sizing*/
+
+    p{
+      font-size: 13px;
+      line-height: 27px;
+    }
+
+    .bnr-hero h1{
+      font-size: 8.3vh;
+      padding-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
+    .prjs h2{
+      font-size: 7vh;
+      padding-bottom: 12vh;
+    }
+
+    .brake{
+      display: inline;
+    }
+
+    .prj h3{
+      font-size: 5vh;
+      padding-bottom: 5px;
+    }
+
+    .info h2{
+      font-size: 5.5vh;
+      padding: 8.5vh 0 0 0;
+    }
+
+    .cont h2, .cont a{
+      font-size: 7vh;
+    }
+
+    .cont a{
+      margin-bottom: -10px;
+      margin-top: 28px;
+    }
+
+  }
+  </style>
+</head>
+<body>
+  <div class="texture"></div>
+  <!--left side bar-->
+  <div class="l-sd-bar">
+    <ul>
+      <li><p id="abt">about</p></li>
+      <li><p id="prj">projects</p></li>
+      <li><p id="hom">home</p></li>
+      <li><p id="con">contact</p></li>
+    </ul>
+    <ul>
+      <li><a href="https://dribbble.com/auriga">dribbble</a></li>
+      <li><a href="https://www.instagram.com/auriga_z/">instagram</a></li>
+      <li><a href="https://www.behance.net/auriga_z">behance</a></li>
+    </ul>
+  </div>
+  <!--right bar-->
+  <div class="r-sd-bar">
+    <img class="logo" src="media/logow.svg" alt="abhishek jha">
+    <div class="bar-links">
+      <p>see more works</p>
+      <a href="https://www.instagram.com/auriga_z/" title="@auriga_z"><img alt="instagram" src="media/instagram.svg"/></a>
+      <a href="https://dribbble.com/auriga" title="@auriga"><img alt="dribbble" src="media/dribbble.svg"/></a>
+    </div>
+  </div>
+  <!--main content-->
+  <section class="bnr">
+    <div class="bnr-hero" data-scroll-speed="30">
+      <h1>crafting</h1>
+      <h1>designs that</h1>
+      <h1>are beyond</h1>
+      <h1>& twisted</h1>
+    </div>
+    <div data-aos="fade-up" class="bnr-para" data-scroll-speed="35">
+      <h2>ABOUT</h2>
+      <p>Hi, I am Abhishek Jha, I am a Indian
+         designer with experience in creating
+         digital interfaces, websites and print
+         design.
+      </p>
+    </div>
+  </section>
+  <main>
+    <section class="prjs">
+      <h2 data-aos="fade-up"><span class="stroke brake">some of my featured</span> works</h2>
+
+      <div class="prj" data-aos="fade-up" data-aos-easing="ease-out-cubic">
+        <div class="prj-img left-img">
+          <img alt="Currently Located" src="media/cur.jpg">
+        </div>
+        <div class="prj-text left-text txt1" data-scroll-speed="13">
+          <h3>Currently<span class="brake"> Located</span></h3>
+          <p>Currently located travel
+             service that aims to <br/>maximize your experience.
+          </p><br/>
+          <a target="_blank" href="https://www.currentlylocated.com/">visit site</a>
+        </div>
+      </div>
+
+      <div class="prj to_be_hidden" data-aos="fade-up" data-aos-easing="ease-out-cubic">
+        <div class="prj-text right-text txt2" data-scroll-speed="13">
+          <h3>Rise of<span class="brake"> Artificial Intelligence</span></h3>
+          <p>A Site Illustrating the uses of Artificial<br/>
+             Intelligence in future.
+          </p><br/>
+          <a href="projects/">visit site</a>
+        </div>
+        <div class="prj-img right-img">
+          <img alt="Artificial Intelligence" src="media/ris.jpg">
+        </div>
+      </div>
+
+      <div class="prj" data-aos="fade-up" data-aos-easing="ease-out-cubic">
+        <div class="prj-img left-img">
+          <img alt="Martial Arts" src="media/maf.jpg">
+        </div>
+        <div class="prj-text left-text txt3" data-scroll-speed="13">
+          <h3>Martial<span class="brake"> Arts</span></h3>
+          <p>A Template designed for Martial
+             Arts & Fitness<br/>Academy.
+          </p><br/>
+          <a href="#">visit site</a>
+        </div>
+      </div>
+
+      <div class="prj to_be_hidden" data-aos="fade-up" data-aos-easing="ease-out-cubic">
+        <div class="prj-text right-text txt4" data-scroll-speed="13">
+          <h3>Artificial<span class="brake"> Intelligence</span></h3>
+          <p>A New Perspective on the upcoming AI & some<br/>
+             of their uses in Industries.
+          </p><br/>
+          <a href="projects/ai/home.html">visit site</a>
+        </div>
+        <div class="prj-img right-img">
+          <img alt="Artificial Intelligence" src="media/ari.jpg">
+        </div>
+      </div>
+
+      <div class="prj" data-aos="fade-up" data-aos-easing="ease-out-cubic">
+        <div class="prj-img left-img">
+          <img alt="Hero Brother" src="media/hrb.jpg">
+        </div>
+        <div class="prj-text left-text txt5" data-scroll-speed="13">
+          <h3>Hero's<span class="brake"> Brother</span></h3>
+          <p>A Template for Hero's Brother
+             a book by M. Scott <br/>Anderson.
+          </p><br/>
+          <a href="projects/hb/index.html">visit site</a>
+        </div>
+      </div>
+
+    </section>
+    <section class="info">
+      <h2 data-aos="fade-up">my expertise lies in the creation of<span class="stroke"> user
+        interfaces </span>and <span class="stroke">interaction</span>, but also includes
+        the ability to bring those concepts to life
+        through creative<span class="stroke"> front-end development</span>.
+      </h2>
+      <p data-aos="fade-up" data-scroll-speed="20">
+         I also like to do from time to time a bit of
+         illustration & motion.
+         I look forward to any kind of creative work
+         including branding and art direction.
+      </p>
+    </section>
+  </main>
+  <footer class="cont">
+      <h2 data-aos="fade-up"><span class="stroke">Have a Project in mind?</span><br><a href="mailto:rnegic341@gmail.com">Let me know.</a></h2>
+      <p data-aos="fade-up" data-aos-anchor-placement="top-bottom">Crafted with love by abhishek jha.<span class="to_be_hidden"> all rights reserved. made possible by github.</span></p>
+  </footer>
+  <script>
+
+    AOS.init();
+
+    $.fn.moveIt = function(){
+    var $window = $(window);
+    var instances = [];
+
+     $(this).each(function(){
+       instances.push(new moveItItem($(this)));
+     });
+
+     window.addEventListener('scroll', function(){
+       var scrollTop = $window.scrollTop();
+       instances.forEach(function(inst){
+         inst.update(scrollTop);
+       });
+     }, {passive: true});
+   }
+
+   var moveItItem = function(el){
+     this.el = $(el);
+     this.speed = parseInt(this.el.attr('data-scroll-speed'));
+   };
+
+   moveItItem.prototype.update = function(scrollTop){
+     this.el.css('transform', 'translateY(' + -(scrollTop / this.speed) + '%)');
+   };
+
+   // Initialization
+   $(function(){$('[data-scroll-speed]').moveIt();});
+
+
+   $(document).ready(function(){
+
+     $("#abt").click(function(){
+       $("html, body").animate({
+           scrollTop: $(".info").offset().top}, 1000);
+     });
+
+     $("#prj").click(function(){
+       $("html, body").animate({
+           scrollTop: $(".prjs").offset().top}, 1000);
+     });
+
+     $("#hom").click(function(){
+       $("html, body").animate({
+           scrollTop: $(".bnr").offset().top}, 1000);
+     });
+
+     $("#con").click(function(){
+       $("html, body").animate({
+           scrollTop: $(".cont").offset().top}, 1000);
+     });
+   });
+  </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg" style="vector-effect: non-scaling-stroke;">
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect rx="50" id="svg_2" y="117.898447" x="46.292693" width="419.414623" stroke-width="19" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke="#032527" height="319.4" fill="none"/>
+  <line id="svg_4" y2="192.581242" y1="260.606327" x2="52.351244" x1="226.800001" stroke-width="19" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke="#032527" fill="none"/>
+  <line id="svg_5" y2="261.355778" y1="191.831792" x2="285.399999" x1="460.750316" stroke-width="17" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke="#032527" fill="none"/>
+  <path id="svg_6" stroke-width="14" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke="#032527" fill="none" d="m258.899994,316.799988l-5.800003,0c-13.199997,0 -24,-10.700012 -24,-24l0,-42.599991l53.800003,0l0,42.599991c0,13.200012 -10.799988,24 -24,24z"/>
+  <path id="svg_7" stroke-width="21" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke="#032527" fill="none" d="m185.699997,115.695335l0,-31.800003c0,-7.5 7.100006,-13.599998 16,-13.599998l108.599991,0c8.800018,0 16,6.099998 16,13.599998l0,31.800003"/>
+  <line id="svg_8" y2="70.295342" y1="70.295342" x2="295.7" x1="216.3" stroke-width="10" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke="#032527" fill="none"/>
+ </g>
+</svg>

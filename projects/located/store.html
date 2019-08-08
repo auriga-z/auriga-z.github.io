@@ -1,0 +1,305 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <title>CL Store</title>
+  <link rel="shortcut icon" href="#">
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  body, html{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+  }
+
+  *{
+    box-sizing: border-box;
+  }
+
+  @font-face {
+    font-family: product-r;
+    src: url("font/Product Regular.ttf");
+  }
+
+  @font-face {
+    font-family: product-b;
+    src: url("font/Product Bold.ttf");
+  }
+
+  @font-face {
+    font-family: kayak-r;
+    src: url("font/Kayak Sans Regular.otf");
+  }
+
+  @font-face {
+    font-family: kayak-b;
+    src: url("font/Kayak Sans Bold.otf");
+  }
+
+  @font-face {
+    font-family: bebas;
+    src: url("font/Bebas.otf");
+  }
+
+
+  p, h1, h2, h3, h4{
+    margin: 0px;
+    font-family: sans-serif;
+    font-weight: normal;
+  }
+
+  ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a{
+    text-decoration: none;
+    font-family: kayak-r, sans-serif;
+    display: block;
+  }
+
+  button{
+    background: none;
+    border: none;
+  }
+
+  /*STYLESHEETS*/
+
+  .nav, .nav__logo, .nav__social, .nav__menu, #scroll, .testi,
+  .footer__follow div{
+    display: flex;
+    align-items: center;
+  }
+
+  .flex{
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .ideal__para{
+    font-family: kayak-r, sans-serif;
+    font-size: 15px;
+    color: #144d53;
+    line-height: 25px;
+  }
+
+  .title{
+    font-family: bebas, sans-serif;
+    font-size: 8vh;
+    letter-spacing: 5px;
+    color: #374818;
+  }
+
+  .nav__logo, .nav__menu, .nav__social{
+    position: absolute;
+  }
+
+  .nav, #sidebar, #scroll, .bnr__photo, .background{
+    position: fixed;
+  }
+
+  /*FIXED*/
+
+  .nav{
+    top: 12%;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+  }
+
+  .nav__logo{
+    left: 8%;
+  }
+
+  .nav__logo img{
+    width: 90px;
+  }
+
+  .nav__menu{
+    right: 8%;
+  }
+
+  .nav__menu a{
+    padding: 0 15px;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  .nav__menu a img{
+    width: 16px;
+  }
+
+  .nav__social{
+    left: 18%;
+  }
+
+  .nav__social img {
+    width: 30px;
+    padding: 4px;
+  }
+
+  /*HEADER*/
+
+  header{
+    background: url('photo/footer.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 10% 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header div{
+    flex: 50%;
+    width: 50%;
+    padding: 5%;
+  }
+
+  header div h1{
+    font-size: 12vh;
+    font-family: product-b;
+  }
+
+  header div:last-child{
+    text-align: right;
+  }
+
+  header div:last-child a{
+    color: #777;
+    padding: 2px 10px;
+  }
+
+  /*MAIN*/
+
+  main{
+    padding: 1% 6%;
+  }
+
+  .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .column{
+    display: flex;
+    flex-direction: column;
+    flex: 50%;
+    padding: 7%;
+  }
+
+  .item{
+    width: 100%;
+  }
+
+  .item img{
+    width: 100%;
+  }
+
+  .item__info{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .item__info div:first-child{
+    width: 60%;
+  }
+
+  .item__info div:first-child h3{
+    font-size: 4vh;
+    padding: 15px 0;
+  }
+
+  .item__info div:last-child{
+    width: 40%;
+    text-align: right;
+    padding: 16px 0 0 0;
+  }
+
+  .item__info div:last-child a{
+    margin-top: 45%;
+    color: #777;
+  }
+
+
+
+  </style>
+</head>
+<body>
+  <!--FIXED MENU STUFF-->
+  <div class="nav">
+    <div class="nav__logo">
+      <img class="to__black" alt="Logo" src="photo/logog.png">
+    </div>
+    <div class="nav__social">
+      <img class="to__black" alt="Instagram" src="photo/instagram.svg">
+      <img class="to__black" alt="Twitter" src="photo/twitter.svg">
+      <!--<img alt="Facebook" src="photo/face.svg">-->
+    </div>
+    <div class="nav__menu">
+      <a href="#" class="nav__links">store</a>
+      <a href="#" class="nav__links">inquire</a>
+      <a href="#"><img class="to__black" alt="Your Route" src="photo/per.svg"></a>
+    </div>
+  </div>
+  <!--HEADER-->
+  <header>
+    <div>
+      <h1>store</h1>
+      <p class="ideal__para">Lorem ipsum dolor sit amet, consectetuer
+         adipiscing elit. <br/>Aenean commodo
+         ligula eget dolor aenean.
+      </p>
+    </div>
+    <div>
+      <h3 class="title">75 ITEMS</h3>
+      <a href="#">Item1</a>
+      <a href="#">Item1</a>
+      <a href="#">Item1</a>
+    </div>
+  </header>
+  <!--ITEMS-->
+  <main>
+    <div class="row">
+      <div class="column">
+        <div class="item">
+          <img src="photo/abtg.jpg">
+          <div class="item__info">
+            <div>
+              <h3>Product Name</h3>
+              <p class="ideal__para">Lorem ipsum dolor sit amet, consectetuer
+                 adipiscing elit. Aenean commodo
+                 ligula eget dolor aenean.
+              </p>
+            </div>
+            <div>
+              <h3>$475</h3>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="item">
+          <img src="photo/abtg.jpg">
+          <div class="item__info">
+            <div>
+              <h3>Product Name</h3>
+              <p class="ideal__para">Lorem ipsum dolor sit amet, consectetuer
+                 adipiscing elit. Aenean commodo
+                 ligula eget dolor aenean.
+              </p>
+            </div>
+            <div>
+              <h3>$475</h3>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
