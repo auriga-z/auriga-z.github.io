@@ -45,7 +45,7 @@
 
   [data-scroll-content]{
     padding-top: 9vw;
-    padding-bottom: 4vw;
+    padding-bottom: 5.5vw;
   }
 
   .bnr{
@@ -194,7 +194,8 @@
 
   .cs .imgrev{
     width: 30vw;
-    margin-left: -10vw;
+    margin-left: -25vw;
+    margin-top: -4.5vh;
   }
 
   </style>
@@ -608,8 +609,6 @@
   </script>
   <script>
     $(document).ready(function () {
-      $(".cs .imgrev").css("transform", "translate(0px, 0px)");
-
       $('[data-paroller-factor]').paroller();
       //FIRST HEADING
       $(".sleft").paroller({
@@ -630,13 +629,6 @@
       //TO BOTTOM
       $(".sbot").paroller({
        factor: .18,
-       type: 'foreground',
-       direction: 'vertical',
-       transition: 'transform .3s linear'
-      });
-      //CONTACT
-      $(".cs .imgrev").paroller({
-       factor: -0.16,
        type: 'foreground',
        direction: 'vertical',
        transition: 'transform .3s linear'
