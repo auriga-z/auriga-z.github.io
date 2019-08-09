@@ -40,5 +40,4 @@ var scroll = $(window).scrollTop();
 
 $(document).ready(function(){
     $(this).scrollTop(0);
-    $("[data-scroll-content]").css("transform", "translate3d(0px 0px 0px)");
 });
