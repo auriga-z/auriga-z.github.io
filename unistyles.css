@@ -208,11 +208,6 @@ hr[data-emergence=visible]::after {
   height: 0;
 }
 
-[data-scroll-content]{
-  padding-top: 9vw;
-  padding-bottom: 14vw;
-}
-
 nav{
   position: relative;
   justify-content: space-between;

@@ -43,6 +43,11 @@
   </script>
   <style>
 
+  [data-scroll-content]{
+    padding-top: 9vw;
+    padding-bottom: 4vw;
+  }
+
   .bnr{
     position: relative;
     background: #1d1d1d;
@@ -114,7 +119,7 @@
   .w p{
     font-size: 1.02em;
     font-family: product;
-    padding: 15px 0 1px 0;
+    padding: 15px 0 2px 0;
   }
 
   .w > span{
@@ -135,6 +140,7 @@
 
   .con{
     position: relative;
+    margin-bottom: 0;
   }
 
   .con *{
@@ -188,10 +194,11 @@
 
   .cimg{
     width: 30vw;
-    position: absolute;
+    margin-left: -10vw;
+    /*position: absolute;
     z-index: -2;
     bottom: -54vh;
-    left: 31.5vw;
+    left: 31.5vw;*/
   }
 
   .cimg p{
@@ -541,8 +548,9 @@
            <span class="c-small row">
              <span data-emergence="hidden">Made with 💙 by<br> Abhishek Jha.</span>
            </span>
-         </div>
-       </div>
+          </div>
+        </div>
+       <div class="flex ali" style="justify-content: flex-end; width: 76.33%">
        <div class="cs social">
          <p>
            <span class="row">
@@ -579,6 +587,7 @@
          <img src="photos/cont.jpg">
        </div>
       </div>
+     </div>
       <!--SCROLL-END-->
     </div>
   </div>
@@ -639,7 +648,7 @@
       });
       //CONTACT
       $(".cimg").paroller({
-       factor: -.15,
+       factor: -.19,
        type: 'foreground',
        direction: 'vertical',
        transition: 'transform .3s ease-out'
