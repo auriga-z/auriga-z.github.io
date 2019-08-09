@@ -149,9 +149,9 @@
   }
 
   .cs{
-    position: absolute;
-    left: 20vw;
-    top: 44vh;
+     width: 52.33%;
+     margin-left: 25.3%;
+     align-items: center;
   }
 
   .social a{
@@ -192,19 +192,9 @@
     opacity: .5;
   }
 
-  .cimg{
+  .cs .imgrev{
     width: 30vw;
     margin-left: -10vw;
-  }
-
-  .cimg p{
-    font-size: 12px;
-    padding-top: 5px;
-    opacity: .3;
-  }
-
-  .cimg a{
-    font-size: inherit;
   }
 
   </style>
@@ -546,8 +536,8 @@
            </span>
           </div>
         </div>
-       <div class="flex ali" style="justify-content: flex-end; width: 76.33%">
-       <div class="cs social">
+       <div class="flex jus cs">
+       <div class="social">
          <p>
            <span class="row">
              <span data-emergence="hidden">SOCIAL</span>
@@ -579,9 +569,9 @@
            </span>
          </a>
        </div>
-       <div class="cimg imgrev" data-emergence="hidden" title="Images by Cru camara & Slava Semeniuta">
-         <img src="photos/cont.jpg">
-       </div>
+        <div class="imgrev" data-emergence="hidden" title="Images by Cru camara & Slava Semeniuta">
+          <img src="photos/cont.jpg">
+        </div>
       </div>
      </div>
       <!--SCROLL-END-->
@@ -643,8 +633,8 @@
        transition: 'transform .3s linear'
       });
       //CONTACT
-      $(".cimg").paroller({
-       factor: -.15,
+      $(".cs .imgrev").paroller({
+       factor: -0.16,
        type: 'foreground',
        direction: 'vertical',
        transition: 'transform .3s linear'
