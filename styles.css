@@ -70,10 +70,7 @@
 
 .cimg{
   width: 25.8vw;
-  position: absolute;
-  z-index: -2;
-  top: 30vh;
-  left: 1.5vw;
+  margin: 20px 6.5vw 0 0;
 }
 
 
