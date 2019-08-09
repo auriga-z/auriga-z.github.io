@@ -289,14 +289,13 @@
     background: #f0f0f0;
     z-index: 4;
     transition: .6s;
-    transition-delay: .8s;
+    animation: imgrev .8s;
+    animation-delay: .5s;
   }
 
-  .imgrev[data-emergence=hidden]::before {
-    width: 100%;
-  }
-  .imgrev[data-emergence=visible]::before{
-    width: 0;
+  @@keyframes imgrev {
+    from{width: 100%;}
+    to{width: 0;}
   }
 
 
