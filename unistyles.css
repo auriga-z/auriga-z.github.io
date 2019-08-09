@@ -210,7 +210,7 @@ hr[data-emergence=visible]::after {
 
 [data-scroll-content]{
   padding-top: 9vw;
-  padding-bottom: 14.5vw;
+  padding-bottom: 14vw;
 }
 
 nav{
@@ -457,4 +457,45 @@ nav div > span, nav a{
 .social p{
   font-size: 16px;
   opacity: .5;
+}
+
+
+.scr{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f0f0f0;
+  display: none;
+  text-align: center;
+  padding-top: 25vh;
+}
+
+.scr h1, .scr p, .scr a{
+  color: #19191b;
+  text-align: center;
+  display: block;
+}
+
+.scr p, .scr a{
+  font-size: 2vw;
+  line-height: 2.4vw;
+  padding: 20px 0;
+}
+
+.scr a{
+  text-decoration: underline;
+  padding-top: 50px;
+}
+
+@media only screen and (max-width: 1000px){
+  body{
+    overflow: hidden;
+  }
+
+  .scr{
+    display: block;
+    z-index: 100;
+  }
 }

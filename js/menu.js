@@ -37,3 +37,7 @@ var scroll = $(window).scrollTop();
     nl.style="opacity: 0";
   }
 });
+
+$(document).ready(function(){
+    $(this).scrollTop(0);
+});
