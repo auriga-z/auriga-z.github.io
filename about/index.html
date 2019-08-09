@@ -25,7 +25,7 @@
   </script>
   <style>
   [data-scroll-content]{
-    padding: 13vw 0 1vw 0;
+    padding: 13vw 0 1px 0;
   }
   </style>
 </head>
@@ -388,7 +388,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
   <script src="../js/skew.js"></script>
-  <script src="../js/paroller.js"></script>
   <script src="../js/emergence.js"></script>
   <script src="../js/menu.js"></script>
   <script>
@@ -411,18 +410,6 @@
         console.log('Element is hidden with NO reset.');
       }
     }
-    });
-  </script>
-  <script>
-    $(document).ready(function () {
-      $('[data-paroller-factor]').paroller();
-      //TO BOTTOM
-      $(".cimg").paroller({
-       factor: -.09,
-       type: 'foreground',
-       direction: 'vertical',
-       transition: 'transform .3s ease-out'
-      });
     });
   </script>
 </body>
