@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<!--
+    - Automatically appends .is-inview to every element with data-scroll attribute.
+		  Use .parent.is-inview .child selector for animating.
+
+		- For smooth scroll put content inside another element with overflow hidden.
+
+		- Don't forget to add locomotive-scroll css.
+
+		- Go to: https://www.cssscript.com/animate-scroll-parallax-locomotive/
+
+		-
+	  -->
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Locomotive Scroll Exploration</title>
+		<link href="locomotive-scroll-master\dist\locomotive-scroll.min.css" rel="stylesheet" />
+		<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		p{
+			font-size: 80px;
+			padding-bottom: 200px;
+			line-height: 80px
+		}
+
+		#ctn{
+			overflow: hidden;
+		}
+
+		.red{
+			transform: none;
+      opacity: 1;
+      transition-duration: .8s;
+		}
+
+		.test.is-inview .d3d{
+      transform: none;
+      opacity: 1;
+			transition-delay: .5s;
+	  }
+
+		.d3d{
+			transform-origin: center top;
+      transform-style: preserve-3d;
+      transform: translateY(100%) rotateX(-80deg);
+      transition: opacity .8s cubic-bezier(.215,.61,.355,1),transform .8s cubic-bezier(.215,.61,.355,1);
+      transition-delay: 0s, 0s;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="ctn">
+			<div id="js-scroll">
+			<p>BOOM!! BOOOM!! BOOOOM!!</p>
+			<p>BOOM!! BOOOM!! BOOOOM!!</p>
+			<div class="test" data-scroll data-scroll-offset="15%">
+		  	<p class="d3d">BOOM!! BOOOM!! BOOOOM!!</p>
+		  </div>
+			<div style="transform: rotate(15deg)">
+			<p data-scroll data-scroll-speed="3" data-scroll-direction="horizontal"
+			data-scroll-offset="1%">BOOM!! BOOOM!! BOOOOM!!</p>
+		  </div>
+			<p>BOOM!! BOOOM!! BOOOOM!!</p>
+			<p class="has-scroll-dragging">BOOM!! BOOOM!! BOOOOM!!</p>
+	  	</div>
+		</div>
+
+
+
+		<script src="locomotive-scroll-master\dist\locomotive-scroll.min.js"></script>
+		<script>
+		const scroll = new LocomotiveScroll({
+    el: document.querySelector('#js-scroll'),
+    smooth: true,
+		inertia: .6,
+		draggingClass: 'has-scroll-dragging',
+    });
+		</script>
+	</body>
+</html>
