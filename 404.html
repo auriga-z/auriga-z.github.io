@@ -1,86 +1,146 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
-	<head>
-		<!--
-    - Automatically appends .is-inview to every element with data-scroll attribute.
-		  Use .parent.is-inview .child selector for animating.
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145352703-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-		- For smooth scroll put content inside another element with overflow hidden.
+    gtag('config', 'UA-145352703-1');
+    </script>
+    <meta charset="utf-8">
+    <title>404 — Page not found</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="unistyles.css">
+    <style>
 
-		- Don't forget to add locomotive-scroll css.
+      html, body {
+        overflow: hidden;
+        background-color: #000;
+      }
 
-		- Go to: https://www.cssscript.com/animate-scroll-parallax-locomotive/
+      body {
+        margin: 0;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+      }
 
-		-
-	  -->
-		<meta charset="UTF-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Locomotive Scroll Exploration</title>
-		<link href="locomotive-scroll-master\dist\locomotive-scroll.min.css" rel="stylesheet" />
-		<style>
-		*{
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-		}
-		p{
-			font-size: 80px;
-			padding-bottom: 200px;
-			line-height: 80px
-		}
+      canvas {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
 
-		#ctn{
-			overflow: hidden;
-		}
+      .dg{
+        display: none;
+      }
 
-		.red{
-			transform: none;
-      opacity: 1;
-      transition-duration: .8s;
-		}
+      .txt{
+        text-align: center;
+        width: 30%;
+        margin: auto;
+        transform: translate(0, 44%);
+        pointer-events: none;
+      }
 
-		.test.is-inview .d3d{
-      transform: none;
-      opacity: 1;
-			transition-delay: .5s;
-	  }
+      ul{
+        display: flex;
+        align-items: center;
+        position: fixed;
+        bottom: 30px;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
 
-		.d3d{
-			transform-origin: center top;
-      transform-style: preserve-3d;
-      transform: translateY(100%) rotateX(-80deg);
-      transition: opacity .8s cubic-bezier(.215,.61,.355,1),transform .8s cubic-bezier(.215,.61,.355,1);
-      transition-delay: 0s, 0s;
-		}
-		</style>
-	</head>
-	<body>
-		<div id="ctn">
-			<div id="js-scroll">
-			<p>BOOM!! BOOOM!! BOOOOM!!</p>
-			<p>BOOM!! BOOOM!! BOOOOM!!</p>
-			<div class="test" data-scroll data-scroll-offset="15%">
-		  	<p class="d3d">BOOM!! BOOOM!! BOOOOM!!</p>
-		  </div>
-			<div style="transform: rotate(15deg)">
-			<p data-scroll data-scroll-speed="3" data-scroll-direction="horizontal"
-			data-scroll-offset="1%">BOOM!! BOOOM!! BOOOOM!!</p>
-		  </div>
-			<p>BOOM!! BOOOM!! BOOOOM!!</p>
-			<p class="has-scroll-dragging">BOOM!! BOOOM!! BOOOOM!!</p>
-	  	</div>
-		</div>
+      ul li{
+        padding: 0 20px;
+      }
 
+      .prj_btn{
+        border-bottom: 1px solid rgba(240, 240, 243, .18);
+        width: 100%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0;
+        box-shadow: inset 0 0 #fff;
+        transition: .6s;
+        pointer-events: auto;
+      }
 
+      .prj_btn:hover{
+        border-bottom: 1px solid transparent;
+        box-shadow: inset 0 -100px #fff;
+        padding: 20px 30px;
+      }
 
-		<script src="locomotive-scroll-master\dist\locomotive-scroll.min.js"></script>
-		<script>
-		const scroll = new LocomotiveScroll({
-    el: document.querySelector('#js-scroll'),
-    smooth: true,
-		inertia: .6,
-		draggingClass: 'has-scroll-dragging',
-    });
-		</script>
-	</body>
+      .prj_btn img{
+        transform: rotate(-180deg);
+      }
+
+      .prj_btn:hover p{
+        color: #231f20;
+        cursor: pointer;
+      }
+
+      .prj_btn:hover img{
+        filter: invert(.7);
+        transform: rotate();
+      }
+
+      @media only screen and (max-width: 900px) {
+        .txt{
+          width: 80%;
+          transform: translate(0, 55%);
+        }
+
+        h1{
+          font-size: 5em;
+        }
+
+        ul li{
+          padding: 0 10px;
+        }
+      }
+  </style>
+  <script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-105392568-1', 'auto');
+      ga('send', 'pageview');
+  </script>
+  </head>
+  <body>
+    <div class="txt">
+      <h1 class="delay">
+       404
+      </h1>
+      <p class="delay">
+        The page you are looking for does not exist, you can
+        either go back to homepage or stay here.
+      </p><br><br>
+      <a href="index.html" class="prj_btn">
+        <span>
+          <span><img src="photos/larro.svg"></span>
+        </span>
+        <p>
+          Go back to homepage
+        </p>
+      </a>
+    </div>
+    <ul>
+      <li><a href="https://www.instagram.com/design_flavorist/">instagram</a></li>
+      <li><a href="https://dribbble.com/abhishek_jha">dribbble</a></li>
+      <li><a href="https://www.behance.net/abhishek_jha">behance</a></li>
+      <li><a href="https://twitter.com/designflavorist">twitter</a></li>
+    </ul>
+    <canvas></canvas>
+    <script src="js/script.js"></script>
+  </body>
 </html>
