@@ -43,8 +43,6 @@
   h1 > .row{
     font-size: 8vw;
     font-family: circular;
-    line-height: 100%;
-    padding-bottom: 7px;
   }
 
   nav{
@@ -114,9 +112,31 @@
   .btn:hover img{
     filter: invert(.7);
   }
+
+  .cover{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 63%;
+    background: #0d0d0d;
+    z-index: 100;
+    text-align: center;
+  }
+
+  .cover h1{
+    font-size: 12vw;
+    line-height: 90%;
+    padding-bottom: 30px;
+  }
   </style>
 </head>
 <body>
+  <div class="cover">
+    <h1>WORK IN<br>Progress</h1>
+    <p>This website is currently not available<br> for mobile. Try Desktop</p>
+  </div>
   <nav class="col-3" style="writing-mode: sideways-rl;">
     <p>
       Abhishek Jha
