@@ -19,8 +19,8 @@
   <meta name="description" content="Portfolio of Abhishek Jha. A visual designer and front-end developer specialized in UI/UX.">
   <meta name="theme-color" content="#f94444">
   <meta name="twitter:card" content="Abhishek Jha - Visual designer and developer.">
-  <meta name="twitter:site" content="@auriga_z">
-  <meta name="twitter:creator" content="@auriga_z">
+  <meta name="twitter:site" content="@designflavorist">
+  <meta name="twitter:creator" content="@designflavorist">
   <meta name="twitter:url" content="https://abhishekjha.me">
   <meta name="twitter:title" content="2019 Portfolio of Abhishek Jha">
   <meta name="twitter:description" content="Abhishek Jha is a visual designer based in New Delhi. He makes high-end user interfaces.">
@@ -28,13 +28,13 @@
   <meta name="twitter:image:alt" content="Image">
   <script type="text/javascript">
     <!--
-    if (screen.width >= 699) {
+    if (screen.width >= 1080) {
     document.location = "index.html";
     }
     //-->
   </script>
   <style>
-  body{
+  html, body{
    width: 100%;
    height: 100%;
    margin: 0;
@@ -62,7 +62,7 @@
   }
 
   [data-scroll-content]{
-    padding: 25px 0 4vh 0;
+    padding: 32px 0 4vh 0;
   }
 
   span{
@@ -183,10 +183,6 @@
     transform: translate(-50%, 0);
   }
 
-  nav hr{
-    height: 2px;
-  }
-
   nav hr::after{
     background: #3a3a3c;
   }
@@ -198,7 +194,7 @@
   }
 
   .bnr{
-    padding-top: 27vh;
+    padding-top: 25vh;
     padding-bottom: 8vh;
   }
 
@@ -235,13 +231,13 @@
   .wrk > div > div a::after{
     content: "";
     position: absolute;
-    background: url('photos/arrow.png');
+    background: url('photos/tab.svg');
     background-size: cover;
     width: 3vh;
     height: 3vh;
     top: 50%;
     transition: .8s;
-    transform: translate(0, -50%) rotate(-90deg);
+    transform: translate(0, -50%);
   }
 
   .wrk > div > div a[data-emergence=hidden]::after{
@@ -286,16 +282,17 @@
     height: 100%;
     top: 0;
     left: 0;
+    width: 0;
     background: #f0f0f0;
     z-index: 4;
     transition: .6s;
+    animation: imgrev .8s;
+    animation-delay: .5s;
   }
 
-  .imgrev[data-emergence=hidden]::before {
-    width: 100%;
-  }
-  .imgrev[data-emergence=visible]::before{
-    width: 0;
+  @keyframes imgrev {
+    from{width: 100%;}
+    to{width: 0;}
   }
 
 
@@ -329,9 +326,9 @@
       <div class="bnr" id="js-bnr">
         <div class="row social">
           <span data-emergence="hidden">
-              <a href="https://dribbble.com/auriga">Dribbble</a>
-              <a href="https://www.instagram.com/auriga_z/">Instagram</a>
-              <a href="https://www.behance.net/auriga_z">Behance</a>
+              <a href="https://dribbble.com/abhishek_jha">Dribbble</a>
+              <a href="https://www.instagram.com/design_flavorist/">Instagram</a>
+              <a href="https://www.behance.net/abhishek_jha">Behance</a>
           </span>
         </div>
         <h1 class="tb sleft">
@@ -349,7 +346,7 @@
           </span>
         </h1>
         <div>
-          <div class="imgrev" data-emergence="hidden">
+          <div class="imgrev" data-emergence="visible">
             <img style='width: 100%' src="photos/mob.jpg">
           </div>
           <p>
@@ -366,7 +363,7 @@
               <span data-emergence="hidden">and sometimes develop digital interfaces</span>
             </span>
             <span class="row">
-              <span data-emergence="hidden">for web and mobile and but ocassionally</span>
+              <span data-emergence="hidden">for web and mobile and but occasionally</span>
             </span>
             <span class="row">
               <span data-emergence="hidden">I also make typographic poster and</span>
@@ -390,7 +387,7 @@
         <div>
           <hr data-emergence="hidden">
           <div>
-            <a href="projects/located/" data-emergence="hidden">
+            <a href="projects/located/" target="_blank" data-emergence="hidden">
               <h4>
                 <span class="row">
                   <span data-emergence="hidden">Currently Located</span>
@@ -400,7 +397,7 @@
           </div>
           <hr data-emergence="hidden">
           <div>
-            <a href="https://www.behance.net/gallery/81156627/CHUU-Website-Redesign" data-emergence="hidden">
+            <a href="https://www.behance.net/gallery/81156627/CHUU-Website-Redesign" target="_blank" data-emergence="hidden">
               <h4>
                 <span class="row">
                   <span data-emergence="hidden">Chuu redesign</span>
@@ -410,7 +407,7 @@
           </div>
           <hr data-emergence="hidden">
           <div>
-            <a href="https://www.behance.net/gallery/78469709/Star-Wars-Online-Store" data-emergence="hidden">
+            <a href="https://www.behance.net/gallery/78469709/Star-Wars-Online-Store" target="_blank" data-emergence="hidden">
               <h4>
                 <span class="row">
                   <span data-emergence="hidden">Star wars</span>
@@ -420,7 +417,7 @@
           </div>
           <hr data-emergence="hidden">
           <div>
-            <a href="http://vvorld.in/" data-emergence="hidden">
+            <a href="http://vvorld.in/" target="_blank" data-emergence="hidden">
               <h4>
                 <span class="row">
                   <span data-emergence="hidden">Vvorld agency</span>
@@ -430,7 +427,7 @@
           </div>
           <hr data-emergence="hidden">
           <div>
-            <a href="projects/previous/" data-emergence="hidden">
+            <a href="projects/previous/" target="_blank" data-emergence="hidden">
               <h4>
                 <span class="row">
                   <span data-emergence="hidden">Portfolio 2018</span>
@@ -471,16 +468,17 @@
             </span>
             </p>
           </p>
-          <a href="mailto:rnegic341@gmail.com?subject=Lets%20Work%20Together" class="ce" title="I usually respond in a day.">
+          <a href="mailto:2abhijha@gmail.com?subject=Lets%20Work%20Together" class="ce" title="I usually respond in a day.">
             <span class="row">
-              <span data-emergence="hidden">Write Email</span>
+              <span data-emergence="hidden">Get in touch</span>
             </span>
           </a><br>
           <div class="row social" style="text-align: left">
             <span data-emergence="hidden">
-                <a href="https://dribbble.com/auriga" style="margin-left:0;">Dribbble</a>
-                <a href="https://www.instagram.com/auriga_z/">Instagram</a>
-                <a href="https://www.behance.net/auriga_z">Behance</a>
+                <a href="https://dribbble.com/abhishek_jha" style="margin-left:0;">Dribbble</a>
+                <a href="https://www.instagram.com/design_flavorist/">Instagram</a>
+                <a href="https://www.behance.net/abhishek_jha">Behance</a>
+                <a href="https://www.youtube.com/channel/UCZihpBYv20WPVx85QGIscAw">Youtube</a>
             </span>
           </div>
         </div>
@@ -498,10 +496,10 @@
     reset: false,
     handheld: true,
     throttle: 250,
-    elemCushion: 0.14,
+    elemCushion: 0.12,
     offsetTop: 0,
     offsetRight: 0,
-    offsetBottom: 30,
+    offsetBottom: 20,
     offsetLeft: 0,
     callback: function(element, state) {
       if (state === 'visible') {

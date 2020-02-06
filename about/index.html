@@ -1,200 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Abhishek Jha - Visual Designer</title>
+  <title>Abhishek Jha — Visual Designer</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="icon" href="../photos/logo.png">
   <link rel="stylesheet" href="../unistyles.css">
-  <link rel="stylesheet" href="../styles.css">
   <meta name="description" content="Portfolio of Abhishek Jha. A visual designer specialised in User Interfaces but not limited to it.">
   <meta name="theme-color" content="#c1372a">
   <script type="text/javascript">
     <!--
     if (screen.width <= 699) {
-    document.location = "mobile.html";
+    document.location = "../mobile.html";
     }
     //-->
   </script>
   <script language=javascript>
     <!--
     if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
-    location.replace("mobile.html");
+    location.replace("../mobile.html");
     }
     -->
   </script>
   <style>
-  [data-scroll-content]{
-    padding: 13vw 0 1px 0;
+
+  body, .imgrev::before{
+    background: #6cb3b5; /*#ef3c3c;*/
   }
+
+  h1, p, a{
+    color: #fff;
+  }
+
+  a:hover{
+    color: #97dcdf;
+  }
+
+  .outline{
+    -webkit-text-stroke: .02em #fff;
+    text-stroke: 1px #fff;
+    color: transparent;
+    white-space: nowrap;
+  }
+
+  .abt_t{
+    padding-top: 25%;
+    padding-bottom: 25%;
+  }
+
+  .abt_t h1{
+    width: 200%;
+  }
+
+  .abt_t > h1 > .row > span > span{
+    display: inline-block;
+  }
+
+  .le{
+    margin-left: -20%;
+  }
+
+  .abt_t > div{
+    position: absolute;
+    margin-left: 15%;
+  }
+
+  .abt_t > div:last-child{
+    transform: translate(0, 280%);
+  }
+
+  .abt_p{
+    margin-top: 8vh;
+  }
+
+  .pro > div{
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+  }
+
+  .pro > p{
+    margin-left: 11%;
+    padding-bottom: 40px;
+  }
+
+  .pro > div:first-child .row > span{
+    transition-delay: .1s;
+  }
+
+  .pro > div:nth-child(2) span > span{
+    transition-delay: .2s;
+  }
+
+  .pro > div:nth-child(3) span > span{
+    transition-delay: .3s;
+  }
+
+  .pro > div:nth-child(4) span > span{
+    transition-delay: .4s;
+  }
+
+  .pro div > div, .pro div > h4 > span span{
+    display: flex;
+    align-items: flex-start;
+    white-space: nowrap;
+  }
+
+  .pro .outline{
+    padding: 0 40px;
+  }
+
+  .pro div > span{
+    font-family: circular_bold;
+    margin-top: 5px;
+    margin-right: 10px;
+    color: #fff;
+  }
+
+  .pro h4{
+    font-family: sequel;
+    font-size: 6vw;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    line-height: 100%;
+    color: #fff;
+    text-align: right;
+    transition: .4s;
+    margin-bottom: -20px;
+  }
+
+  .exp{
+    margin: 30vh 0 30vh 30vw;
+  }
+
+  .exp > div{
+    display: flex;
+    align-items: flex-start;
+    white-space: nowrap;
+  }
+
+  .exp > div div:last-child{
+    width: 73%;
+  }
+
+  .exp div > div{
+    width: 27%;
+  }
+
+  .exp p{
+    opacity: .7;
+  }
+
+  .exp div > div{
+    font-family: circular_bold;
+    color: #fff;
+  }
+
+  @media only screen and (max-width: 920px) {
+    .exp{
+      display: block;
+      margin-left: 8vw;
+    }
+
+    .exp div{
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .exp div:last-child{
+      transform: none;
+      margin-top: 50px;
+    }
+
+    .exp div > div{
+      width: 45%;
+    }
+  }
+
+
+  /* Desktops and laptops ----------- */
+  @media only screen  and (min-width : 1200px) and (max-width : 1356px){
+    .abt_t{
+      padding-top: 35%;
+      padding-bottom: 20%;
+    }
+    .exp{
+      margin: 16vh 0 11vh 37.5vw;
+    }
+  }
+
+  .fot{
+    border-top: 1px solid rgba(255, 255, 255, .3);
+  }
+
   </style>
 </head>
 <body>
-  <nav class="flex col-12">
+  <div class="logo">
+    <p>Abhishek Jha<br>Visual Designer</p>
+  </div>
+  <nav class="col-3">
    <div>
-     <span class="flex">
-       2019 PORTFOLIO
-       <hr data-emergence="hidden" style="width: 2vw;">
-       ABHISHEK JHA
-     </span>
+     <a href="../">home</a><br>
+     <a href="../projects/">projects</a><br><br>
    </div>
    <div>
-     <span class="flex">
-       <a href="../">HOME</a>
-       <hr data-emergence="hidden" style="width: 5vw;">
-       <a href="../projects/">PROJECTS</a>
-     </span>
-   </div>
-   <div id="mbtn" class="mbtn-visible" onclick="shonav();">
-     <hr>
-     <hr style="transition-delay: .3s;">
+     <a href="https://www.behance.net/abhishek_jha">behance</a><br>
+     <a href="https://dribbble.com/abhishek_jha">dribbble</a><br>
+     <a href="mailto:2abhijha@gmail.com?subject=Lets%20Work%20Together" title="I usually respond in a day.">email</a>
    </div>
   </nav>
-  <div id="nl" class="nav_left">
-    <h5 class="flex">
-      ABOUT
-      <hr data-emergence="visible" style="width: 4vw;">
-      ABHISHEK
-    </h5>
-  </div>
-  <div id="mbtn_side" onclick="shonav();">
-    <h5>MENU</h5>
-  </div>
   <!--MAIN-->
-  <div id="mnu" class="mnu-hid">
-    <div id="cbtn" class="cbtn-hidden" onclick="hidnav();">
-      <hr style="transform: rotate(-45deg) translate(-1px, 1px);">
-      <hr style="transform: rotate(45deg)">
-    </div>
-    <div class="col-10">
-      <h1 class="jus">
-          <span class="row">
-            <span class="js-hide" data-emergence="hidden">
-              <del>ABOUT</del>
-            </span>
-          </span>
-          <hr class="js-hide" data-emergence="hidden" style="width: 37.1vw;">
-          <span class="row">
-            <span class="js-hide" data-emergence="hidden">
-              <a href="../">HOME</a>
-            </span>
-          </span>
-      </h1><br>
-      <h1>
-        <hr class="js-hide" data-emergence="hidden" style="width: 25vw;margin-left:0">
-          <span class="row">
-            <span class="js-hide" data-emergence="hidden">
-              <a href="../projects/">PROJECTS</a>
-            </span>
-          </span>
-      </h1>
-    </div><br><br>
-    <div class="mnub jus flex col-10">
-      <div class="me flex">
-        <div class="flex">
-          <span class="row">
-            <span class="js-hide" data-emergence="hidden">
-              <a class="flex" href="mailto:2abhijha@gmail.com?subject=Lets%20Work%20Together">Get in touch</a>
-            </span>
-          </span>
-          <hr class="js-hide" data-emergence="hidden" style="width: 5vw;">
-        </div>
-        <p class="p mb">
-          <span class="row">
-            <span class="js-hide" data-emergence="hidden">This button will open your default</span>
-          </span>
-          <span class="row">
-            <span class="js-hide" data-emergence="hidden">mail client with my email filled in</span>
-          </span>
-          <span class="row">
-            <span class="js-hide" data-emergence="hidden">if you don't want to open it, then my</span>
-          </span>
-          <span class="row">
-            <span class="js-hide" data-emergence="hidden">my email is 2abhijha@gmail.com</span>
-          </span>
-          <span class="row">
-            <span class="js-hide" data-emergence="hidden">wierd right?</span>
-          </span>
-        </p>
-      </div>
-      <div class="ms social">
-        <span class="row">
-          <span class="js-hide" data-emergence="hidden">
-            <a href="https://www.instagram.com/design_flavorist/">Instagram</a>
-          </span>
-        </span>
-        <span class="row">
-          <span class="js-hide" data-emergence="hidden">
-            <a href="https://dribbble.com/abhishek_jha">Dribbble</a>
-          </span>
-        </span>
-        <span class="row">
-          <span class="js-hide" data-emergence="hidden">
-            <a href="https://twitter.com/designflavorist">Twitter</a>
-          </span>
-        </span>
-        <span class="row">
-          <span class="js-hide" data-emergence="hidden">
-            <a href="https://www.behance.net/abhishek_jha">Behance</a>
-            </span>
-        </span>
-        <span class="row">
-          <span class="js-hide" data-emergence="hidden">
-            <a href="https://www.youtube.com/channel/UCZihpBYv20WPVx85QGIscAw">Youtube</a>
-          </span>
-        </span>
-      </div>
-    </div>
-  </div>
   <!--SCROLL-CTN-->
-  <div data-scroll>
-    <div data-scroll-content>
-      <div class="abt col-10">
-        <h1 class="jus">
-          <span class="row">
-            <span data-emergence="hidden">ABOUT</span>
-          </span>
-          <hr style="width: 58%;" data-emergence="hidden">
-          <span class="row">
-            <span data-emergence="hidden">ME</span>
-          </span>
-        </h1>
-        <div class="jus flex ali intro">
-          <div>
-            <p>
-            <span class="row">
-              <span data-emergence="hidden">
-                 Available for freelance and remote
-              </span>
-            </span>
-            <span class="row">
-              <span data-emergence="hidden">
-                 Jobs only, from
-              </span>
-            </span>
-            <span class="row" style="font-size: 25px; font-family: pbold;">
-              <span data-emergence="hidden">
-                 AUG 2019
-              </span>
-            </span>
+  <div id="luxy">
+    <div>
+      <div class="abt_t">
+        <div style="transform: translate(0, -130%)">
+          <p class="delay">
+           <span class="row">
+             <span data-emergence="hidden">
+                Available for freelance & remote
+             </span>
+           </span>
+           <span class="row">
+             <span data-emergence="hidden">
+                Jobs only, after
+             </span>
+           </span>
+           <span class="row" style="font-size: 20px; padding-top: 8px; font-family: circular_bold;">
+             <span data-emergence="hidden">
+                FEB 2020
+             </span>
+           </span>
           </p>
-          </div>
-          <div>
-            <p>
+        </div>
+        <h1 class="luxy-el" data-horizontal="1" data-speed-x="-15">
+         <span class="row">
+           <span data-emergence="hidden">about<span class="outline">about</span>about</span>
+         </span>
+        </h1>
+        <div class="ai imgrev luxy-el" data-speed-y="-10" data-offset="20"  data-emergence="hidden">
+          <img src="https://media.giphy.com/media/xUOxfjsW9fWPqEWouI/giphy.gif">
+          <div class="abt_p">
+            <p class="delay">
               <span class="row">
-                <span data-emergence="hidden">I am a 18 y/o self taught visual designer</span>
+                <span data-emergence="hidden">I am a self taught designer with experience in</span>
               </span>
               <span class="row">
-                <span data-emergence="hidden">with experience in creating digital</span>
+                <span data-emergence="hidden">creating digital interfaces, websites, and print</span>
               </span>
               <span class="row">
-                <span data-emergence="hidden">interfaces, websites, and print design</span>
+                <span data-emergence="hidden">design but I also have the ability to bring</span>
               </span>
               <span class="row">
-                <span data-emergence="hidden">but I also have the ability to bring those</span>
-              </span>
-              <span class="row">
-                <span data-emergence="hidden">concepts to life through creative</span>
+                <span data-emergence="hidden">those concepts to life through creative</span>
               </span>
               <span class="row">
                 <span data-emergence="hidden">front-end development.</span>
@@ -202,201 +261,227 @@
             </p>
           </div>
         </div>
-        <div class="abt-img imgrev" data-emergence="hidden" style="transition-delay: .8s;">
-          <img src="../photos/bnr.jpg">
+        <h1 class="le luxy-el" data-horizontal="1" data-speed-x="15">
+         <span class="row">
+           <span style="transition-delay: .4s" data-emergence="hidden">myself<span class="outline">myself</span>myself</span>
+         </span>
+        </h1>
+      </div>
+     </div>
+     <!--CONTENT-->
+     <div>
+       <div class="pro" onmousemove="vis();" onmouseout="hid();">
+        <p class="row">
+          <span data-emergence="hidden">MY PROCESS</span>
+        </p>
+        <div class="flex" style="flex-wrap: nowrap; margin-left: 7vw; ">
+          <h4 id="res">
+            <span class="row luxy-el" data-horizontal="1" data-speed-x="24">
+              <span data-emergence="hidden" style="transition-delay: .1s;">User Study — <span style="padding: 0 40px">Research</span> — Goals</span>
+            </span>
+          </h4>
+         </div>
+         <div class="flex">
+           <h4 id="gol">
+             <span class="row luxy-el" data-horizontal="1" data-speed-x="16">
+               <span data-emergence="hidden" style="transition-delay: .2s;"><span class="outline">Problem Finding<span style="padding: 0 40px"> — Goal Analysis</span></span></span>
+             </span>
+           </h4>
+         </div>
+        <div class="flex">
+          <h4 id="sta">
+            <span class="row luxy-el" data-horizontal="1" data-speed-x="12">
+              <span data-emergence="hidden" style="transition-delay: .3s;">Developing UX — <span style="padding: 0 40px">Visual strategy</span></span>
+            </span>
+          </h4>
         </div>
-        <div class="col-7">
-          <div class="abt-bar">
-            <div class="col-6">
-              <span class="row">
-                <span data-emergence="hidden">Experience</span>
-              </span>
-            </div>
-            <p>
-              <span class="row">
-                <span data-emergence="hidden">As a design student my portfolio mostly</span>
-              </span>
-              <span class="row">
-                <span data-emergence="hidden">contains conceptual projects, but I have been</span>
-              </span>
-              <span class="row">
-                <span data-emergence="hidden">freelancing for one year now, and I was lucky</span>
-              </span>
-              <span class="row">
-                <span data-emergence="hidden">to get good clients and deploy websites</span>
-              </span>
-              <span class="row">
-                <span data-emergence="hidden">successfully. Design is more of an obsession</span>
-              </span>
-              <span class="row">
-                <span data-emergence="hidden">to me than a job.</span>
-              </span>
-            </p>
-          </div>
-          <div class="abt-bar">
-            <div class="col-6">
-              <span class="row">
-                <span data-emergence="hidden">MY PROCESS</span>
-              </span>
-            </div>
-            <p>
-              <span class="row">
-                <span data-emergence="hidden">Typically I start my projects with research</span>
-              </span>
-              <span class="row">
-                <span data-emergence="hidden">on the product or field to get an idea of</span>
-              </span>
-              <span class="row">
-                <span data-emergence="hidden">what am I going to deal with, after that</span>
-              </span>
-              <span class="row">
-                <span data-emergence="hidden">comes the moodboard, competitiors site/app</span>
-              </span>
-              <span class="row">
-                <span data-emergence="hidden">analysis, brainstrorm to generate cool, of </span>
-              </span>
-              <span class="row">
-                <span data-emergence="hidden">the grid ideas then the fun part, designing</span>
-              </span>
-              <span class="row">
-                <span data-emergence="hidden">and optimising the UX, prototyping and </span>
-              </span>
-              <span class="row">
-                <span data-emergence="hidden">then development (if included)</span>
-              </span>
-            </p>
-          </div>
-          <div class="abt-bar">
-            <div class="col-6">
-              <span class="row">
-                <span data-emergence="hidden">Preffered</span>
-              </span>
-              <span class="row">
-                <span data-emergence="hidden">Projects</span>
-              </span>
-            </div>
-            <p>
-              <span class="row">
-                <span data-emergence="hidden">I like projects that allow me to play</span>
-              </span>
-              <span class="row">
-                <span data-emergence="hidden">with my creativity and are not limited</span>
-              </span>
-              <span class="row">
-                <span data-emergence="hidden">to conventional design, however I understand</span>
-              </span>
-              <span class="row">
-                <span data-emergence="hidden">that conventional designs are also important</span>
-              </span>
-              <span class="row">
-                <span data-emergence="hidden">and even inevitable in some cases.</span>
-              </span><br>
-              <span class="row">
-                <span data-emergence="hidden">I do not take stand-alone development</span>
-              </span>
-              <span class="row">
-                <span data-emergence="hidden">projects. I design and develop together or</span>
-              </span>
-              <span class="row">
-                <span data-emergence="hidden">design only.</span>
-              </span>
-            </p>
-          </div>
+        <div class="flex">
+          <h4 id="des">
+            <span class="row luxy-el" data-horizontal="1" data-speed-x="11">
+              <span data-emergence="hidden" style="transition-delay: .4s;"><span class="outline">User Testing — <span style="padding: 0 40px">Design & Deploy</span></span></span>
+            </span>
+          </h4>
+        </div>
+       </div>
+       <!--EXPERIENCE-->
+       <div class="exp">
+         <div>
+           <div>
+             <span class="row">
+               <span data-emergence="hidden">Background</span>
+             </span>
+           </div>
+           <div>
+             <p class="delay">
+               <span class="row">
+                 <span data-emergence="hidden">Currently I am working as a freelancer</span>
+               </span>
+               <span class="row">
+                 <span data-emergence="hidden">and on contract basis with a design</span>
+               </span>
+               <span class="row">
+                 <span data-emergence="hidden">agency, But in the past I have worked with</span>
+               </span>
+               <span class="row">
+                 <span data-emergence="hidden">some great clients and delivered amazing</span>
+               </span>
+               <span class="row">
+                 <span data-emergence="hidden">products which users enjoy.</span>
+               </span>
+             </p><br><br>
+             <p class="delay">
+               <span class="row">
+                 <span data-emergence="hidden">I have 2 years of experience as a designer</span>
+               </span>
+               <span class="row">
+                 <span data-emergence="hidden">and also have the ability to bring concepts to</span>
+               </span>
+               <span class="row">
+                 <span data-emergence="hidden">life through creative front-end development</span>
+               </span>
+               <span class="row">
+                 <span data-emergence="hidden">for smaller projects. I love everything that</span>
+               </span>
+               <span class="row">
+                 <span data-emergence="hidden">has to do with product & visual design,</span>
+               </span>
+               <span class="row">
+                 <span data-emergence="hidden" style="transition-delay: .6s;">mobile & web projects as well as branding,</span>
+               </span>
+               <span class="row">
+                 <span data-emergence="hidden" style="transition-delay: .7s;">typography, and animations.</span>
+               </span>
+             </p>
+           </div>
+         </div>
+
+         <div style="display: none;">
+           <div>
+             <span class="row">
+               <span data-emergence="hidden">Preffered Projects</span>
+             </span>
+           </div>
+           <p class="delay">
+             <span class="row">
+               <span data-emergence="hidden">I like projects that allow me to play with my</span>
+             </span>
+             <span class="row">
+               <span data-emergence="hidden">creativity and are not limited to conventional</span>
+             </span>
+             <span class="row">
+               <span data-emergence="hidden">design only. I do not take stand-alone development</span>
+             </span>
+             <span class="row">
+               <span data-emergence="hidden"> projects. I design and develop together or</span>
+             </span>
+             <span class="row">
+               <span data-emergence="hidden">design only.</span>
+             </span>
+           </p>
+         </div>
         </div>
       </div>
       <!--CONTACT-->
-      <div class="con col-10">
-        <div>
-          <h1 class="flex jus">
-            <span class="row">
-              <span data-emergence="hidden">CONT</span>
-            </span>
-            <hr data-emergence="hidden" style="width: 56.1%;">
-            <span class="row">
-              <span data-emergence="hidden">ACT</span>
-            </span>
-          </h1>
-        </div>
-        <div class="col-12 flex ali">
-          <div class="cimg imgrev" data-emergence="hidden">
-            <img src="../photos/cont.jpg">
-          </div>
-          <div class="social">
-            <p>
-              <span class="row">
-                <span data-emergence="hidden">SOCIAL</span>
-              </span>
-            </p>
-            <a href="https://www.instagram.com/design_flavorist/">
-              <span class="row">
-                <span data-emergence="hidden">Instagram</span>
-              </span>
-            </a>
-            <a href="https://dribbble.com/abhishek_jha">
-              <span class="row">
-                <span data-emergence="hidden">Dribbble</span>
-              </span>
-            </a>
-            <a href="https://twitter.com/designflavorist">
-              <span class="row">
-                <span data-emergence="hidden">Twitter</span>
-              </span>
-            </a>
-            <a href="https://www.behance.net/abhishek_jha">
-              <span class="row">
-                <span data-emergence="hidden">Behance</span>
-              </span>
-            </a>
-            <a href="https://www.youtube.com/channel/UCZihpBYv20WPVx85QGIscAw">
-              <span class="row">
-                <span data-emergence="hidden">Youtube</span>
-              </span>
-            </a>
-          </div>
-          <div>
-           <p>
-             <span class="row">
-               <span data-emergence="hidden">Have a project in mind?</span>
-             </span>
-             <span class="row">
-               <span data-emergence="hidden">Write a mail and I will</span>
-             </span>
-             <span class="row">
-               <span data-emergence="hidden">contact you, consultation</span>
-             </span>
-             <span class="row">
-               <span data-emergence="hidden">is Free.</span>
-             </span><br>
-             <span class="row">
-               <span data-emergence="hidden">I would love to hear you next</span>
-             </span>
-             <span class="row">
-               <span data-emergence="hidden">big idea.</span>
-             </span>
-           </p>
-           <a href="mailto:2abhijha@gmail.com?subject=Lets%20Work%20Together" class="ce">
-             <span class="row">
-               <span data-emergence="hidden">Get in touch</span>
-             </span>
-           </a>
-          </div>
-        </div>
+      <div class="fot">
+        <p class="delay">
+          <span class="row">
+            <span data-emergence="hidden">Designed and developed by Abhishek Jha.</span>
+          </span>
+          <span class="row">
+            <span data-emergence="hidden">© 2020 All rights reserved.</span>
+          </span>
+        </p>
+        <a href="mailto:rnegic341@gmail.com?subject=Lets%20Work%20Together">
+          <span class="row">
+            <span data-emergence="hidden">Get in touch</span>
+          </span>
+        </a>
       </div>
       <!--scroll-end-->
-    </div>
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-  <script src="../js/skew.js"></script>
+  <span id="float" class="float custom_img"><img id="images" src="../photos/res.png"></span>
+  <script src="../js/luxy.js"></script>
   <script src="../js/emergence.js"></script>
-  <script src="../js/menu.js"></script>
+  <script charset="utf-8">
+    luxy.init();
+
+    function vis(){
+      document.getElementById('float').style.opacity = "1";
+    }
+
+    function hid(){
+      document.getElementById('float').style.opacity = "0";
+    }
+
+
+    var $ = document.querySelector.bind(document);
+    var $on = document.addEventListener.bind(document);
+    var followMouse = function() {
+      key = requestAnimationFrame(followMouse);
+
+      if (!x || !y) {
+        x = xmouse;
+        y = ymouse;
+      }
+      else {
+        dx = (xmouse - x) * 0.125;
+        dy = (ymouse - y) * 0.125;
+        if (Math.abs(dx) + Math.abs(dy) < 0.1) {
+          x = xmouse;
+          y = ymouse;
+        }
+        else {
+          x += dx;
+          y += dy;
+        }
+      }
+      ball.style.left = x + 'px';
+      ball.style.top = $("#luxy").scrollTop + y + 'px';
+    };
+
+    var xmouse, ymouse;
+    var ball = $('#float');
+    var x = void 0,
+      y = void 0,
+      dx = void 0,
+      dy = void 0,
+      tx = 0,
+      ty = 0,
+      key = -1;
+
+    $on('mousemove', function(e) {
+      xmouse = e.clientX || e.pageX;
+      ymouse = e.clientY || e.pageY;
+    });
+
+    var img = $('#images');
+
+    document.addEventListener("DOMContentLoaded", followMouse);
+
+    document.getElementById('res').addEventListener("mouseover", function(){
+      img.setAttribute("src", "../photos/res.png");
+    });
+
+    document.getElementById('gol').addEventListener("mouseover", function(){
+      img.setAttribute("src", "../photos/gol.png");
+    });
+
+    document.getElementById('sta').addEventListener("mouseover", function(){
+      img.setAttribute("src", "../photos/sta.png");
+    });
+
+    document.getElementById('des').addEventListener("mouseover", function(){
+      img.setAttribute("src", "../photos/des.png");
+    });
+
+  </script>
   <script>
   emergence.init({
     container: window,
     reset: false,
     handheld: true,
     throttle: 250,
-    elemCushion: 0.15,
+    elemCushion: 0.41,
     offsetTop: 0,
     offsetRight: 0,
     offsetBottom: 10,

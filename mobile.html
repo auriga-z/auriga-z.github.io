@@ -26,471 +26,269 @@
   <meta name="twitter:description" content="Abhishek Jha is a visual designer based in New Delhi. He makes high-end user interfaces.">
   <meta name="twitter:image" content="https://abhishekjha.me/photos/card.jpg">
   <meta name="twitter:image:alt" content="Image">
+  <link rel="stylesheet" href="unistyles.css">
   <script type="text/javascript">
     <!--
-    if (screen.width >= 1080) {
+    //if (screen.width >= 1080) {
     document.location = "index.html";
     }
     //-->
   </script>
   <style>
-  html, body{
-   width: 100%;
-   height: 100%;
-   margin: 0;
-   text-rendering: optimizeLegibility;
-   font-size: 100%;
-   font-family: sans-serif;
-   background: #f0f0f0;
+  #luxy{
+    padding: 50px 15px;
+    width: 90%;
   }
 
-  *{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    -webkit-user-select: none;
+  h1 > .row{
+    font-size: 8vw;
+    font-family: circular;
+    line-height: 100%;
+    padding-bottom: 7px;
   }
-
-  @font-face {
-    font-family: product;
-    src: url(fonts/product.ttf);
-  }
-
-  @font-face {
-    font-family: pbold;
-    src: url(fonts/productb.ttf);
-  }
-
-  [data-scroll-content]{
-    padding: 32px 0 4vh 0;
-  }
-
-  span{
-    display: block;
-    font-size: inherit;
-  }
-
-  a{
-    text-decoration: none;
-    color: inherit;
-    font-family: product;
-  }
-
-  h1, h2, h3, h4{
-    font-weight: normal;
-  }
-
-  h1{
-    font-size: 15vw;
-    color: #19191b;
-    font-family: pbold, sans-serif;
-    line-height: 8.5vh;
-    text-transform: uppercase;
-  }
-
-  p{
-    font-family: product, sans-serif;
-    font-size: 4.5vw;
-    color: #aeaeaf;
-  }
-
-  p .row{
-    margin-bottom: 2px;
-  }
-
-  hr{
-    height: 1px;
-    border: none;
-    transition: box-shadow 1.9s cubic-bezier(0.215, 0.61, 0.355, 1);
-    transition-delay: .5s;
-    position: relative;
-    display: block;
-  }
-
-  hr::after{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 100%;
-    width: 0;
-    background: #dddddd;
-    transition: 1.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-    transition-delay: .8s;
-  }
-
-  hr[data-emergence=hidden]::after {
-    width: 0;
-  }
-  hr[data-emergence=visible]::after {
-    width: 100%;
-  }
-
-  .row{
-    overflow: hidden;
-    font-size: inherit;
-  }
-
-  .row > span, .imgrev::before{
-    transition: transform 1s cubic-bezier(0.215, 0.61, 0.355, 1);
-    transition-delay: .3s;
-  }
-
-  .row > span{
-    font-family: inherit;
-  }
-
-  .row > span[data-emergence=hidden] {
-    transform: translate(0, 100%);
-  }
-  .row > span[data-emergence=visible] {
-    transform: translate(0, 0);
-  }
-
-  .flex{
-    display: flex;
-    align-items: center;
-  }
-
-  .social{
-    text-align: center;
-    margin: 40px 0 30px 0;
-  }
-
-  .social a{
-    text-transform: uppercase;
-    font-size: 14px;
-    margin: 0 10px;
-    color: #3a3a3c;
-  }
-
-  /*styles*/
 
   nav{
-    padding-bottom: 1.5vh;
+    width: 10%;
+  }
+
+  nav > p{
+    padding-bottom: 30px;
+  }
+
+  nav > div a{
+    padding: 20px;
+  }
+
+  .bnr_img{
     position: relative;
+    height: 48vh;
   }
 
-  nav > div{
-    text-align: center;
-    margin: auto;
-  }
-
-  nav .flex{
-    white-space: nowrap;
+  .bnr_img > div{
     position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-  }
-
-  nav hr::after{
-    background: #3a3a3c;
-  }
-
-  nav h3, nav .flex span{
-    font-family: product;
-    font-size: 4.5vw;
-    color: #3a3a3c;
-  }
-
-  .bnr{
-    padding-top: 25vh;
-    padding-bottom: 8vh;
-  }
-
-  .bnr h1{
-    text-align: center;
-    font-size: 7vh;
-    padding-bottom: 40px;
-    line-height: 7vh;
-  }
-
-  .bnr img{
-    padding-bottom: 20px;
-  }
-
-  .bnr p{
-    margin: 0 20px;
-  }
-
-  .bnr p, .mo{
-    color: #3a3a3c;
-    font-size: 5vw;
-  }
-
-  .wrk{
-    margin: 14vh 20px 22vh 20px;
-  }
-
-  .wrk > div > div{
-    padding: 10px 0;
-    position: relative;
-    overflow-x: hidden;
-  }
-
-  .wrk > div > div a::after{
-    content: "";
-    position: absolute;
-    background: url('photos/tab.svg');
-    background-size: cover;
-    width: 3vh;
-    height: 3vh;
-    top: 50%;
-    transition: .8s;
-    transform: translate(0, -50%);
-  }
-
-  .wrk > div > div a[data-emergence=hidden]::after{
-    right: -10%;
-  }
-  .wrk > div > div a[data-emergence=visible]::after{
-    right: 0;
-  }
-
-
-  .wrk > div > div h4{
-    font-size: 3vh;
-    font-family: product;
-    color: #3a3a3c;
-    text-transform: uppercase;
-  }
-
-  .con{
-    margin: 0 20px;
-  }
-
-  .ce{
-    margin-top: 6vh;
-    display: block;
-    font-size: 25px;
-    color: #3a3a3c;
-    text-decoration: underline;
-  }
-
-  .imgrev{
-    position: relative;
-    overflow: hidden;
-  }
-
-  .imgrev img{
-    width: 100%;
-  }
-
-  .imgrev::before{
-    content: "";
-    position: absolute;
-    height: 100%;
-    top: 0;
+    top: 8%;
     left: 0;
-    width: 0;
-    background: #f0f0f0;
-    z-index: 4;
+  }
+
+  .bnr_img > div img{
+    transition: none;
+  }
+
+
+  .wrkm{
+    margin: 30% 0 25% 0;
+  }
+
+
+  .w-img > div img{
+    width: 100%;
+    padding: 35px;
+  }
+
+  .copy{
+    transform: translate(0, 8vh);
+    padding-bottom: 6vh;
+  }
+
+  .btn{
+    border-bottom: 1px solid rgba(240, 240, 243, .18);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    box-shadow: inset 0 0 #fff;
     transition: .6s;
-    animation: imgrev .8s;
-    animation-delay: .5s;
   }
 
-  @keyframes imgrev {
-    from{width: 100%;}
-    to{width: 0;}
+  .btn:hover{
+    border-bottom: 1px solid transparent;
+    box-shadow: inset 0 -100px #fff;
+    padding: 15px 20px;
   }
 
+  .btn:hover p{
+    color: #231f20;
+    cursor: pointer;
+  }
 
+  .btn:hover img{
+    filter: invert(.7);
+  }
   </style>
 </head>
 <body>
-  <div data-scroll>
-    <div data-scroll-content>
-      <nav class="col-12">
-       <div class="flex">
-          <span class="row">
-            <span data-emergence="hidden">2019 PORTFOLIO</span>
-          </span>
-          <hr data-emergence="hidden" style="width: 5vw;margin: 0 5px;">
-          <span class="row">
-            <span data-emergence="hidden">ABHISHEK JHA</span>
-          </span>
-       </div><br><br>
-       <div>
-         <h3>
-           <span class="row">
-             <span data-emergence="hidden">VISUAL DESIGNER</span>
-           </span>
-           <span class="row">
-             <span data-emergence="hidden">BASED IN DELHI</span>
-           </span>
-         </h3>
-       </div>
-      </nav>
-      <!--bnr-->
-      <div class="bnr" id="js-bnr">
-        <div class="row social">
+  <nav class="col-3" style="writing-mode: sideways-rl;">
+    <p>
+      Abhishek Jha
+    </p>
+   <div>
+      <a href="https://www.behance.net/abhishek_jha">behance</a>
+      <a href="https://dribbble.com/abhishek_jha">dribbble</a>
+      <a href="mailto:2abhijha@gmail.com?subject=Lets%20Work%20Together" title="I usually respond in a day.">email</a>
+   </div>
+  </nav>
+  <!--Main-->
+  <div id="luxy">
+    <div class="bnr">
+      <h1>
+        <span class="row">
           <span data-emergence="hidden">
-              <a href="https://dribbble.com/abhishek_jha">Dribbble</a>
-              <a href="https://www.instagram.com/design_flavorist/">Instagram</a>
-              <a href="https://www.behance.net/abhishek_jha">Behance</a>
+             I make sleek
           </span>
-        </div>
-        <h1 class="tb sleft">
-          <span class="row">
-            <span data-emergence="hidden">Custodian</span>
+        </span>
+        <span class="row">
+          <span data-emergence="hidden">
+             Interface for
           </span>
-          <span class="row">
-            <span data-emergence="hidden">of User</span>
+        </span>
+        <span class="row">
+          <span data-emergence="hidden">
+             web & mobile.
           </span>
-          <span class="row">
-            <span data-emergence="hidden">Interface</span>
+        </span>
+      </h1><br><br>
+      <p class="delay">
+        <span class="row">
+          <span data-emergence="hidden">I'm Abhishek Jha, a visual</span>
+        </span>
+        <span class="row">
+          <span data-emergence="hidden">designer based in New Delhi.</span>
+        </span>
+        <span class="row">
+          <span data-emergence="hidden">I make beautiful designs for</span>
+        </span>
+        <span class="row">
+          <span data-emergence="hidden">mobile and web.</span>
+        </span>
+      </p>
+      <div>
+        <p>
+          Find me on
+        </p>
+       <div>
+          <a href="https://www.behance.net/abhishek_jha">behance</a>
+          <a href="https://dribbble.com/abhishek_jha">dribbble</a>
+          <a href="mailto:2abhijha@gmail.com?subject=Lets%20Work%20Together" title="I usually respond in a day.">email</a>
+       </div>
+      </div>
+      <div style="z-index: 2;" class="bnr_img imgrev" data-emergence="hidden">
+        <img id="imgb" src="photos/b4.jpg">
+      </div>
+    </div>
+    <!--Work-->
+    <div class="wrkm">
+      <h1>
+        <span class="row">
+          <span data-emergence="hidden">
+             FEATURED
           </span>
-          <span class="row">
-            <span data-emergence="hidden">Paradigms</span>
+        </span>
+        <span class="row">
+          <span data-emergence="hidden">
+             Projects
           </span>
-        </h1>
-        <div>
-          <div class="imgrev" data-emergence="visible">
-            <img style='width: 100%' src="photos/mob.jpg">
+        </span>
+      </h1><br><br>
+      <div class="wrk_e">
+        <a href="http://bit.ly/chuu-web">
+          <div class="w-img imgrev" data-emergence="hidden">
+            <img class="bg" src="photos/chbg.jpg">
+            <div style="width: 61%; margin: 0 0 -20% 18%;">
+              <img src="photos/chuu.png">
+            </div>
           </div>
-          <p>
-            <span class="row">
-              <span data-emergence="hidden">Hi, I'm Abhishek Jha, a visual designer</span>
-            </span>
-            <span class="row">
-              <span data-emergence="hidden">specialised in user experience and</span>
-            </span>
-            <span class="row">
-              <span data-emergence="hidden">interface based in New Delhi, I design</span>
-            </span>
-            <span class="row">
-              <span data-emergence="hidden">and sometimes develop digital interfaces</span>
-            </span>
-            <span class="row">
-              <span data-emergence="hidden">for web and mobile and but occasionally</span>
-            </span>
-            <span class="row">
-              <span data-emergence="hidden">I also make typographic poster and</span>
-            </span>
-            <span class="row">
-              <span data-emergence="hidden">other graphics.</span>
-            </span>
-          </p>
+        </a>
+        <div class="w-txt">
+          <p>01.</p>
+          <div>
+            <p>Chuu Seoul</p>
+            <span>Website</span>
+          </div>
         </div>
       </div>
-      <!--work-->
-      <div class="wrk">
-        <h1 class="tb sleft">
-          <span class="row">
-            <span data-emergence="hidden">Selected</span>
-          </span>
-          <span class="row">
-            <span data-emergence="hidden">work</span>
-          </span>
-        </h1><br><br>
-        <div>
-          <hr data-emergence="hidden">
-          <div>
-            <a href="projects/located/" target="_blank" data-emergence="hidden">
-              <h4>
-                <span class="row">
-                  <span data-emergence="hidden">Currently Located</span>
-                </span>
-              </h4>
-            </a>
+
+      <div class="wrk_e" style="margin: 25% 0;">
+        <a href="http://bit.ly/shosiz">
+          <div class="w-img imgrev" data-emergence="hidden">
+            <img class="bg" src="photos/shbg.jpg">
+            <div>
+              <img src="photos/shoe.png">
+            </div>
           </div>
-          <hr data-emergence="hidden">
+        </a>
+        <div class="w-txt">
+          <p>02.</p>
           <div>
-            <a href="https://www.behance.net/gallery/81156627/CHUU-Website-Redesign" target="_blank" data-emergence="hidden">
-              <h4>
-                <span class="row">
-                  <span data-emergence="hidden">Chuu redesign</span>
-                </span>
-              </h4>
-            </a>
+            <p>Shoe Size Finder</p>
+            <span>Mobile App/Concept</span>
           </div>
-          <hr data-emergence="hidden">
-          <div>
-            <a href="https://www.behance.net/gallery/78469709/Star-Wars-Online-Store" target="_blank" data-emergence="hidden">
-              <h4>
-                <span class="row">
-                  <span data-emergence="hidden">Star wars</span>
-                </span>
-              </h4>
-            </a>
-          </div>
-          <hr data-emergence="hidden">
-          <div>
-            <a href="http://vvorld.in/" target="_blank" data-emergence="hidden">
-              <h4>
-                <span class="row">
-                  <span data-emergence="hidden">Vvorld agency</span>
-                </span>
-              </h4>
-            </a>
-          </div>
-          <hr data-emergence="hidden">
-          <div>
-            <a href="projects/previous/" target="_blank" data-emergence="hidden">
-              <h4>
-                <span class="row">
-                  <span data-emergence="hidden">Portfolio 2018</span>
-                </span>
-              </h4>
-            </a>
-          </div>
-          <hr data-emergence="hidden">
         </div>
       </div>
-      <!--contact-->
-      <div class="con">
-        <h1 class="tb sleft">
+
+      <div class="wrk_e">
+        <a href="http://bit.ly/abudezo">
+          <div class="w-img imgrev" data-emergence="hidden">
+            <img class="bg" src="photos/pobg.jpg">
+            <div>
+              <img src="photos/post.png">
+            </div>
+          </div>
+        </a>
+        <div class="w-txt">
+          <p>03.</p>
+          <div>
+            <p>Abudezo E-cards</p>
+            <span>Mobile App</span>
+          </div>
+        </div>
+      </div>
+
+     </div>
+    <!--Contact-->
+    <div class="cont">
+      <h1>
+        <span class="row">
+          <span data-emergence="hidden">Contact</span>
+        </span>
+      </h1><br>
+      <div>
+        <p class="delay">
           <span class="row">
-            <span data-emergence="hidden">Contact</span>
+            <span data-emergence="hidden">Have a project in mind? Would you like</span>
           </span>
-        </h1><br>
-        <div>
+          <span class="row">
+            <span data-emergence="hidden">to share it? Feel free to reach out</span>
+          </span>
+          <span class="row">
+            <span data-emergence="hidden">by writing an e-mail.</span>
+          </span>
+        </p><br>
+        <a href="mailto:rnegic341@gmail.com?subject=Lets%20Work%20Together" class="btn " title="I usually respond in a day.">
           <p>
-            <span class="row">
-              <span data-emergence="hidden">Have a project in mind? Would you like to</span>
-            </span>
-            <span class="row">
-              <span data-emergence="hidden">share it with me? If yes then feel free to</span>
-            </span>
-            <span class="row">
-              <span data-emergence="hidden">reach out, write an e-mail and I will</span>
-            </span>
-            <span class="row">
-              <span data-emergence="hidden">get back to you as soon as possible.</span>
-            </span><br>
-            <p class="mo">
-            <span class="row">
-              <span data-emergence="hidden">Let's make something</span>
-            </span>
-            <span class="row">
-              <span data-emergence="hidden">that matters.</span>
-            </span>
-            </p>
-          </p>
-          <a href="mailto:2abhijha@gmail.com?subject=Lets%20Work%20Together" class="ce" title="I usually respond in a day.">
             <span class="row">
               <span data-emergence="hidden">Get in touch</span>
             </span>
-          </a><br>
-          <div class="row social" style="text-align: left">
-            <span data-emergence="hidden">
-                <a href="https://dribbble.com/abhishek_jha" style="margin-left:0;">Dribbble</a>
-                <a href="https://www.instagram.com/design_flavorist/">Instagram</a>
-                <a href="https://www.behance.net/abhishek_jha">Behance</a>
-                <a href="https://www.youtube.com/channel/UCZihpBYv20WPVx85QGIscAw">Youtube</a>
-            </span>
-          </div>
-        </div>
+          </p>
+          <span class="row">
+            <span data-emergence="hidden"><img src="photos/larro.svg"></span>
+          </span>
+        </a>
+        <p class="delay copy">
+          <span class="row">
+            <span data-emergence="hidden">Designed and developed by Abhishek Jha.</span>
+          </span>
+          <span class="row">
+            <span data-emergence="hidden">© <span style="display: inline;" id="year"></span> All rights reserved.</span>
+          </span>
+        </p>
       </div>
-      <!--scroll-end-->
     </div>
   </div>
-  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="js/skewm.js"></script>
+  <script src="js/luxy.js"></script>
   <script src="js/emergence.js"></script>
   <script>
+  luxy.init();
+
   emergence.init({
     container: window,
     reset: false,
