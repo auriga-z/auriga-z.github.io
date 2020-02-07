@@ -43,9 +43,8 @@
     white-space: nowrap;
   }
 
-  .abt_t{
-    padding-top: 25%;
-    padding-bottom: 25%;
+  .abt{
+    padding: 50vh 0;
   }
 
   .abt_t h1{
@@ -180,12 +179,29 @@
 
   /* Desktops and laptops ----------- */
   @media only screen  and (min-width : 1200px) and (max-width : 1356px){
-    .abt_t{
-      padding-top: 35%;
-      padding-bottom: 20%;
+    .abt{
+      padding-top: 51vh;
+      padding-bottom: 32vh;
     }
     .exp{
-      margin: 16vh 0 11vh 37.5vw;
+      margin: 32vh 0 18vh 37.5vw;
+    }
+  }
+
+  @media only screen  and (min-width : 1430px){
+    .abt h1{
+      line-height: 110%;
+      font-size: 8.5vw;
+    }
+    .abt{
+      padding-top: 50vh;
+      padding-bottom: 22%;
+    }
+    .ai img{
+      width: 40vw;
+    }
+    .exp{
+      margin: 25vh 0 15vh 37.5vw;
     }
   }
 
