@@ -89,7 +89,7 @@
   #scroll{
     position: absolute;
     right: -9%;
-    top: 112%;
+    top: 23vh;
     width: 100px;
     z-index: 5;
   }
@@ -117,7 +117,7 @@
 
   .bnr_t{
     position: relative;
-    transform: translate(0, 55%);
+    transform: translate(0, 55vh);
     height: inherit;
   }
 
@@ -222,23 +222,24 @@
 
   /* Desktops and laptops ----------- */
   @media only screen  and (min-width : 1200px) and (max-width : 1356px){
-    .bnr_c{
-      transform: translate(-50%, 54.27%);
-    }
-    #scroll{
-      top: 98%;
-    }
-    .bnr_t{
-      transform: translate(0, 40%);
-    }
     .wrk{
       margin-top: 4vh;
     }
     .con{
-      padding-bottom: 10vh;
-      margin-top: 30vh;
+      padding-bottom: 15vh;
+      margin-top: 46vh;
     }
 
+  }
+
+  @media only screen  and (min-width : 1356px){
+    .wrk{
+      margin-top: 12vh;
+    }
+    .con{
+      padding-bottom: 10vh;
+      margin-top: 36vh;
+    }
   }
 
 
@@ -291,6 +292,7 @@
           </div>
         </div><br>
         <div class="bnr_t">
+
           <div class="no-out" style="z-index: 1">
             <h1 class="luxy-el" data-horizontal="1" data-speed-x="-35">
              <span class="row">
@@ -302,13 +304,15 @@
                <span data-emergence="hidden">Interface and designs</span>
              </span>
             </h1>
-         </div>
+          </div>
+
           <div style="z-index: 2; margin-left: 30.3%;" class="bnr_img imgrev luxy-el" data-speed-y="-19" data-offset="-80" data-emergence="hidden">
             <img id="imgb" src="photos/b1.jpg">
             <div>
               <img id="imgc" src="photos/c1.png" class="luxy-el" data-speed-y="15">
             </div>
           </div>
+
           <div style="z-index: 3;">
             <h1 class="luxy-el outline" data-horizontal="1" data-speed-x="-35">
              <span class="row">
