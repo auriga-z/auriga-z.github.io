@@ -22,12 +22,12 @@
 
   @font-face {
     font-family: product-r;
-    src: url("../../fonts/product.ttf");
+    src: url("font/Productr.ttf");
   }
 
   @font-face {
     font-family: product-b;
-    src: url("../../fonts/productb.ttf");
+    src: url("font/Productb.ttf");
   }
 
   @font-face {
@@ -63,6 +63,7 @@
 
   p{
     font-size: 14px;
+    line-height: 100%;
   }
 
   ul{
@@ -103,10 +104,6 @@
     padding: 6% 18%;
   }
 
-  .width_to_100{
-
-  }
-
   .padding_10-22{
     padding: 10% 22%;
   }
@@ -130,7 +127,7 @@
     font-family: kayak-r, sans-serif;
     font-size: 15px;
     color: #326765;
-    line-height: 25px;
+    line-height: 20px;
   }
 
   .video, .gallery{
@@ -455,13 +452,20 @@
     padding: 25px 16px 8px 16px;
   }
 
+  .elem h3{
+    font-size: 20px;
+    font-family: product-b;
+    color: #27253d;
+  }
+
   .elem img{
     width: 100px;
     padding-bottom: 20px;
   }
 
   .elem p{
-    font-size: 12px;
+    text-align: left;
+    font-size: 15px;
     line-height: calc(12px * 1.618px);
   }
 
