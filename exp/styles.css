@@ -1,0 +1,57 @@
+body, html{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+  
+::-webkit-scrollbar-thumb{
+    background: #fff;
+}
+  
+::-moz-selection, ::selection, ::-webkit-selection{
+    color: inherit;
+    background: transparent;
+}
+
+@font-face {
+    font-family: circular;
+    src: url(fonts/CircularStd-Book.woff2);
+}
+  
+@font-face {
+    font-family: sequel;
+    src: url(fonts/MonumentExtended-Bold.woff);
+}
+  
+@font-face {
+    font-family: circular_bold;
+    src: url(fonts/CircularStd-Medium.woff2);
+}
+
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%; margin: auto;}
+.col-12 {width: 100%;}
+
+ul, li{
+  list-style-type: none;
+}
+
+h1{
+    padding-top: 200px;
+}
