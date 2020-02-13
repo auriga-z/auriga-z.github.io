@@ -54,37 +54,6 @@ $('#project-link').on("click", function(event){
   }, 1000)
 })
 
-var firstLoad = false,
-    isAnimating = false;
-
-$(window).on('popstate', function() {
-  if(firstLoad) {
-    /*
-    Safari emits a popstate event on page load - check if firstLoad is true before animating
-    if it's false - the page has just been loaded 
-    */
-    var newPageArray = location.pathname.split('/'),
-      //this is the url of the page to be loaded 
-      newPage = newPageArray[newPageArray.length - 1];
-
-    if( !isAnimating  &&  newLocation != newPage ){
-      $('body').addClass("is-loading");
-
-      setTimeout(function(){
-        $("main").load(content, function(data, statusTxt){
-           if(statusTxt == "success"){
-             setTimeout(function(){
-                $('body').removeClass("is-loading")
-                $('body').addClass("is-loaded")
-             }, 1000) 
-            }
-        })
-      }, 1000)
-    };
-  }
-  firstLoad = true;
-});
-
 
 
 
