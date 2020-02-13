@@ -6,8 +6,6 @@ $('.nav-center a').on("click", function(event){
 
     const href = $(this).attr("href")
 
-    window.history.pushState(null, href)
-
     $('.nav-center a').removeClass("active")
     $(this).addClass("active")
 
@@ -23,6 +21,7 @@ $('.nav-center a').on("click", function(event){
                 $('body').addClass("is-loaded")
              }, 1000) 
              remouse();
+             window.history.pushState(null, null, href)
            }
         })
 
@@ -36,8 +35,6 @@ $('#project-link').on("click", function(event){
 
   const href = $(this).attr("href")
 
-  window.history.pushState(null, href)
-
   const content = href + " #content";
 
   $('body').addClass("is-loading");
@@ -49,6 +46,7 @@ $('#project-link').on("click", function(event){
               $('body').removeClass("is-loading")
               $('body').addClass("is-loaded")
            }, 1000) 
+           window.history.pushState(null, null, href)
          }
       })
   }, 1000)
