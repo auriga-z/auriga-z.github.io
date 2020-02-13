@@ -6,7 +6,7 @@ $('.nav-center a').on("click", function(event){
 
     const href = $(this).attr("href")
 
-    window.history.pushState(null, href)
+    window.history.pushState(null, null, href)
 
     $('.nav-center a').removeClass("active")
     $(this).addClass("active")
@@ -36,7 +36,7 @@ $('#project-link').on("click", function(event){
 
   const href = $(this).attr("href")
 
-  window.history.pushState(null, href)
+  window.history.pushState(null, null, href)
 
   const content = href + " #content";
 
