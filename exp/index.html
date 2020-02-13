@@ -4,69 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phtographer template</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles.css"></link>
 </head>
 <style>
-    nav{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding: 25px 30px;
-        border-bottom: 1px solid gainsboro;
-        z-index: 6;
-    }
 
-    .nav-items{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .nav-items ul{
-        display: flex;
-    }
-
-    .nav-items a{
-        padding: 0 12px;
-    }
-
-    .nav-center{
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, 0);
-    }
-
-    .active{
-        text-decoration: line-through;
-        pointer-events: none;
-    }
-
-    .loading-screen{
-        position: fixed;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 5;
-    }
-
-    .transition-fade {
-        transition: 0.4s;
-        opacity: 1;
-    }
-
-    html.is-animating .transition-fade {
-        opacity: 0;
-    }
 
 </style>
-<body>
+<body class="is-loaded">
     <nav>
         <div class="nav-items">
             <a href="">JOE MASE</a>
             <ul class="nav-center">
-                <li><a href="/index.html">WORKS</a></li>
-                <li><a href="/about.html">ABOUT</a></li>
+                <li><a class="active" href="index.html">WORKS</a></li>
+                <li><a href="about.html">ABOUT</a></li>
             </ul>
             <ul>
                 <li><a href="">TW</a></li>
@@ -76,28 +26,64 @@
         </div>
     </nav>
 
-    <main id="swup">
-        <section>
-            <h1>Home</h1>
+    <main>
+        <section id="content" class="works">
+
+            <div class="back-bar" onclick="work2();">
+                <div class="arrow-wrapper" id="back-arrow">
+                    <img class="btn-circle" src="assets/circle.svg" alt="Go">
+                    <img src="assets/arrow.svg" alt="back">
+                </div>
+            </div>
+
+            <div class="works-center">
+              <a href="projects/prj1.html" id="project-link">
+                <div class="images" style="background-image: url('assets/p1.jpg');">
+                    <div class="image-cover">
+                        <div class="inverted-radius"></div>
+                    </div>
+                </div>
+                <div class="text">
+                    <div>
+                        <h1 id="row1">
+                            <span>Project</span>
+                            <span>Work</span>
+                            <span>Case</span>
+                        </h1>
+                    </div>
+                    <div>
+                        <h1 id="row2">
+                            <span>One</span>
+                            <span>Two</span>
+                            <span>Three</span>
+                        </h1>
+                    </div>
+                </div>
+                <img src="assets/case.png" id="case" alt="View Case">
+              </a>
+            </div>
+
+            <div class="next-bar" onclick="work1();">
+                <div class="arrow-wrapper" id="next-arrow">
+                    <img src="assets/arrow.svg" alt="next">
+                    <img class="btn-circle" src="assets/circle.svg" alt="project">
+                </div>
+            </div>
+
         </section>
-        <a href="/about.html">Go to other page</a>
     </main>
 
     <div class="loading-screen"></div>
 
 
 
+    <script src="js/jquery.js"></script>
     <script src="js/gsap.min.js"></script>
-    <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
+    <script src="js/CustomEase.js"></script>
     <script src="js/index.js"></script>
     <script>
-        const options = {
-         linkSelector: 'a[href^="' +
-                window.location.origin +
-             '"]:not([data-no-swup]), a[href^="/"]:not([data-no-swup]), a[href^="#"]:not([data-no-swup])'
-        };
 
-        const swup = new Swup(options);
+        
     </script>
 </body>
 </html>
