@@ -8,15 +8,21 @@
     font-family: modena;
     src: url(../font/ModenaScript-Regular.otf);
 }
+
+@font-face {
+    font-family: Piersans;
+    src: url(../font/PierSans-Medium.woff);
+}
   
 @font-face {
     font-family: ttnorms;
-    src: url(../font/TTNorms-Regular.otf);
+    src: url(../font/BM-Ultra-Medium.woff);
 }
 
 h1, h2, h3, h4, h5, h6{
     font-weight: normal;
 }
+
 
 :root{
     --title-color: #111110;
@@ -24,11 +30,12 @@ h1, h2, h3, h4, h5, h6{
 
 
 nav a{
-    font-family: ttnorms;
+    font-family: piersans;
     font-size: 12px;
     color: rgba(39, 39, 39, .9);
-    letter-spacing: 0.03em;
+    letter-spacing: 0.04em;
     position: relative;
+    font-weight: lighter;
 }
 
 .nav-center a{
@@ -78,9 +85,9 @@ nav a{
 }
 
 .loading-screen p{
-    font-family: ttnorms;
+    font-family: piersans;
     opacity: .5;
-    font-size: 10px;
+    font-size: .7rem;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #fff;
@@ -187,7 +194,7 @@ nav a{
 }
 
 .about-content h3, .project-content h3{
-    font-family: ttnorms;
+    font-family: piersans;
     text-transform: uppercase;
     font-size: 12px;
     opacity: .5;
@@ -195,8 +202,8 @@ nav a{
 }
 
 .about-containers p, .about-containers li{
-    font-size: 15px;
-    opacity: .8;
+    font-size: 1rem;
+    opacity: .7;
     font-family: ttnorms;
     color: var(--title-color);
     line-height: 22px;
@@ -263,11 +270,11 @@ nav a{
 }
 
 .project-info p, .cover p{
-    font-size: 15px;
-    opacity: .8;
+    font-size: 1rem;
+    opacity: .7;
     font-family: ttnorms;
     color: var(--title-color);
-    line-height: 18px;
+    line-height: 22px;
 }
 
 .project-images > div{
