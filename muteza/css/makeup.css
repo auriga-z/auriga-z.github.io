@@ -80,7 +80,7 @@ h1, h2, h3, h4{
   font-family: inherit;
 }
 
-.c-loader.is-loaded .c-l-up span{
+.c-loader.is-loading .c-l-up span{
   transform: translate(0, 0) !important;
 }
 
