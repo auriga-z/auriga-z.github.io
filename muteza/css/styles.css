@@ -1,6 +1,5 @@
 body, html{
-  width: 100vw;
-  height: 100vh;
+  
   margin: 0;
   font-family: sans-serif;
   text-rendering: geometricPrecision;
@@ -66,6 +65,7 @@ a{
   white-space: nowrap;
   width: max-content;
   line-height: 80%;
+  display: block;
 }
 
 .o-row > span{
@@ -75,19 +75,19 @@ a{
   transform: translate(0, 100%);
 }
 
-.detect div:first-child span{
+.detect .o-row:first-child span{
   transition-delay: .1s;
 }
 
-.detect div:nth-child(2) span{
+.detect .o-row:nth-child(2) span{
   transition-delay: .2s;
 }
 
-.detect div:nth-child(3) span{
+.detect .o-row:nth-child(3) span{
   transition-delay: .3s;
 }
 
-.detect div:nth-child(4) span{
+.detect .o-row:nth-child(4) span{
   transition-delay: .4s;
 }
 
@@ -150,9 +150,6 @@ nav{
 }
 
 
-#main{
-  overflow: hidden;
-}
 
 .o-section{
   margin: 12.8% 0;
