@@ -63,6 +63,8 @@ a{
   overflow: hidden;
   white-space: nowrap;
   width: max-content;
+  width: -webkit-max-content;
+  width: -ms-max-content;
   line-height: 80%;
   display: block;
 }
