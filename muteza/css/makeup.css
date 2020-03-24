@@ -74,14 +74,14 @@ h1, h2, h3, h4{
   transition: .2s;
   transition-delay: 0;
   display: block;
-  transform: translate(0, 100%);
+  transform: translate(0, 0);
   color: #fff;
   font-size: inherit;
   font-family: inherit;
 }
 
-.c-loader.is-loading .c-l-up span{
-  transform: translate(0, 0) !important;
+.c-loader.is-loaded .c-l-up span{
+  transform: translate(0, -100%) !important;
 }
 
 .c-loader_text{
@@ -116,7 +116,7 @@ h1, h2, h3, h4{
   border-radius: 100px;
   animation: loader-rotate 1s linear infinite;
   transition: .4s;
-  transition-delay: .2;
+  transition-delay: .2s;
 }
 
 .mobile{

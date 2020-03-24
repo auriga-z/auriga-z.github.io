@@ -1,4 +1,6 @@
-body, html{ 
+body, html{
+  width: 100vw;
+  height: 100vh;
   margin: 0;
   font-family: sans-serif;
   text-rendering: geometricPrecision;
@@ -163,13 +165,14 @@ nav{
 .c-banner{
   display: flex;
   justify-content: space-between;
-  margin-top: 20vh;
+  margin-top: 0;
+  padding-top: 20vh;
 }
 
 .c-banner_text{
   padding-left: 4vw;
   position: relative;
-  z-index: 3;
+  z-index: 2;
 }
 
 .c-banner_text_button{
@@ -343,6 +346,7 @@ nav{
 
 .c-info_features--image img{
   width: 100%;
+  margin-top: 10vh;
 }
 
 .c-info_features--left, .c-info_features--right{
@@ -595,8 +599,11 @@ nav{
   font-size: 7vw;
   position: relative;
   width: max-content;
+  width: -ms-max-content;
+  width: -webkit-max-content;
   margin: auto;
   padding: 4vh 0;
+  text-align: center;
   text-transform: capitalize;
 }
 

@@ -14,14 +14,14 @@
     <div class="c-loader_bg"></div>
     <div class="c-loader_text">
       <h2 class="o-h2">
-        <div class="c-l-up">
+        <span class="c-l-up">
           <span>MUTEZA</span>
-        </div>
+        </span>
       </h2>
       <h4>
-        <div class="c-l-up">
+        <span class="c-l-up">
           <span>Personalised Skin Serum</span>
-        </div>
+        </span>
       </h4>
     </div>
     <div class="c-loader_circle"></div>
@@ -56,7 +56,7 @@
     </div>
   </nav>
   <!--Main-->
-  <main id="main" data-scroll-container>
+  <main data-scroll-container>
     <section class="o-section c-banner col-12" data-scroll-section>
       <div class="c-banner_text col-7">
         <div class="c-banner_text_button"> 
@@ -127,7 +127,7 @@
       </div>
     </section>
 
-    <section class="o-section c-how" data-scroll-section>
+    <section class="o-section c-how col-12" data-scroll-section>
       <div class="c-how_title col-3" data-scroll data-scroll-speed="1.6">
         <h2 data-scroll class="o-h2 detect">
           <span class="o-row">
@@ -142,7 +142,7 @@
           test your skin and apply serum.
         </p>
         <div class="img-detect" data-scroll data-scroll-offset="10%">
-          <img src="assets/how3.webp" alt="lady">
+          <img src="assets/how3.jpg" alt="lady"/>
         </div>
       </div>
       <div class="c-how_steps col-9">
@@ -191,7 +191,7 @@
       </div>
     </section>
 
-    <section class="o-section c-info" data-scroll-section>
+    <section class="o-section c-info col-12" data-scroll-section>
       <h2 class="o-h2">
         Get the right ingredients at the right amounts for your skin.
       </h2>
@@ -228,9 +228,9 @@
       </div>
     </section>
 
-    <section class="o-section c-benefit" data-scroll-section>
+    <section class="o-section c-benefit col-12" data-scroll-section>
       <div class="c-benefit_image col-12 img-detect">
-        <div data-scroll data-scroll-speed="-1.6">
+        <div data-scroll data-scroll-speed="-1.5">
           <img src="assets/ing.jpg" alt="benefits"/>
         </div>
       </div>
@@ -392,10 +392,10 @@
           This is a Concptual Website.
         </h2>
         <p>
-          This site was created as a concept website, to keep myself occupied during 
-          the quarantine, so I redesigned Atolla's Website
+          This site is conceptual, to keep myself occupied during 
+          the quarantine I redesigned Atolla's Website
           But changed the name to muteza, Visit their site to see the actual product.
-          This website is also a milestone for me, i.e I wanted to share
+          This website is also a milestone for me, thats why I wanted to share
           it with the community and especially you ❤️.
         </p>
         <div class="credits">
@@ -412,17 +412,17 @@
   </div>
 
 
-  <script src="js/locomotive-scroll.js"></script>
   <script nomodule src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.6.0/polyfill.min.js" crossorigin="anonymous"></script>
   <script nomodule src="https://polyfill.io/v3/polyfill.min.js?features=Object.assign%2CElement.prototype.append%2CNodeList.prototype.forEach%2CCustomEvent%2Csmoothscroll" crossorigin="anonymous"></script>
+  <script src="js/locomotive-scroll.js"></script>
   <script>
     
-		const scroll = new LocomotiveScroll({
+	const scroll = new LocomotiveScroll({
       el: document.querySelector('[data-scroll-container]'),
       smooth: true,
 	  	inertia: .4
     });
-
+    
     const howto = document.querySelector(".c-how");
     const rev = document.querySelector(".c-review");
 
@@ -433,7 +433,11 @@
     function revi(){
       scroll.scrollTo(rev);
     }
-    
+
+    window.onload = function(){
+      scroll.init();
+    }
+
   </script>
   <script>
     var pop_up = document.getElementById("pop-up");
