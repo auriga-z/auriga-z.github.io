@@ -167,7 +167,7 @@ nav{
 .c-banner_text{
   padding-left: 4vw;
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 .c-banner_text_button{
