@@ -4,7 +4,13 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Muteza | Skin Care</title>
+  <meta name="keywords" content="ui/ux, designer, serum, website, skincare">
+  <meta name="author" content="Abhishek Jha">
+  <meta name="description" content="Redesign of Atolla's Old website.">
   <link rel="shortcut icon" href="assets/icon.png"/>
+  <meta name="theme-color" content="#FFA372">
+  <meta name="twitter:site" content="@designflavorist">
+  <meta name="twitter:creator" content="@designflavorist">
   <link rel="stylesheet" href="css/makeup.css"/>
   <link rel="stylesheet" href="css/styles.css"/>
   <link rel="stylesheet" href="css/locomotive-scroll.css"/>
@@ -47,8 +53,8 @@
     <p class="nav_logo"><a href="#">MUTEZA</a></p>
     <div class="nav_links">
       <a href="product.html">Product</a>
-      <a href="javascript:void(0)" onclick="how();">How it Works</a>
-      <a href="javascript:void(0)" onclick="revi();">Reviews</a>
+      <a href="javascript:void(0)" id="how_btn">How it Works</a>
+      <a href="javascript:void(0)" id="revi_btn">Reviews</a>
     </div>
     <div class="nav_cta">
       <a href="#">Sign up/in</a>
@@ -57,6 +63,7 @@
   </nav>
   <!--Main-->
   <main data-scroll-container>
+    
     <section class="o-section c-banner col-12" data-scroll-section>
       <div class="c-banner_text col-7">
         <div class="c-banner_text_button"> 
@@ -236,7 +243,7 @@
       </div>
       <div class="c-benefit_cards">
         <ul class="col-9">
-          <li data-scroll data-scroll-speed="1" data-scroll-delay="0.2">
+          <li data-scroll data-scroll-speed="1">
             <div class="c-benefit--card u-benefit--color1">
               <h3>ADAPTS TO<br/>YOUR NEEDS</h3>
               <p>
@@ -245,10 +252,10 @@
                 will continue to adapt to the changing 
                 needs of your skin. 
               </p>
-              <img src="assets/clock.png" alt="clock">
+              <img src="assets/clock.png" alt="clock"/>
             </div>
           </li>
-          <li data-scroll data-scroll-speed="2" data-scroll-delay="0.4">
+          <li data-scroll data-scroll-speed="2">
             <div class="c-benefit--card u-benefit--color2">
               <h3>BEST<br/>INGREDIENTS</h3>
               <p>
@@ -256,17 +263,17 @@
                 scents you'll find in our products come from 
                 nature.
               </p>
-              <img src="assets/leaf.png" alt="clock"/>
+              <img src="assets/leaf.png" alt="leaf"/>
             </div>
           </li>
-          <li data-scroll data-scroll-speed="3" data-scroll-delay="0.6">
+          <li data-scroll data-scroll-speed="3">
             <div class="c-benefit--card u-benefit--color3">
               <h3>YOUR PERFECT<br/>DOSE</h3>
               <p>
                 Each formula contains ingredients in the dosages 
                 that will do the most for your skin at that time.
               </p>
-              <img src="assets/dropper.png" alt="clock">
+              <img src="assets/dropper.png" alt="dropper"/>
             </div>
           </li>
         </ul>
@@ -278,7 +285,7 @@
         <h2 class="o-h2">REVIEWS</h2><br/>
          <ul>
            <li>
-             <img src="assets/fivestar.png" alt="5 Star"/>
+             <img src="assets/fivestar.png" alt="5-Star"/>
              <p>
               Best first experience with a skincare product! Within 3 days, 
               I saw changes to my skin - improving texture, moisture, and 
@@ -287,7 +294,7 @@
              </p>
            </li>
            <li>
-            <img src="assets/fivestar.png" alt="5 Star"/>
+            <img src="assets/fivestar.png" alt="5-Star"/>
             <p>
               It absorbs quickly and leaves my face feeling clean. It 
               seemed to help clear up a few small breakout spots 
@@ -296,7 +303,7 @@
             </p>
           </li>
           <li>
-            <img src="assets/fivestar.png" alt="5 Star"/>
+            <img src="assets/fivestar.png" alt="5-Star"/>
             <p>
               This has already changed my skin in a month! And the ever 
               changing serum taking into account changes to my skincare 
@@ -381,6 +388,7 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <div id="pop-up" onclick="pop_hide();">
@@ -404,7 +412,8 @@
           <a target="_blank" href="https://www.glossier.com?ref=abhishekjha.me">Glossier</a><span> / </span>
           <a target="_blank" href="https://www.neuebel.com/?ref=abhishekjha.me">Neuebel</a><span> / </span><br/>
           <a target="_blank" href="https://atolla.co/?ref=abhishekjha.me">Atolla</a><span> / </span>
-          <a target="_blank" href="https://locomotive.ca/en?ref=abhishekjha.me">Locomotive</a>
+          <a target="_blank" href="https://locomotive.ca/en?ref=abhishekjha.me">Locomotive</a><span> / </span>
+          <a target="_blank" href="https://ajayns.me/?ref=abhishekjha.me">Ajay</a>
         </div><br/><br/>
         <a target="_blank" href="https://abhishekjha.me/">Go to my Portfolio ⟶</a>
       </div>
@@ -416,31 +425,40 @@
   <script nomodule src="https://polyfill.io/v3/polyfill.min.js?features=Object.assign%2CElement.prototype.append%2CNodeList.prototype.forEach%2CCustomEvent%2Csmoothscroll" crossorigin="anonymous"></script>
   <script src="js/locomotive-scroll.js"></script>
   <script>
-    
-	const scroll = new LocomotiveScroll({
-      el: document.querySelector('[data-scroll-container]'),
-      smooth: true,
-	  	inertia: .6
-    });
-    
-    const howto = document.querySelector(".c-how");
-    const rev = document.querySelector(".c-review");
-
-    function how(){
-      scroll.scrollTo(howto);
-    }
-
-    function revi(){
-      scroll.scrollTo(rev);
-    }
+    var pop_up = document.getElementById("pop-up"),
+     js_loader = document.querySelector(".c-loader"),
+         howto = document.querySelector(".c-how"),
+         rev = document.querySelector(".c-review");
 
     window.onload = function(){
-      scroll.init();
+
+      js_loader.classList.add("is-loaded");
+      js_loader.classList.remove("is-loading");
+
+      if(screen.width <= 750){
+         js_loader.classList.add("on-mobile");
+         js_loader.classList.remove("is-loaded");
+         js_loader.classList.remove("is-loading");
+      }
+
+      const lscroll = new LocomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'),
+        smooth: true,
+	    	inertia: .6
+      });
+
+      document.querySelector("#how_btn").addEventListener("click", how);
+      document.querySelector("#revi_btn").addEventListener("click", revi);
+
+      function how(){
+        lscroll.scrollTo(howto);
+      }
+
+      function revi(){
+        lscroll.scrollTo(rev);
+      }
     }
 
-  </script>
-  <script>
-    var pop_up = document.getElementById("pop-up");
 
     function pop_hide(){
       pop_up.style="display: none; pointer-events: none";
@@ -450,13 +468,6 @@
       pop_up.style="display: block; pointer-events: all";
     }
 
-    window.onload = function(){
-       document.querySelector(".c-loader").classList.add("is-loaded");
-       if(screen.width <= 750){
-         document.querySelector(".c-loader").classList.add("on-mobile");
-         document.querySelector(".c-loader").classList.remove("is-loaded");
-       }
-    }
   </script>
 </body>
 </html>

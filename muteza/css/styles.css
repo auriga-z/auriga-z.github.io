@@ -154,6 +154,12 @@ nav{
 
 
 
+
+
+main{
+  overflow: hidden;
+}
+
 .o-section{
   margin: 12.8% 0;
 }
@@ -361,8 +367,8 @@ nav{
 
 
 .c-benefit{
-  padding: 0 !important;
-  margin-bottom: -8% !important;
+  padding: 0;
+  margin-bottom: -8%;
 }
 
 .c-benefit_image > div{

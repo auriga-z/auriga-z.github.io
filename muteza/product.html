@@ -74,7 +74,7 @@
           </h1>
         </div>
         <div class="c-p-banner_image">
-          <img data-scroll data-scroll-speed="-.5" src="assets/pbanner.png" alt="Magical Serum"/>
+          <img data-scroll data-scroll-speed="-1.5" src="assets/pbanner.png" alt="Magical Serum"/>
         </div>
       </section>
 
@@ -415,7 +415,8 @@
           <a target="_blank" href="https://www.glossier.com?ref=abhishekjha.me">Glossier</a><span> / </span>
           <a target="_blank" href="https://www.neuebel.com/?ref=abhishekjha.me">Neuebel</a><span> / </span><br/>
           <a target="_blank" href="https://atolla.co/?ref=abhishekjha.me">Atolla</a><span> / </span>
-          <a target="_blank" href="https://locomotive.ca/en?ref=abhishekjha.me">Locomotive</a>
+          <a target="_blank" href="https://locomotive.ca/en?ref=abhishekjha.me">Locomotive</a><span> / </span>
+          <a target="_blank" href="https://ajayns.me/?ref=abhishekjha.me">Ajay</a>
         </div><br/><br/>
         <a target="_blank" href="https://abhishekjha.me/">Go to my Portfolio ⟶</a>
       </div>
@@ -425,11 +426,25 @@
 
   <script src="js/locomotive-scroll.js"></script>
   <script>
-		const scroll = new LocomotiveScroll({
-      el: document.querySelector('[data-scroll-container]'),
-      smooth: true,
-	  	inertia: .6,
-    });
+    window.onload = function(){
+
+      var js_loader = document.querySelector(".c-loader");
+
+      js_loader.classList.add("is-loaded");
+      js_loader.classList.remove("is-loading");
+
+      if(screen.width <= 750){
+         js_loader.classList.add("on-mobile");
+         js_loader.classList.remove("is-loaded");
+         js_loader.classList.remove("is-loading");
+      }
+
+      const lscroll = new LocomotiveScroll({
+       el: document.querySelector('[data-scroll-container]'),
+       smooth: true,
+	    	inertia: .6
+      });
+    }
   </script>
   <script>
     var f_btn = document.getElementsByClassName("c-factor--title"),
@@ -459,14 +474,6 @@
 
     function pop_show(){
       pop_up.style="display: block; pointer-events: all";
-    }
-
-    window.onload = function(){
-       document.querySelector(".c-loader").classList.add("is-loaded");
-       if(screen.width <= 750){
-         document.querySelector(".c-loader").classList.add("on-mobile");
-         document.querySelector(".c-loader").classList.remove("is-loaded");
-       }
     }
   </script>
 </body>

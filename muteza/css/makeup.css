@@ -354,16 +354,24 @@ nav a{
   }
 
   .c-banner_image{
-    height: 95vh;
+    height: 95vh !important;
+  }
+
+  .c-benefit{
+    margin-bottom: 12.8% !important;
+  }
+
+  .c-benefit_image > div{
+    height: 70vh !important;
   }
 
   .c-benefit_cards{
-    transform: translate(0, -100%);
-    margin-bottom: -25%;
+    transform: translate(0, -50%) !important;
+    margin-bottom: -20%;
   }
 
   .c-item{
-    height: 35vh;
+    height: 35vh !important;
   }
 
   .c-items_text li{
