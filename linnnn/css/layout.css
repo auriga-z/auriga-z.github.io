@@ -133,7 +133,7 @@ main{
 }
 
 .back-bar:hover, .next-bar:hover{
-    cursor: none;
+    cursor: pointer;
 }
 
 .arrow-wrapper{
@@ -144,13 +144,11 @@ main{
 }
 
 #back-arrow{
-    top: 30%;
-    left: 15%;
+    transform: translate(15%, 140%);
 }
 
 #next-arrow{
-    top: 30%;
-    right: 15%;
+    transform: translate(15%, 140%);
 }
 
 .btn-circle{
@@ -285,8 +283,7 @@ main{
 
 #back-text{
     position: absolute;
-    top: 43%;
-    left: 30%;
+    transform: translate(30%, 140%);
     opacity: 0;
     pointer-events: none;
 }

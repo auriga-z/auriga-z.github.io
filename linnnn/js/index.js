@@ -2,7 +2,8 @@ window.onload = function(){
   setTimeout(function(){
     document.querySelector("body").setAttribute("class", "is-loaded");
   }, 600)
-}
+} 
+
 
 $(document).ready(function(){
 
@@ -235,18 +236,18 @@ var back = $('#back-arrow'),
 
   $(backBar).on('mouseover', function(){
       $(backBar).on("mousemove", function moveBack(e) {
-        TweenLite.to(back, 0.3, {left: e.pageX - 25, top: e.pageY - 280});
+        TweenLite.to(back, 0.3, {x: e.pageX - 25, y: e.pageY - 280, ease: "power4. out"});
      });
   });
 
   $(backBar).on('mouseout', function(){
-      TweenLite.to(back, 0.3, {left: '15%', top: '30%'});
+      TweenLite.to(back, 0.3, {x: '15%', y: '140%'});
   });
 
 //Second Bar
 
   function moveNext(e) {
-      TweenLite.to(next, 0.3, {right: (window.innerWidth - e.pageX) - 25, top: e.pageY - 280});
+      TweenLite.to(next, 0.3, {x: 130 - (window.innerWidth - e.pageX), y: e.pageY - 280, ease: "power4. out"});
   }
 
   $(nextBar).on('mouseover',function(){
@@ -254,13 +255,13 @@ var back = $('#back-arrow'),
   });
 
   $(nextBar).on('mouseout',function(){
-      TweenLite.to(next, 0.3, {right: '15%', top: '30%'});
+      TweenLite.to(next, 0.3, {x: '15%', y: '140%'});
   });
 
 //Case Move
 
   function moveCase(e) {
-      TweenLite.to(vcase, 0.3, {left: e.pageX + 20, top: e.pageY + 20});
+      TweenLite.to(vcase, 0.3, {x: e.pageX - 200, y: e.pageY - 60, ease: "power4. out"});
   }
   
   $(project).on('mouseover',function(){
@@ -276,7 +277,7 @@ var back = $('#back-arrow'),
 
   function moveBack(e) {
       var offset = $(mainBar).offset();
-      TweenLite.to(text, 0.3, {left: e.pageX, top: e.pageY - offset.top});
+      TweenLite.to(text, 0.3, {x: e.pageX, y: e.pageY - offset.top, ease: "power4. out"});
   }
 
   $(mainBar).on('mouseover', function(){
@@ -288,7 +289,6 @@ var back = $('#back-arrow'),
   $(mainBar).on('mouseout', function(){
        gsap.to(".main-back img", {duration: .2, opacity: 1})
        gsap.to(text, {duration: .3, opacity: 0})
-       TweenLite.to(text, 0.3, {left: '30%', top: '43%'});
   });
 
 
@@ -312,13 +312,13 @@ var back = $('#back-arrow'),
 
 
     $(backBar).on('mouseover', function(){
-        $(backBar).on('mousemove',  function(e) {
-          TweenLite.to(back, 0.3, {left: e.pageX - 25, top: e.pageY - 280});
-        });
+       $(backBar).on("mousemove", function moveBack(e) {
+         TweenLite.to(back, 0.3, {x: e.pageX - 25, y: e.pageY - 280, ease: "power4. out"});
+       });
     });
 
     $(backBar).on('mouseout', function(){
-        TweenLite.to(back, 0.3, {left: '15%', top: '30%'});
+        TweenLite.to(back, 0.3, {x: '15%', y: '140%'});
     });
 
    //Second Bar
@@ -328,11 +328,11 @@ var back = $('#back-arrow'),
     });
 
     function moveNext(e) {
-      TweenLite.to(next, 0.3, {right: (window.innerWidth - e.pageX) - 25, top: e.pageY - 280});
+      TweenLite.to(next, 0.3, {x: 130 - (window.innerWidth - e.pageX), y: e.pageY - 280, ease: "power4. out"});
     }
 
     $(nextBar).on('mouseout',function(){
-        TweenLite.to(next, 0.3, {right: '15%', top: '30%'});
+        TweenLite.to(next, 0.3, {x: '15%', y: '140%'});
     });
 
    //Case Move
@@ -342,9 +342,9 @@ var back = $('#back-arrow'),
         $(project).on('mousemove', moveCase);
     });
 
-    function moveCase(e){
-      TweenLite.to(vcase, 0.3, {left: e.pageX + 20, top: e.pageY + 20});
-    }
+    function moveCase(e) {
+      TweenLite.to(vcase, 0.3, {x: e.pageX - 200, y: e.pageY - 60, ease: "power4. out"});
+  }
   
     $(project).on('mouseout',function(){
         TweenLite.to(vcase, 0.3, {opacity: 0});
@@ -360,13 +360,12 @@ var back = $('#back-arrow'),
 
     function moveBack(e) {
       var offset = $(mainBar).offset();
-      TweenLite.to(text, 0.3, {left: e.pageX, top: e.pageY - offset.top});
+      TweenLite.to(text, 0.3, {x: e.pageX, y: e.pageY - offset.top, ease: "power4. out"});
     }
 
     $(mainBar).on('mouseout', function(){
          gsap.to(".main-back img", {duration: .2, opacity: 1})
          gsap.to(text, {duration: .3, opacity: 0})
-         TweenLite.to(text, 0.3, {left: '30%', top: '43%'});
     });
 
   }
