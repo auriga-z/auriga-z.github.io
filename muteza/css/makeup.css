@@ -349,6 +349,15 @@ nav a{
   color: #fff;
 }
 
+.mobile a{
+  display: block;
+  transform: translate(0, 150%);
+  white-space: nowrap;
+  padding: 10px 25px;
+  border: var(--border);
+  border-color: #fff;
+}
+
 
 
 
