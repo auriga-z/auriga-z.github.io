@@ -1,0 +1,23 @@
+{
+  "name": "portfolio-2021",
+  "version": "1.0.0",
+  "description": "Portfolio of Abhishek Jha - Visual designer based in india.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Abhishek Jha",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.0-beta.2"
+  },
+  "dependencies": {
+    "@dogstudio/highway": "^2.2.0",
+    "gsap": "^3.6.1",
+    "locomotive-scroll": "^4.1.1",
+    "poly-fluid-sizing": "^1.1.0"
+  }
+}
