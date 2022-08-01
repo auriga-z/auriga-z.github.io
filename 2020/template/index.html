@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145352703-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-145352703-1');
+  </script>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Phtographer ― JOE MASE</title>
+    <link rel="stylesheet" href="css/layout.css"></link>
+    <link rel="stylesheet" href="css/styles.css"></link>
+</head>
+<style>
+
+</style>
+<body class="is-loading">
+    <div class="cover">
+        <h1>Please open this website on desktop</h1>
+        <p>This website is not responsive yet.</p>
+    </div>
+    <nav>
+        <div class="nav-items">
+            <a href="">JOE MASE</a>
+            <ul class="nav-center">
+                <li><a id="home-link" class="active" href="index.html">WORKS</a></li>
+                <li><a id="about-link" href="about.html">ABOUT</a></li>
+            </ul>
+            <ul>
+                <li><a href="https://twitter.com/designflavorist">TW</a></li>
+                <li><a href="https://www.behance.net/abhishek_jha">BE</a></li>
+                <li><a href="https://instagram.com/design_flavorist">IN</a></li>
+            </ul> 
+        </div>
+    </nav>
+
+    <main>
+        <section id="content" class="works">
+
+            <div class="back-bar" onclick="work2();">
+                <div class="arrow-wrapper" id="back-arrow">
+                    <img class="btn-circle" src="assets/circle.png" alt="Go"/>
+                    <img src="assets/arrow.png" alt="back"/>
+                </div>
+            </div>
+
+            <div class="works-center">
+              <a href="prj1.html" id="project-link">
+                <div class="images" style="background-image: url('assets/p1.jpg');">
+                    <div class="image-cover">
+                        <div class="inverted-radius"></div>
+                    </div>
+                </div>
+                <div class="text">
+                    <div>
+                        <h1 id="row1">
+                            <span class="ptitle" style="transform: translate(0px, 100%); opacity: 1">D'oi vieùnt</span>
+                            <span class="ptitle">Soveriegn</span>
+                            <span class="ptitle">LANEIGE</span>
+                        </h1>
+                    </div>
+                    <div>
+                        <h1 id="row2">
+                            <span class="ptitle" style="transform: translate(0px, 100%); opacity: 1">TENDER</span>
+                            <span class="ptitle">Nation</span>
+                            <span class="ptitle">Beauty</span>
+                        </h1>
+                    </div>
+                </div>
+                <div id="case" style="opacity: 0">
+                  <img src="assets/case.png" alt="View Case"/>
+                </div>
+              </a>
+            </div>
+
+            <div class="next-bar" onclick="work1();">
+                <div class="arrow-wrapper" id="next-arrow">
+                    <img src="assets/arrow.png" alt="next"/>
+                    <img class="btn-circle" src="assets/circle.png" alt="project"/>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="loading-screen">
+        <div class="loading-content">
+           <h1>JOE MASE</h1>
+           <p>Phtographer</p>
+           <img src="assets/load3.gif" alt="Loading..."/>
+         </div>
+    </div>
+
+ 
+    <script src="js/jquery.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <script src='js/luxy.js'></script>
+    <script src="js/index.js"></script>
+    <div id="loadScript">
+      <script src="js/slider.js"></script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,362 @@
+
+@font-face {
+    font-family: elgoc;
+    src: url(../font/Elgoc-Regular.woff);
+}
+  
+@font-face {
+    font-family: modena;
+    src: url(../font/ModenaScript-Regular.otf);
+}
+
+@font-face {
+    font-family: ttnorms;
+    src: url(../font/TTNorms-Regular.otf);
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: normal;
+}
+
+
+:root{
+    --title-color: #111110;
+}
+
+
+nav a{
+    font-family: ttnorms;
+    font-size: 12px;
+    color: rgba(39, 39, 39, .9);
+    letter-spacing: 0.04em;
+    position: relative;
+    font-weight: lighter;
+}
+
+.nav-center a{
+    margin: 0 18px;
+}
+
+.nav-items a::before{
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgba(39, 39, 39, .7);
+    transition: .3s cubic-bezier(.215,.61,.355,1);
+}
+
+.active{
+    position: relative;
+    pointer-events: none;
+}
+
+.active::before{
+    top: 50% !important;
+    width: 100% !important;
+    opacity: .7;
+}
+
+.nav-items a:hover:before{
+    width: 100%;
+}
+
+.loading-content{
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .4s;
+}
+
+.loading-screen h1{
+    font-family: elgoc;
+    font-size: 4vw;
+    color: #fff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.loading-screen p{
+    font-family: ttnorms;
+    opacity: .5;
+    font-size: .7rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.loading-screen img{
+    transform: translate(0, 500%);
+    width: 30px;
+    opacity: .4;
+    filter: saturate(0);
+}
+
+.is-loading .loading-content{
+    opacity: 1;
+    transition-delay: .8s;
+}
+
+.is-loaded .loading-content{
+    opacity: 0;
+    transition-delay: 0;
+}
+
+/*INDEX STYLES*/
+
+.text h1{
+    font-family: elgoc;
+    color: var(--title-color);
+}
+
+.ptitle{
+    font-size: 9vw;
+    white-space: nowrap;
+}
+
+#back-arrow, #next-arrow{
+    transition: .4s opacity;
+}
+
+#back-arrow img:last-child{
+    transform: rotate(-180deg);
+}
+
+.back-bar:hover .btn-circle, .next-bar:hover .btn-circle{
+    opacity: 1;
+    padding: 0;
+}
+
+.back-bar:hover .btn-circle{
+    transform: translate(55%, 0);
+}
+
+.next-bar:hover .btn-circle{
+    transform: translate(-55%, 0);
+    position: relative;
+    z-index: -1;
+}
+
+@keyframes rotatecase{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+
+#case img{
+    animation: rotatecase 30s linear infinite;
+}
+
+
+/*ABOUT*/
+
+.main-back img{
+    transform: rotate(-180deg);
+    width: 50px;
+    pointer-events: none;
+}
+
+.main-back p{
+    font-family: modena;
+    font-size: 3vw;
+}
+
+.main-title h1{
+    font-family: elgoc;
+    font-size: 7.32vw;
+    line-height: 97%;
+    color: var(--title-color);
+}
+
+.main-title span{
+    position: relative;
+}
+
+.main-title span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    height: 3px;
+    width: 100%;
+    background-color: var(--title-color);;
+}
+
+.about-containers{
+    margin: 20vh 0 20vh 20vw;
+}
+
+.about-content h3, .project-content h3{
+    font-family: ttnorms;
+    text-transform: uppercase;
+    font-size: 12px;
+    opacity: .5;
+    padding-top: 4px;
+}
+
+.about-containers p, .about-containers li{
+    font-size: 1rem;
+    opacity: .7;
+    font-family: ttnorms;
+    color: var(--title-color);
+    line-height: 22px;
+}
+
+.email{
+    font-size: 38px !important;
+    text-decoration: underline;
+    white-space: nowrap;
+}
+
+.email::after{
+    content: "✍️" !important;
+    display: inline;
+    transition: .4s;
+    opacity: 0;
+    text-decoration: none !important;
+}
+
+.contact a{
+    font-size: 25px;
+    padding-top: 8px;
+    font-family: elgoc;
+}
+
+.contact a::after{
+    content: "→";
+    display: inline;
+    transition: .4s;
+    opacity: 0;
+}
+
+.contact a:hover::after{
+    opacity: 1;
+    padding-left: 10px;
+}
+
+/*PROJECTS*/
+
+.project-info h1, .cover h1{
+    font-family: elgoc;
+    font-size: 8vw;
+    line-height: 88%;
+    color: var(--title-color);
+    text-transform: uppercase;
+}
+
+.project-info h1::after{
+    content: attr(title);
+    font-family: modena;
+    font-size: 5vw;
+    opacity: .4;
+    display: inline-block;
+    text-transform: none;
+    transform: rotate(-12deg);
+}
+
+.project-info > div{
+    padding-top: 10vh;
+}
+
+.project-info h3{
+    padding-bottom: 12px;
+}
+
+.project-info p, .cover p{
+    font-size: 1rem;
+    opacity: .7;
+    font-family: ttnorms;
+    color: var(--title-color);
+    line-height: 22px;
+}
+
+.project-images > div{
+    width: 100%;
+    padding: 22vh 0;
+}
+
+.project-images div:first-child{
+    width: 100%;
+    padding-top: 17vh;
+}
+
+.double{
+    display: flex;
+    justify-content: space-between;
+}
+
+.--btm{
+    align-items: flex-end;
+}
+
+.--top{
+    align-items: flex-start;
+}
+
+.next-project{
+    padding: 5vh 0 30vh 0;
+}
+
+.next-project h1{
+    font-family: elgoc;
+    font-size: 7vw;
+    color: var(--title-color);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.next-project h1:before{
+    content: "next project";
+    font-family: modena;
+    font-size: 3vw;
+    opacity: .4;
+    display: table-row;
+    text-transform: none;
+    transform: translate(170%, 55%) rotate(-5deg);
+    opacity: 0;
+    transition: .4s;
+}
+
+.next-project h1:hover::before{
+    opacity: .6;
+    transform: translate(170%, 30%) rotate(-10deg);
+}
+
+.padding-2 {margin-left: 16.66%;}
+.padding-3 {margin-left: 25%;}
+.padding-4 {margin-left: 33.33%;}
+.padding-5 {margin-left: 41.66%;}
+.padding-6 {margin-left: 50%;}
+.padding-7 {margin-left: 58.33%;}
+.padding-9 {margin-left: 75%;}
+.padding-10 {margin-left: 83.33%;}
+.padding-12 {margin-left: 100%;}
+
+
+
+.cover{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #F7F3F0;
+    padding: 65% 50px 0 50px;
+    text-align: center;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+}
+
+.cover h1{
+    font-size: 11vw;
+    padding-bottom: 10px;
+}
+
+@media only screen and (max-width: 720px){
+    .cover{
+        display: block;
+        pointer-events: none;
+    }
+}

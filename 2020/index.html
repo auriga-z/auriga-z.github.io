@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145352703-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-145352703-1');
+  </script>
+  <title>Abhishek Jha — Visual Designer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="photos/logo.png">
+  <link rel="stylesheet" href="unistyles.css">
+  <meta name="keywords" content="ui/ux, designer, freelance, website, portfolio">
+  <meta name="author" content="Abhishek Jha">
+  <meta name="description" content="Portfolio of Abhishek Jha. A visual designer currently available for freelance.">
+  <meta name="theme-color" content="#f94444">
+  <meta name="twitter:card" content="Abhishek Jha - Visual designer and developer.">
+  <meta name="twitter:site" content="@designflavorist">
+  <meta name="twitter:creator" content="@designflavorist">
+  <meta name="twitter:url" content="https://abhishekjha.me">
+  <meta name="twitter:title" content="2019 Portfolio of Abhishek Jha">
+  <meta name="twitter:description" content="Abhishek Jha is a visual designer based in New Delhi. He makes high-end user interfaces.">
+  <meta name="twitter:image" content="https://abhishekjha.me/photos/card.jpg">
+  <meta name="twitter:image:alt" content="Abhishek Jha Visual Designer.">
+  <script type="text/javascript">
+    <!--
+    if (screen.width <= 699) {
+    document.location = "mobile.html";
+    }
+    //-->
+  </script>
+  <script language=javascript>
+    <!--
+    if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
+    location.replace("mobile.html");
+    }
+    -->
+  </script>
+  <style>
+
+  .loader{
+    background: #161618;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    display: block;
+    transition: .4s;
+  }
+
+  .loader img{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    margin: auto;
+  }
+
+  .loader h1{
+    position: absolute;
+    bottom: 10vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 2vw;
+  }
+
+  .bnr{
+    position: relative;
+    height: 100vh;
+  }
+
+  .bnr h1 span:first-child > span, .copy span:first-child > span{
+    transition-delay: .6s;
+  }
+
+  .bnr h1 span:nth-child(2) > span, .copy span:nth-child(2) > span{
+    transition-delay: .7s;
+  }
+
+  .bnr_c{
+    position: absolute;
+    width: 39vw;
+    left: 50%;
+    transform: translate(-50%, 50px);
+    z-index: 3;
+  }
+
+  #scroll{
+    position: absolute;
+    right: -9%;
+    top: 23vh;
+    width: 100px;
+    z-index: 5;
+  }
+
+  #scroll, .beh{
+    animation-name: rotate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  @keyframes rotate {
+    from{
+      transform: rotate(0deg);
+    }
+    to{
+      transform: rotate(360deg);
+    }
+  }
+
+
+  .bnr_c p{
+    font-size: 16px;
+  }
+
+  .bnr_t{
+    position: relative;
+    transform: translate(0, 55vh);
+    height: inherit;
+  }
+
+  .bnr_t > div{
+    position: absolute;
+  }
+
+  .bnr_img{
+    margin-top: -4%;
+  }
+
+  .bnr_t > .no-out h1{
+    -webkit-text-stroke: 0 #4bbfda;
+    text-stroke: 0 #4bbfda;
+    color: #fff;
+  }
+
+  .bnr_t img{
+    width: 39vw;
+    margin: auto;
+  }
+
+  .le{
+    margin-left: -18%; /*23*/
+  }
+
+  .bnr_img{
+    width: 39vw;
+    height: auto;
+    position: relative;
+  }
+
+  .bnr_img > div{
+    position: absolute;
+    top: 8%;
+    left: 0;
+    width: 80%;
+  }
+
+  .bnr_img > div img{
+    transition: none;
+  }
+
+  .bnr_img img{
+    z-index: 3;
+  }
+
+  #img_chu{
+    width: 14.5vw;
+  }
+
+  #img_sho{
+    width: 85%;
+  }
+
+  #img_abu{
+    width: 90%;
+  }
+
+  #img_sta{
+    width: 84%;
+  }
+
+  .con{
+    margin-top: 50vh;
+    justify-content: space-between;
+  }
+
+  .con_t > div{
+    width: 70%;
+    position: relative;
+    z-index: 3;
+    margin: 0 auto -5.2% auto;
+  }
+
+  .con_p{
+    transform: translate(-4.53vw, 5.1%);
+    color: #fff;
+  }
+
+  .btn{
+    border-bottom: 1px solid rgba(240, 240, 243, .18);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    box-shadow: inset 0 0 #fff;
+    transition: .6s;
+  }
+
+  .btn:hover{
+    border-bottom: 1px solid transparent;
+    box-shadow: inset 0 -100px #fff;
+    padding: 15px 20px;
+  }
+
+  .btn:hover p{
+    color: #231f20;
+    cursor: pointer;
+  }
+
+  .btn:hover img{
+    filter: invert(.7);
+  }
+
+  .prj_btn{
+    width: 39.5%;
+    padding: 20px 0;
+    transform: translate(0, -105.6%);
+  }
+
+  .prj_btn:hover{
+    border-bottom: 1px solid transparent;
+    box-shadow: inset 0 -100px #fff;
+    padding: 20px 25px;
+  }
+
+  /* Desktops and laptops ----------- */
+  @media only screen  and (min-width : 1150px) and (max-width : 1356px){
+    .wrk{
+      margin-top: 15vh;
+    }
+    .con{
+      padding-bottom: 15vh;
+      margin-top: 46vh;
+    }
+    #img_chu{
+      width: 15vw;
+      margin-bottom: -10%;
+    }
+
+    #img_abu{
+      margin-bottom: 7%;
+    }
+
+    #img_sta{
+      width: 80%;
+      margin-bottom: -6%;
+    }
+  }
+
+  @media only screen  and (min-width : 1430px){
+    .bnr_t{
+      transform: translate(0, 60vh);
+    }
+    .bnr h1{
+      line-height: 110%;
+      font-size: 8.1vw;
+    }
+    .bnr_img{
+      margin-top: -15%;
+    }
+    #img_sho{
+      width: 88%;
+      margin-left: 2.2vw;
+      margin-bottom: -2%;
+    }
+    .wrk{
+      margin-top: 12vh;
+    }
+    .con{
+      padding-bottom: 10vh;
+      margin-top: 36vh;
+    }
+  }
+
+
+  </style>
+</head>
+<body>
+  <div class="loader" id="loader">
+    <img src="photos/load.gif">
+    <h1>LOADING...</h1>
+  </div>
+  <div class="logo">
+    <p>Abhishek Jha<br>Visual Designer</p>
+  </div>
+  <nav class="col-3">
+    <div>
+      <a href="about/">about</a><br>
+      <a href="projects/">projects</a>
+    </div>
+   <div>
+      <a target="_blank" href="https://www.behance.net/abhishek_jha">behance</a><br>
+      <a target="_blank" href="https://dribbble.com/abhishek_jha">dribbble</a><br>
+      <a href="mailto:2abhijha@gmail.com?subject=Lets%20Work%20Together" title="I usually respond in a day.">email</a>
+   </div>
+  </nav>
+  <!--MAIN-->
+  <!--SCROLL-CTN-->
+  <div id="luxy">
+      <!--BANNER-->
+      <div class="bnr col-12">
+        <div class="bnr_c">
+          <img id="scroll" src="photos/scroll.png">
+          <div>
+            <p class="delay">
+              <span class="row">
+                <span data-emergence="hidden">Hello! I'm Abhishek, based in New Delhi</span>
+              </span>
+              <span class="row">
+                <span data-emergence="hidden">I am a passionate and creative UI/UX Designer </span>
+              </span>
+              <span class="row">
+                <span data-emergence="hidden">with experience in creating highly polished</span>
+              </span>
+              <span class="row">
+                <span data-emergence="hidden">Interfaces for the web and mobile.</span>
+              </span><br>
+              <span class="row">
+                <span data-emergence="hidden"><a style="text-decoration: underline;" href="about/">Read More About Me</a></span>
+              </span>
+            </p>
+          </div>
+        </div><br>
+        <div class="bnr_t">
+
+          <div class="no-out" style="z-index: 1">
+            <h1 class="luxy-el" data-horizontal="1" data-speed-x="-35">
+             <span class="row">
+               <span data-emergence="hidden">Flavorist of mesmerizing</span>
+             </span>
+            </h1>
+            <h1 class="le luxy-el" data-horizontal="1" data-speed-x="35">
+             <span class="row">
+               <span data-emergence="hidden">Interface and designs</span>
+             </span>
+            </h1>
+          </div>
+
+          <div style="z-index: 2; margin-left: 30.3%;" class="bnr_img imgrev luxy-el" data-speed-y="-19" data-offset="-80" data-emergence="hidden">
+            <img id="imgb" src="photos/b1.jpg">
+            <div>
+              <img id="imgc" src="photos/c1.png" class="luxy-el" data-speed-y="15">
+            </div>
+          </div>
+
+          <div style="z-index: 3;">
+            <h1 class="luxy-el outline" data-horizontal="1" data-speed-x="-35">
+             <span class="row">
+               <span data-emergence="hidden">Flavorist of mesmerizing</span>
+             </span>
+            </h1>
+            <h1 class="le luxy-el outline" data-horizontal="1" data-speed-x="35">
+             <span class="row">
+               <span data-emergence="hidden">Interface and designs</span>
+             </span>
+            </h1>
+          </div>
+        </div>
+      </div><br><br>
+      <!--WORK-->
+      <div class="wrk">
+        <div class="wrk_t">
+          <p class="row" style="margin-top: 12px;">
+            <span data-emergence="hidden" style="transition-delay: .8s">FEATURED PROJECTS</span>
+          </p>
+          <h1>
+            <span class="row">
+              <span class="outline -o" data-emergence="hidden">work</span>
+            </span>
+            <span class="row">
+              <span data-emergence="hidden">work</span>
+            </span>
+            <span class="row">
+              <span class="outline -o" data-emergence="hidden">work</span>
+            </span>
+          </h1>
+        </div>
+
+        <div class="wrk_s">
+          <div class="wrk_e" style="width: 40vw;">
+            <a target="_blank" href="http://bit.ly/chuu-web">
+              <div class="w-img imgrev" data-emergence="hidden" onmousemove="vis();" onmouseout="hid();">
+                <img class="bg" src="photos/chbg.jpg">
+                <div style="left: 30.8%" class="luxy-el" data-speed-y="4" data-offset="-65">
+                  <img id="img_chu" src="photos/chuu.png">
+                </div>
+              </div>
+            </a>
+            <div class="w-txt">
+              <p>01.</p>
+              <div>
+                <p>Chuu Seoul</p>
+                <span>Website</span>
+              </div>
+            </div>
+           </div>
+         </div>
+
+        <div class="wrk_s flex jus" style="padding: 12.5% 0 15% 0; align-items: flex-end;">
+          <a target="_blank" href="projects/index.html" class="prj_btn btn">
+            <p>
+              <span class="row">
+                <span data-emergence="hidden">See All Projects</span>
+              </span>
+            </p>
+            <span class="row">
+              <span data-emergence="hidden"><img src="photos/larro.svg"></span>
+            </span>
+          </a>
+          <div class="wrk_e" style="width: 45vw;">
+            <a target="_blank" href="http://bit.ly/shosiz">
+              <div class="w-img imgrev" data-emergence="hidden" onmousemove="vis();" onmouseout="hid();">
+                <img class="bg" src="photos/shbg.jpg">
+                <div style="left: 5%" class="luxy-el" data-speed-y="-5" data-offset="110">
+                  <img id="img_sho" src="photos/shoe.png">
+                </div>
+              </div>
+            </a>
+            <div class="w-txt">
+              <p>02.</p>
+              <div>
+                <p>Shoe Size Finder</p>
+                <span>Mobile App/Concept</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wrk_s flex jus">
+          <div class="wrk_e" style="width: 35vw;">
+            <a target="_blank" href="http://bit.ly/abudezo">
+              <div class="w-img imgrev" data-emergence="hidden" onmousemove="vis();" onmouseout="hid();">
+                <img class="bg" src="photos/pobg.jpg">
+                <div class="luxy-el" data-speed-y="-4" data-offset="175">
+                  <img id="img_abu" src="photos/post.png">
+                </div>
+              </div>
+            </a>
+            <div class="w-txt">
+              <p>03.</p>
+              <div>
+                <p>Abudezo E-cards</p>
+                <span>Mobile App</span>
+              </div>
+            </div>
+          </div>
+          <div class="wrk_e" style="width: 28vw; transform: translate(0, 55%)">
+            <a target="_blank" href="https://bit.ly/ptemplate1">
+              <div class="w-img imgrev" data-emergence="hidden" onmousemove="vis();" onmouseout="hid();">
+                <img class="bg" src="photos/ptbg.jpg">
+                <div style="left: 8.1%" class="luxy-el" data-speed-y="2" data-offset="-85">
+                  <img id="img_sta" src="photos/pt.png">
+                </div>
+              </div>
+            </a>
+            <div class="w-txt">
+              <p>04.</p>
+              <div>
+                <p>Photographers Folio</p>
+                <span>Website/Template</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--CONTACT-->
+      <div class="con flex">
+        <div class="con_t">
+          <h1 style="position: relative; z-index: 4;">
+            <span class="row">
+              <span class="outline -o" data-emergence="hidden">CONTACT</span>
+            </span>
+            <span class="row">
+              <span data-emergence="hidden">CONTACT</span>
+            </span>
+          </h1>
+          <h1>
+            <span class="row">
+              <span class="outline -o" style="transition-delay: .5s" data-emergence="hidden">CONTACT</span>
+            </span>
+          </h1>
+          <div class="imgrev luxy-el" data-speed-y="-4.5" data-offset="160" data-emergence="hidden" >
+            <img src="photos/cont2.gif">
+          </div>
+        </div>
+        <div class="con_p">
+         <p class="delay">
+           <span class="row">
+             <span data-emergence="hidden">Have a project in mind? Would you like</span>
+           </span>
+           <span class="row">
+             <span data-emergence="hidden">to share it? Feel free to reach out</span>
+           </span>
+           <span class="row">
+             <span data-emergence="hidden">by writing an e-mail.</span>
+           </span>
+         </p><br>
+         <a href="mailto:rnegic341@gmail.com?subject=Lets%20Work%20Together" class="btn " title="I usually respond in a day.">
+           <p>
+             <span class="row">
+               <span data-emergence="hidden">Get in touch</span>
+             </span>
+           </p>
+           <span class="row">
+             <span data-emergence="hidden"><img src="photos/larro.svg"></span>
+           </span>
+         </a>
+         <p class="delay copy">
+           <span class="row">
+             <span data-emergence="hidden">Designed and developed by Abhishek Jha.</span>
+           </span>
+           <span class="row">
+             <span data-emergence="hidden">© <span style="display: inline;" id="year"></span> All rights reserved.</span>
+           </span>
+         </p>
+        </div>
+       </div>
+      </div>
+      <!--SCROLL-END-->
+  </div>
+  <span id="float" class="float beh"><img src="photos/beh.png"></span>
+  <!--SCRIPTS-->
+  <script>
+  document.onreadystatechange = function() {
+      if (document.readyState !== "complete") {
+          document.querySelector("#loader").style = "visibility: visible;";
+      } else {
+          document.querySelector("#loader").style = "opacity: 0; pointer-events: none;";
+          setTimeout(function(){document.querySelector("#loader").style = "display: none";}, 1200);
+      }
+  };
+
+  document.getElementById('year').innerHTML = new Date().getFullYear();
+
+  function changeImg(imgNumber){
+    var bImg = ["photos/b1.jpg", "photos/b2.jpg", "photos/b3.jpg", "photos/b4.jpg"];
+    var cImg = ["photos/c1.png", "photos/c2.png", "photos/c3.png", "photos/c4.png"];
+    //var imgShown = document.getElementById('imgc').src;
+    var newImgNumber =Math.floor(Math.random() * bImg.length);
+    document.getElementById('imgb').src = bImg[newImgNumber];
+    document.getElementById('imgc').src = cImg[newImgNumber];
+  }
+
+  document.addEventListener("DOMContentLoaded", changeImg);
+
+
+
+  function vis(){
+    document.getElementById('float').style.opacity = "1";
+  }
+
+  function hid(){
+    document.getElementById('float').style.opacity = "0";
+  }
+
+
+
+
+  var $ = document.querySelector.bind(document);
+  var $on = document.addEventListener.bind(document);
+  var followMouse = function() {
+    key = requestAnimationFrame(followMouse);
+
+    if (!x || !y) {
+      x = xmouse;
+      y = ymouse;
+    }
+    else {
+      dx = (xmouse - x) * 0.125;
+      dy = (ymouse - y) * 0.125;
+      if (Math.abs(dx) + Math.abs(dy) < 0.1) {
+        x = xmouse;
+        y = ymouse;
+      }
+      else {
+        x += dx;
+        y += dy;
+      }
+    }
+    ball.style.left = x + 'px';
+    ball.style.top = $("#luxy").scrollTop + y + 'px';
+  };
+
+  var xmouse, ymouse;
+  var ball = $('#float');
+  var x = void 0,
+    y = void 0,
+    dx = void 0,
+    dy = void 0,
+    tx = 0,
+    ty = 0,
+    key = -1;
+
+  $on('mousemove', function(e) {
+    xmouse = e.clientX || e.pageX;
+    ymouse = e.clientY || e.pageY;
+  });
+
+  document.addEventListener("DOMContentLoaded", followMouse);
+  </script>
+  <script src="js/luxy.js"></script>
+  <script src="js/emergence.js"></script>
+  <script>
+  luxy.init();
+
+  emergence.init({
+    container: window,
+    reset: false,
+    handheld: true,
+    throttle: 250,
+    elemCushion: 0.64,
+    offsetTop: 0,
+    offsetRight: 0,
+    offsetBottom: 5,
+    offsetLeft: 0,
+    callback: function(element, state) {
+      if (state === 'visible') {
+        console.log('Element is visible.');
+      } else if (state === 'reset') {
+        console.log('Element is hidden with reset.');
+      } else if (state === 'noreset') {
+        console.log('Element is hidden with NO reset.');
+      }
+    }
+    });
+  </script>
+  <noscript>
+    Congrats Time Traveller, You are in the 90s. Now in order to access this site you either need to
+    update your browser or enable Javascript from settings. And please don't use Internet explorer :).
+  </noscript>
+</body>
+</html>

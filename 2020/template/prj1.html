@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Name</title>
+    <link rel="stylesheet" href="css/layout.css"></link>
+    <link rel="stylesheet" href="css/styles.css"></link>
+</head>
+<style>
+</style>
+<body class="is-loading">
+    <nav>
+        <div class="nav-items">
+            <a href="">JOE MASE</a>
+            <ul class="nav-center">
+                <li><a id="home-link" href="index.html">WORKS</a></li>
+                <li><a id="about-link" href="about.html">ABOUT</a></li>
+            </ul>
+            <ul>
+                <li><a href="https://twitter.com/designflavorist">TW</a></li>
+                <li><a href="https://www.behance.net/abhishek_jha">BE</a></li>
+                <li><a href="https://instagram.com/design_flavorist">IN</a></li>
+            </ul> 
+        </div>
+    </nav>
+
+    <main>
+        <section id="content" class="project">
+            <div class="main-back">
+                <img src="assets/arrow.png"/>
+                <p id="back-text">back</p>
+            </div>
+            
+            <style>main{position: fixed} body{overflow-x: hidden}</style>
+            <div class="scroll-wrapper">
+              <div class="project-content" id="luxy">
+                  <div class="project-info">
+                      <h1 title="editorial">D'oi vieùnt<br>TENDER</h1>
+                      <div>
+                          <div class="project-about">
+                              <h3>About</h3>
+                              <p>
+                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                 In corporis architecto perspiciatis repellat laborum 
+                                 nihil est dicta ratione labore reiciendis.
+                              </p>
+                          </div>
+                          <div class="project-credits">
+                              <h3>Credits</h3>
+                              <p>
+                                  Model ― Name<br>
+                                  Role ― Photographer<br>
+                                  Year ― 2019
+                               </p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="project-images">
+                      <div class="single">
+                          <img class="col-12" src="assets/project1/img1.jpg" alt="Image"/>
+                      </div>
+                      <div class="double --top">
+                          <img class="col-3 luxy-el" data-speed-y="5" data-offset="-50" src="assets/project1/img2.jpg" alt="Image"/>
+                          <img class="col-6"  src="assets/project1/img4.jpg" alt="Image"/>
+                      </div>
+                      <div class="single">
+                          <img class="col-6 padding-3" src="assets/project1/img3.jpg" alt="Image"/>
+                      </div>
+                      <div class="double --btm">
+                          <img class="col-6" src="assets/project1/img5.jpg" alt="Image"/>
+                          <img class="col-4 padding-2 luxy-el" data-speed-y="-5" data-offset="100" src="assets/project1/img6.jpg" alt="Image"/>
+                      </div>
+                  </div>
+                  <div class="next-project">
+                      <a href="prj1.html">
+                          <h1>Undefinable</h1>
+                      </a>
+                  </div>
+              </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="loading-screen">
+        <div class="loading-content">
+            <h1>JOE MASE</h1>
+            <p>Phtographer</p>
+            <img src="assets/load3.gif" alt="Loading..."/>
+        </div>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/luxy.js"></script>
+    <script src="js/index.js"></script>
+    <div id="loadScript">
+        <script>
+            luxy.init();
+        </script>
+    </div>
+</body>
+</html>
